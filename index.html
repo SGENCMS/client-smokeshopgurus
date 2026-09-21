@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Design mockup — Smoke Shop Gurus wholesale trade counter. Not a live store.">
+<style>html,body{margin:0;padding:0}</style>
+<title>Smoke Shop Gurus — Wholesale Trade Counter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wholesale distribution out of Albuquerque, New Mexico. 3,498 orderable SKUs across 568 lines and 186 brands. Licensed retailers only — log in for pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+
+<style>
+/* ============================================================================
+   SGEN-GREEN — design tokens v1 · DARK-FIRST
+   Palette, faces and radius language carried unchanged from sgen-green-tokens.css.
+   Structure below is NOT carried over — this is a distributor, not a SaaS page.
+   ========================================================================= */
+:root{
+  --sg-font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sg-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --sg-fs-hero:    clamp(38px, 6.4vw, 88px);
+  --sg-fs-h2:      clamp(28px, 4.2vw, 54px);
+  --sg-fs-h3:      clamp(20px, 2.2vw, 28px);
+  --sg-fs-h4:      clamp(16px, 1.3vw, 19px);
+  --sg-fs-lead:    clamp(16px, 1.4vw, 20px);
+  --sg-fs-body:    17px;
+  --sg-fs-sm:      15px;
+  --sg-fs-xs:      13px;
+  --sg-fs-eyebrow: 11px;
+  --sg-fs-micro:   10px;
+  --sg-fs-nano:    9px;
+
+  --sg-lh-tight: 1.02;  --sg-lh-snug: 1.25;  --sg-lh-body: 1.6;
+  --sg-tr-hero: -.045em; --sg-tr-head: -.022em; --sg-tr-label: .18em;
+
+  --sg-r-sm: 8px;  --sg-r-md: 12px;  --sg-r-lg: 16px;
+  --sg-r-btn: 8px;
+  --sg-r-pill: 9999px;
+
+  --sg-ease:     cubic-bezier(.16,.84,.36,1);
+  --sg-ease-out: cubic-bezier(.22,.61,.36,1);
+  --sg-t-fast: .2s;  --sg-t-reveal: .6s;
+
+  --sg-maxw: 1400px;
+  --sg-gutter: clamp(16px, 3.4vw, 40px);
+  --sg-secpad: clamp(52px, 6.4vw, 104px);
+
+  --sg-accent-darkest: #0a4a2a;
+  --sg-accent-deep:    #145c37;
+  --sg-accent:         #1c7a45;
+  --sg-accent-lift:    #1f8c4f;
+  --sg-accent-bright:  #2bbd6b;
+  --sg-accent-live:    #3ddc84;
+
+  --sg-accent-tint-08: rgba(43,189,107,.08);
+  --sg-accent-tint-14: rgba(43,189,107,.14);
+  --sg-accent-tint-22: rgba(43,189,107,.22);
+  --sg-accent-fill-08: rgba(28,122,69,.08);
+  --sg-accent-fill-18: rgba(28,122,69,.18);
+
+  --sg-bg-deep: #080706;
+  --sg-bg:      #0d0d0f;
+  --sg-bg-2:    #16161a;
+  --sg-bg-warm: #121214;
+  --sg-bg-header: linear-gradient(180deg,#141112,#0c0b0d);
+
+  --sg-ink:       #f4f2ee;
+  --sg-ink-soft:  rgba(255,255,255,.62);
+  --sg-ink-faint: rgba(255,255,255,.46);
+  --sg-ink-on-accent: #ffffff;
+
+  --sg-line:        rgba(255,255,255,.10);
+  --sg-line-2:      rgba(255,255,255,.06);
+  --sg-line-accent: rgba(43,189,107,.28);
+  --sg-card-bg:     rgba(255,255,255,.04);
+  --sg-card-bg-2:   rgba(255,255,255,.07);
+  --sg-card-border: rgba(255,255,255,.10);
+  --sg-card-border-hover: rgba(43,189,107,.45);
+
+  --sg-success: #2bbd6b;  --sg-success-bg: rgba(43,189,107,.12);
+  --sg-danger:  #ff4d4f;  --sg-danger-bg:  rgba(255,77,79,.12);
+  --sg-warn:    #e0a93b;  --sg-warn-bg:    rgba(224,169,59,.12);
+  --sg-info:    #4a8fe0;  --sg-info-bg:    rgba(74,143,224,.12);
+  --sg-neutral: #cdc8c0;
+
+  --sg-shadow:       0 40px 90px -30px rgba(0,0,0,.80);
+  --sg-shadow-2:     0 50px 120px -24px rgba(0,0,0,.72);
+  --sg-shadow-rest:  0 8px 24px -10px rgba(0,0,0,.60);
+  --sg-shadow-accent:0 10px 30px -8px rgba(28,122,69,.60);
+  --sg-shadow-accent-hover: 0 16px 40px -8px rgba(43,189,107,.55);
+  --sg-glow-live:    0 0 8px rgba(61,220,132,.85);
+  --sg-glass-inset:  inset 0 1px 0 rgba(255,255,255,.06);
+
+  --sg-grad-accent: linear-gradient(135deg,#145c37,#1f8c4f);
+  --sg-grad-text:   linear-gradient(100deg,#3ddc84,#2bbd6b 60%,#7ef0b0);
+  --sg-divider-feather: linear-gradient(to right, rgba(43,189,107,0), rgba(43,189,107,.85) 50%, rgba(43,189,107,0));
+
+  color-scheme: dark;
+}
+@media (prefers-reduced-motion: reduce){
+  :root{ --sg-t-fast:.01ms; --sg-t-reveal:.01ms; }
+  .ssg *{ animation:none !important; }
+}
+
+/* ================================ BASE ==================================== */
+html{ background:var(--sg-bg-deep); -webkit-text-size-adjust:100%; }
+body{
+  margin:0; background:var(--sg-bg); color:var(--sg-ink-soft);
+  font-family:var(--sg-font); font-size:var(--sg-fs-body); line-height:var(--sg-lh-body);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.ssg, .ssg *, .ssg *::before, .ssg *::after{ box-sizing:border-box; }
+.ssg{ position:relative; isolation:isolate; overflow-wrap:break-word; overflow-x:clip; }
+.ssg img{ display:block; max-width:100%; height:auto; }
+.ssg h1,.ssg h2,.ssg h3,.ssg h4{ color:var(--sg-ink); margin:0; letter-spacing:var(--sg-tr-head); line-height:var(--sg-lh-snug); font-weight:700; }
+.ssg p{ margin:0; }
+.ssg ul{ margin:0; padding:0; list-style:none; }
+.ssg a{ color:inherit; text-decoration:none; }
+.ssg :focus-visible{ outline:2px solid var(--sg-accent-live); outline-offset:3px; border-radius:4px; }
+.ssg::after{
+  content:''; position:fixed; inset:0; z-index:90; pointer-events:none; opacity:.045;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+}
+.ssg .wrap{ width:100%; max-width:var(--sg-maxw); margin-inline:auto; padding-inline:var(--sg-gutter); }
+.ssg .vh{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+/* ---- atoms --------------------------------------------------------------- */
+.ssg .eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-eyebrow); font-weight:500;
+  text-transform:uppercase; letter-spacing:var(--sg-tr-label); color:var(--sg-ink-faint);
+}
+.ssg .eyebrow::before{ content:''; width:22px; height:1px; background:var(--sg-accent-bright); flex:none; }
+.ssg .eyebrow.dot::before{ width:7px; height:7px; border-radius:50%; background:var(--sg-accent-live); box-shadow:var(--sg-glow-live); }
+.ssg .chip{
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint);
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-sm);
+  padding:5px 9px; background:rgba(0,0,0,.42); white-space:nowrap;
+}
+.ssg .chip.accent{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); background:var(--sg-accent-tint-08); }
+.ssg .chip.warn{ color:var(--sg-warn); border-color:rgba(224,169,59,.30); background:var(--sg-warn-bg); }
+.ssg .chip.low{ color:var(--sg-danger); border-color:rgba(255,77,79,.30); background:var(--sg-danger-bg); }
+.ssg .chip i{ width:6px; height:6px; border-radius:50%; background:currentColor; flex:none; }
+
+.ssg .btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-eyebrow); font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; line-height:1;
+  padding:15px 20px; border-radius:var(--sg-r-btn);
+  border:1px solid transparent; cursor:pointer; white-space:nowrap;
+  transition:background var(--sg-t-fast) var(--sg-ease), border-color var(--sg-t-fast) var(--sg-ease),
+             color var(--sg-t-fast) var(--sg-ease), box-shadow var(--sg-t-fast) var(--sg-ease),
+             transform var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .btn svg{ flex:none; }
+.ssg .btn-primary{ background:var(--sg-grad-accent); color:var(--sg-ink-on-accent); box-shadow:var(--sg-shadow-accent); }
+.ssg .btn-primary:hover{ background:var(--sg-accent-lift); box-shadow:var(--sg-shadow-accent-hover); transform:translateY(-1px); }
+.ssg .btn-ghost{ background:var(--sg-card-bg); color:var(--sg-ink); border-color:var(--sg-line); box-shadow:var(--sg-glass-inset); }
+.ssg .btn-ghost:hover{ border-color:var(--sg-line-accent); color:var(--sg-accent-bright); background:var(--sg-accent-tint-08); }
+.ssg .btn-sm{ padding:11px 14px; font-size:var(--sg-fs-micro); letter-spacing:.12em; }
+
+.ssg .sec{ position:relative; padding-block:var(--sg-secpad); }
+.ssg .sec-warm{ background:var(--sg-bg-warm); }
+.ssg .sec-2{ background:var(--sg-bg-2); }
+.ssg .sec-deep{ background:var(--sg-bg-deep); }
+.ssg .shead{ display:flex; align-items:flex-end; justify-content:space-between; gap:22px; flex-wrap:wrap; margin-bottom:clamp(26px,3vw,44px); }
+.ssg .shead h2{ font-size:var(--sg-fs-h2); font-weight:800; margin-top:14px; max-width:17ch; line-height:1.06; }
+.ssg .shead .lead{ margin-top:14px; max-width:56ch; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.65; }
+.ssg .shead-link{
+  display:inline-flex; align-items:center; gap:9px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-eyebrow); font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint);
+  padding-bottom:6px; border-bottom:1px solid var(--sg-line);
+  transition:color var(--sg-t-fast) var(--sg-ease), border-color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .shead-link:hover{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); }
+.ssg .shead-link svg{ transition:transform var(--sg-t-fast) var(--sg-ease); }
+.ssg .shead-link:hover svg{ transform:translateX(3px); }
+.ssg .rule-feather{ height:1px; border:0; margin:0; background:var(--sg-divider-feather); opacity:.45; }
+
+/* ============================================================================
+   1 · TRADE RAIL — tier one of the nav. Account, licence and ordering only.
+   ========================================================================= */
+.ssg .rail{ background:var(--sg-bg-deep); border-bottom:1px solid var(--sg-line-2); position:relative; z-index:60; }
+.ssg .rail-in{
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  min-height:40px; padding-block:9px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500;
+  text-transform:uppercase; letter-spacing:.15em; color:var(--sg-ink-faint);
+}
+.ssg .rail-l, .ssg .rail-r{ display:flex; align-items:center; gap:0; flex-wrap:wrap; min-width:0; }
+.ssg .rail-l > *, .ssg .rail-r > *{ padding-inline:13px; border-left:1px solid rgba(255,255,255,.09); white-space:nowrap; }
+.ssg .rail-l > *:first-child, .ssg .rail-r > *:first-child{ border-left:0; padding-left:0; }
+.ssg .rail-r > *:last-child{ padding-right:0; }
+.ssg .rail b{ color:var(--sg-ink); font-weight:500; }
+.ssg .rail .live{ display:inline-flex; align-items:center; gap:7px; color:var(--sg-accent-bright); }
+.ssg .rail .live i{ width:6px; height:6px; border-radius:50%; background:var(--sg-accent-live); box-shadow:var(--sg-glow-live); flex:none; }
+.ssg .rail a{ transition:color var(--sg-t-fast) var(--sg-ease); }
+.ssg .rail a:hover{ color:var(--sg-accent-bright); }
+
+/* ============================================================================
+   2 · CATALOGUE BAR — tier two. Search is the widest control on the bar.
+   ========================================================================= */
+.ssg .cbar{ position:sticky; top:0; z-index:70; background:var(--sg-bg-header); border-bottom:1px solid var(--sg-line); backdrop-filter:saturate(150%) blur(16px); }
+.ssg .cbar-in{ display:flex; align-items:center; gap:clamp(10px,1.3vw,18px); min-height:78px; padding-block:12px; }
+
+.ssg .brand{ display:flex; align-items:center; gap:11px; flex:none; }
+.ssg .brand-mark{
+  width:40px; height:40px; border-radius:var(--sg-r-sm); flex:none;
+  background:var(--sg-grad-accent); display:grid; place-items:center;
+  box-shadow:var(--sg-shadow-accent), var(--sg-glass-inset);
+  font-family:var(--sg-mono); font-weight:700; font-size:13px; color:#fff; letter-spacing:.02em;
+}
+.ssg .brand-txt{ display:flex; flex-direction:column; gap:4px; min-width:0; }
+.ssg .brand-name{ font-weight:800; font-size:15px; letter-spacing:-.01em; color:var(--sg-ink); line-height:1; white-space:nowrap; }
+.ssg .brand-sub{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500; text-transform:uppercase; letter-spacing:.2em; color:var(--sg-accent-bright); line-height:1; white-space:nowrap; }
+
+/* the departments control — anchor of the catalogue tier */
+.ssg .megatoggle{ position:absolute; opacity:0; width:1px; height:1px; pointer-events:none; }
+.ssg .deptbtn{
+  display:inline-flex; align-items:center; gap:10px; flex:none; cursor:pointer;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink);
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-btn);
+  background:var(--sg-card-bg); box-shadow:var(--sg-glass-inset);
+  height:44px; padding-inline:16px;
+  transition:border-color var(--sg-t-fast) var(--sg-ease), color var(--sg-t-fast) var(--sg-ease), background var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .deptbtn:hover{ border-color:var(--sg-line-accent); color:var(--sg-accent-bright); }
+.ssg .deptbtn .bars{ display:grid; gap:3px; flex:none; }
+.ssg .deptbtn .bars span{ display:block; width:14px; height:1.5px; background:currentColor; }
+.ssg .deptbtn .cnt{ color:var(--sg-ink-faint); }
+.ssg .megatoggle:checked ~ .cbar-in .deptbtn{ border-color:var(--sg-line-accent); color:var(--sg-accent-bright); background:var(--sg-accent-tint-08); }
+.ssg .megatoggle:focus-visible ~ .cbar-in .deptbtn{ outline:2px solid var(--sg-accent-live); outline-offset:3px; }
+
+.ssg .csearch{
+  display:flex; align-items:center; gap:10px; flex:1 1 auto; min-width:0;
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-btn);
+  background:rgba(0,0,0,.45); padding-inline:14px; height:44px;
+  transition:border-color var(--sg-t-fast) var(--sg-ease), box-shadow var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .csearch:focus-within{ border-color:var(--sg-line-accent); box-shadow:0 0 0 3px var(--sg-accent-tint-08); }
+.ssg .csearch svg{ color:var(--sg-accent-bright); flex:none; }
+.ssg .csearch input{
+  border:0; background:transparent; outline:none; width:100%; min-width:0;
+  font-family:var(--sg-mono); font-size:12px; font-weight:400; letter-spacing:.04em; color:var(--sg-ink);
+}
+.ssg .csearch input::placeholder{ color:var(--sg-ink-faint); }
+.ssg .csearch .kbd{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); letter-spacing:.1em; color:var(--sg-ink-faint);
+  border:1px solid var(--sg-line); border-radius:5px; padding:3px 6px; flex:none;
+}
+.ssg .cbar-acts{ display:flex; align-items:center; gap:9px; flex:none; }
+.ssg .icon-btn{
+  position:relative; width:44px; height:44px; flex:none; display:grid; place-items:center;
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-btn);
+  background:var(--sg-card-bg); color:var(--sg-ink-soft);
+  transition:color var(--sg-t-fast) var(--sg-ease), border-color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .icon-btn:hover{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); }
+.ssg .icon-btn .count{
+  position:absolute; top:-6px; right:-6px; min-width:18px; height:18px; padding:0 4px;
+  border-radius:var(--sg-r-pill); background:var(--sg-accent); color:#fff;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:700;
+  display:grid; place-items:center; border:2px solid var(--sg-bg-deep);
+}
+.ssg .cbar-acts .btn-primary{ height:44px; padding-inline:18px; }
+
+/* --- department rail: the persistent catalogue strip ---------------------- */
+.ssg .drail{ border-top:1px solid var(--sg-line-2); background:rgba(0,0,0,.30); position:relative; }
+.ssg .drail::after{ content:''; position:absolute; top:0; bottom:0; right:0; width:56px; pointer-events:none; background:linear-gradient(90deg, rgba(12,11,13,0), rgba(12,11,13,.96)); }
+.ssg .drail-scroll{
+  display:flex; gap:0; overflow-x:auto; scrollbar-width:thin;
+  scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch;
+}
+.ssg .drail-scroll::-webkit-scrollbar{ height:3px; }
+.ssg .drail-scroll::-webkit-scrollbar-thumb{ background:var(--sg-line); border-radius:9999px; }
+.ssg .drail-scroll a, .ssg .drail-scroll label{
+  scroll-snap-align:start; flex:none; display:flex; align-items:baseline; gap:8px;
+  padding:12px 16px; border-right:1px solid var(--sg-line-2); white-space:nowrap;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.12em; color:var(--sg-ink-soft);
+  transition:color var(--sg-t-fast) var(--sg-ease), background var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .drail-scroll > :first-child{ padding-left:max(var(--sg-gutter), 16px); }
+.ssg .drail-scroll a:hover, .ssg .drail-scroll label:hover{ color:var(--sg-accent-bright); background:var(--sg-accent-tint-08); }
+.ssg .drail-scroll a b{ font-weight:400; color:var(--sg-ink-faint); font-size:var(--sg-fs-nano); }
+.ssg .drail-scroll label.all{ color:var(--sg-accent-bright); cursor:pointer; }
+
+/* --- the mega panel: the catalogue tree, full width ---------------------- */
+.ssg .mega{ display:none; border-top:1px solid var(--sg-line); background:var(--sg-bg-deep); box-shadow:var(--sg-shadow-2); max-height:74vh; overflow-y:auto; }
+.ssg .megatoggle:checked ~ .mega{ display:block; }
+.ssg .mega-in{ display:grid; grid-template-columns:minmax(0,2.4fr) minmax(0,1fr) minmax(0,1.05fr); gap:clamp(20px,2.6vw,42px); padding-block:30px 34px; }
+.ssg .mega-col > h3{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.2em; color:var(--sg-accent-bright);
+  padding-bottom:11px; border-bottom:1px solid var(--sg-line); margin-bottom:14px;
+}
+.ssg .mega-tree{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2px 18px; }
+.ssg .mega-tree a{
+  display:flex; align-items:baseline; justify-content:space-between; gap:10px;
+  padding:6px 0; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft);
+  border-bottom:1px solid var(--sg-line-2);
+  transition:color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .mega-tree a:hover{ color:var(--sg-accent-bright); }
+.ssg .mega-tree a span{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); color:var(--sg-ink-faint); letter-spacing:.06em; flex:none; }
+.ssg .mega-list{ display:grid; gap:1px; }
+.ssg .mega-list a{
+  display:flex; align-items:baseline; justify-content:space-between; gap:10px;
+  padding:7px 0; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); border-bottom:1px solid var(--sg-line-2);
+}
+.ssg .mega-list a:hover{ color:var(--sg-accent-bright); }
+.ssg .mega-list a span{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); color:var(--sg-ink-faint); }
+.ssg .mega-note{
+  margin-top:16px; padding:14px 15px; border:1px dashed var(--sg-line); border-radius:var(--sg-r-md);
+  background:rgba(255,255,255,.02);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.7;
+}
+.ssg .mega-note b{ color:var(--sg-accent-bright); font-weight:500; }
+.ssg .mega-acts{ display:grid; gap:9px; margin-top:16px; }
+.ssg .mega-acts .btn{ width:100%; }
+.ssg .megaclose{
+  display:block; text-align:center; cursor:pointer; padding:11px 0 14px;
+  border-top:1px solid var(--sg-line-2);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase;
+  letter-spacing:.2em; color:var(--sg-ink-faint);
+}
+.ssg .megaclose:hover{ color:var(--sg-accent-bright); }
+
+/* ============================================================================
+   3 · HERO — full-bleed trade counter. Headline set INTO the image.
+   ========================================================================= */
+.ssg .hero{ position:relative; overflow:hidden; background:var(--sg-bg-deep); isolation:isolate; }
+.ssg .hero-bg{ position:absolute; inset:0; z-index:0; }
+.ssg .hero-bg img{ width:100%; height:100%; object-fit:cover; object-position:66% 56%; filter:contrast(1.07) saturate(1.06) brightness(1.04); }
+/* green duotone grade — the risk */
+.ssg .hero-bg::before{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(155deg, rgba(10,74,42,.58), rgba(20,92,55,.10) 44%, rgba(43,189,107,.34));
+  mix-blend-mode:color; pointer-events:none;
+}
+.ssg .hero-bg::after{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(8,7,6,.90) 0%, rgba(8,7,6,.68) 32%, rgba(8,7,6,.14) 60%, rgba(8,7,6,.06) 84%, rgba(8,7,6,.34) 100%),
+    linear-gradient(180deg, rgba(8,7,6,.52) 0%, rgba(8,7,6,0) 20%, rgba(8,7,6,.06) 52%, rgba(8,7,6,.60) 84%, rgba(8,7,6,.97) 100%);
+}
+/* measuring grid, faint green */
+.ssg .hero-grid-lines{
+  position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.30;
+  background-image:
+    linear-gradient(to right, rgba(43,189,107,.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43,189,107,.10) 1px, transparent 1px);
+  background-size:clamp(70px,8vw,124px) clamp(70px,8vw,124px);
+  mask-image:linear-gradient(105deg, #000 0%, transparent 62%);
+  -webkit-mask-image:linear-gradient(105deg, #000 0%, transparent 62%);
+}
+.ssg .hero-in{ position:relative; z-index:2; padding-block:clamp(48px,6vw,96px) clamp(128px,15vw,200px); }
+.ssg .hero-top{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; }
+.ssg .hero-lay{ display:grid; grid-template-columns:minmax(0,1.5fr) minmax(280px,.5fr); gap:clamp(26px,3.6vw,64px); align-items:end; margin-top:clamp(24px,3vw,48px); }
+.ssg .hero h1{
+  font-size:var(--sg-fs-hero); line-height:1.04;
+  letter-spacing:var(--sg-tr-hero); font-weight:800; max-width:13.5ch;
+  text-shadow:0 2px 40px rgba(0,0,0,.85);
+}
+.ssg .hero h1 em{ font-style:normal; background:var(--sg-grad-text); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.ssg .hero-sub{ margin-top:22px; max-width:50ch; font-size:var(--sg-fs-lead); line-height:1.6; color:rgba(255,255,255,.80); text-shadow:0 1px 20px rgba(0,0,0,.8); }
+.ssg .hero-sub b{ color:var(--sg-ink); font-weight:600; }
+.ssg .hero-cta{ display:flex; flex-wrap:wrap; gap:11px; margin-top:28px; }
+
+/* the ledger — mono key/value slab, the trade-counter voice */
+.ssg .ledger{
+  border:1px solid rgba(255,255,255,.16); border-radius:var(--sg-r-lg);
+  background:rgba(8,7,6,.66); backdrop-filter:blur(14px) saturate(150%);
+  box-shadow:var(--sg-shadow-2), var(--sg-glass-inset); overflow:hidden; min-width:0;
+}
+.ssg .ledger-h{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding:12px 16px; border-bottom:1px solid var(--sg-line); background:rgba(255,255,255,.03);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500;
+  text-transform:uppercase; letter-spacing:.18em; color:var(--sg-ink-faint);
+}
+.ssg .ledger-h b{ color:var(--sg-accent-bright); font-weight:500; }
+.ssg .ledger dl{ margin:0; }
+.ssg .ledger .row{
+  display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:11px 16px; border-bottom:1px solid var(--sg-line-2);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint);
+}
+.ssg .ledger .row:last-child{ border-bottom:0; }
+.ssg .ledger .row dt{ text-transform:uppercase; letter-spacing:.13em; font-size:var(--sg-fs-nano); }
+.ssg .ledger .row dd{ margin:0; color:var(--sg-ink); text-align:right; font-weight:500; }
+.ssg .ledger .row dd.ok{ color:var(--sg-accent-bright); }
+
+/* counter board — the catalogue preview, bleeding over the hero's bottom edge */
+.ssg .board{ position:relative; z-index:3; margin-top:clamp(-150px,-11vw,-92px); }
+.ssg .board-h{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid var(--sg-line);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.18em; color:var(--sg-ink-faint);
+}
+.ssg .board-h .live{ display:inline-flex; align-items:center; gap:7px; color:var(--sg-accent-bright); }
+.ssg .board-h .live i{ width:6px; height:6px; border-radius:50%; background:var(--sg-accent-live); box-shadow:var(--sg-glow-live); }
+.ssg .board-scroll{ display:flex; gap:12px; overflow-x:auto; padding-bottom:10px; scroll-snap-type:x proximity; scrollbar-width:thin; }
+.ssg .board-scroll::-webkit-scrollbar{ height:3px; }
+.ssg .board-scroll::-webkit-scrollbar-thumb{ background:var(--sg-line); border-radius:9999px; }
+.ssg .bcard{
+  scroll-snap-align:start; flex:0 0 clamp(162px,17vw,214px); position:relative;
+  border:1px solid var(--sg-card-border); border-radius:var(--sg-r-md); overflow:hidden;
+  background:var(--sg-bg-2); box-shadow:var(--sg-shadow-rest);
+  transition:border-color var(--sg-t-fast) var(--sg-ease), transform var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .bcard:hover{ border-color:var(--sg-card-border-hover); transform:translateY(-3px); }
+.ssg .bcard img{ width:100%; aspect-ratio:1/1; object-fit:cover; transition:transform var(--sg-t-reveal) var(--sg-ease); }
+.ssg .bcard:hover img{ transform:scale(1.06); }
+.ssg .bcard .bmeta{
+  position:absolute; left:0; right:0; bottom:0; padding:12px 13px 13px;
+  background:linear-gradient(180deg, rgba(8,7,6,0), rgba(8,7,6,.90) 46%, rgba(8,7,6,.98));
+}
+.ssg .bcard .bt{ display:block; font-weight:700; font-size:14px; color:var(--sg-ink); letter-spacing:-.01em; line-height:1.25; }
+.ssg .bcard .bs{ display:block; margin-top:6px; font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.14em; color:var(--sg-accent-bright); }
+
+/* ============================================================================
+   4 · LEDGER STRIP — the catalogue, stated in its real units
+   ========================================================================= */
+.ssg .figs{ border-block:1px solid var(--sg-line); background:var(--sg-bg-deep); }
+.ssg .figs-in{ display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); }
+.ssg .fig{ padding:clamp(20px,2.3vw,30px) clamp(12px,1.6vw,24px); border-left:1px solid var(--sg-line-2); display:flex; flex-direction:column; gap:8px; min-width:0; }
+.ssg .fig:first-child{ border-left:0; }
+.ssg .fig-v{ font-family:var(--sg-mono); font-weight:500; font-size:clamp(24px,2.7vw,38px); line-height:1; letter-spacing:-.025em; color:var(--sg-ink); }
+.ssg .fig.hi .fig-v{ color:var(--sg-accent-bright); }
+.ssg .fig-l{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500; text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint); line-height:1.6; min-height:2.6em; }
+
+/* ============================================================================
+   5 · DEPARTMENTS
+   ========================================================================= */
+.ssg .depts{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.3vw,18px); }
+.ssg .dept{
+  position:relative; display:block; overflow:hidden; border-radius:var(--sg-r-lg);
+  border:1px solid var(--sg-card-border); background:var(--sg-bg-2);
+  aspect-ratio:4/5; min-height:286px; box-shadow:var(--sg-shadow-rest);
+  transition:border-color var(--sg-t-fast) var(--sg-ease), transform var(--sg-t-fast) var(--sg-ease), box-shadow var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .dept:hover{ border-color:var(--sg-card-border-hover); transform:translateY(-4px); box-shadow:var(--sg-shadow), 0 0 0 1px var(--sg-accent-tint-22); }
+.ssg .dept img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scale(1.02); transition:transform var(--sg-t-reveal) var(--sg-ease); }
+.ssg .dept:hover img{ transform:scale(1.08); }
+.ssg .dept::after{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(8,7,6,.66) 0%, rgba(8,7,6,.05) 36%, rgba(8,7,6,.90) 78%, rgba(8,7,6,.98) 100%);
+}
+.ssg .dept-top{
+  position:absolute; top:0; left:0; right:0; z-index:2; display:flex; align-items:center; justify-content:space-between;
+  gap:10px; padding:14px 14px 0;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500; text-transform:uppercase; letter-spacing:.16em;
+}
+.ssg .dept-top .n{ color:var(--sg-accent-bright); }
+.ssg .dept-top .s{ color:var(--sg-ink-faint); }
+.ssg .dept-bot{ position:absolute; left:0; right:0; bottom:0; z-index:2; padding:16px 16px 18px; }
+.ssg .dept-title{ display:block; color:var(--sg-ink); font-weight:700; font-size:clamp(18px,1.5vw,22px); letter-spacing:-.015em; line-height:1.18; }
+.ssg .dept-nums{
+  display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:9px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.13em; color:var(--sg-ink-faint);
+}
+.ssg .dept-nums b{ color:var(--sg-ink); font-weight:500; }
+.ssg .dept-nums .ok{ color:var(--sg-accent-bright); }
+.ssg .dept-go{
+  display:flex; align-items:center; gap:8px; margin-top:13px; padding-top:11px;
+  border-top:1px solid rgba(255,255,255,.14);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500;
+  text-transform:uppercase; letter-spacing:.16em; color:var(--sg-ink);
+}
+.ssg .dept:hover .dept-go{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); }
+.ssg .dept-go svg{ margin-left:auto; transition:transform var(--sg-t-fast) var(--sg-ease); }
+.ssg .dept:hover .dept-go svg{ transform:translateX(4px); }
+
+/* the rest of the departments, as a dense index */
+.ssg .dindex{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2px 24px; margin-top:clamp(26px,3vw,40px); }
+.ssg .dindex a{
+  display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:10px 0;
+  border-bottom:1px solid var(--sg-line-2); font-size:var(--sg-fs-sm); color:var(--sg-ink-soft);
+  transition:color var(--sg-t-fast) var(--sg-ease), border-color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .dindex a:hover{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); }
+.ssg .dindex a span{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); letter-spacing:.08em; color:var(--sg-ink-faint); flex:none; }
+
+/* ============================================================================
+   6 · LINE SHEET — what is on the floor today
+   ========================================================================= */
+.ssg .sheet-wrap{ border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); background:rgba(255,255,255,.022); overflow:hidden; box-shadow:var(--sg-glass-inset); }
+.ssg .sheet-h{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  padding:14px 18px; border-bottom:1px solid var(--sg-line); background:rgba(255,255,255,.03);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.17em; color:var(--sg-ink-faint);
+}
+.ssg .sheet-h b{ color:var(--sg-accent-bright); font-weight:500; }
+.ssg .sheet-scroll{ overflow-x:auto; scrollbar-width:thin; }
+.ssg .sheet-scroll::-webkit-scrollbar{ height:4px; }
+.ssg .sheet-scroll::-webkit-scrollbar-thumb{ background:var(--sg-line); border-radius:9999px; }
+.ssg table.sheet{ width:100%; min-width:720px; border-collapse:collapse; }
+.ssg table.sheet th{
+  text-align:left; padding:12px 16px; border-bottom:1px solid var(--sg-line);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500;
+  text-transform:uppercase; letter-spacing:.16em; color:var(--sg-ink-faint); white-space:nowrap;
+}
+.ssg table.sheet td{ padding:14px 16px; border-bottom:1px solid var(--sg-line-2); font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); vertical-align:middle; }
+.ssg table.sheet tr:last-child td{ border-bottom:0; }
+.ssg table.sheet tbody tr{ transition:background var(--sg-t-fast) var(--sg-ease); }
+.ssg table.sheet tbody tr:hover{ background:var(--sg-accent-tint-08); }
+.ssg table.sheet .brandc{ font-family:var(--sg-mono); font-size:var(--sg-fs-micro); text-transform:uppercase; letter-spacing:.14em; color:var(--sg-accent-bright); white-space:nowrap; }
+.ssg table.sheet .linec{ color:var(--sg-ink); font-weight:600; }
+.ssg table.sheet .axc{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); }
+.ssg table.sheet .skuc{ font-family:var(--sg-mono); font-size:var(--sg-fs-sm); font-weight:700; color:var(--sg-ink); text-align:right; white-space:nowrap; }
+.ssg table.sheet .stkc{ white-space:nowrap; }
+.ssg table.sheet .actc{ text-align:right; white-space:nowrap; }
+.ssg .gatelink{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint);
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-sm); padding:7px 10px;
+  transition:color var(--sg-t-fast) var(--sg-ease), border-color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .gatelink:hover{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); }
+.ssg .sheet-f{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  padding:14px 18px; border-top:1px solid var(--sg-line); background:rgba(0,0,0,.28);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint);
+}
+
+/* ============================================================================
+   7 · PRODUCT CARDS
+   ========================================================================= */
+.ssg .prods{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.3vw,18px); }
+.ssg .pcard{
+  display:flex; flex-direction:column; min-width:0;
+  background:var(--sg-card-bg); border:1px solid var(--sg-card-border);
+  border-radius:var(--sg-r-md); overflow:hidden; box-shadow:var(--sg-glass-inset);
+  transition:border-color var(--sg-t-fast) var(--sg-ease), transform var(--sg-t-fast) var(--sg-ease), box-shadow var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .pcard:hover{ border-color:var(--sg-card-border-hover); transform:translateY(-3px); box-shadow:var(--sg-shadow-rest); }
+.ssg .pmedia{ position:relative; background:var(--sg-bg-2); border-bottom:1px solid var(--sg-line-2); }
+.ssg .pmedia img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
+.ssg .pmedia .ptag{ position:absolute; top:10px; left:10px; }
+.ssg .pmedia .pstock{ position:absolute; top:10px; right:10px; }
+.ssg .pbody{ display:flex; flex-direction:column; gap:0; padding:15px 15px 16px; flex:1; }
+.ssg .pbrandline{
+  display:flex; align-items:baseline; justify-content:space-between; gap:10px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:500;
+  text-transform:uppercase; letter-spacing:.16em;
+}
+.ssg .pbrand{ color:var(--sg-accent-bright); }
+.ssg .ppack{ color:var(--sg-ink-faint); }
+.ssg .pname{ margin-top:9px; font-size:16px; font-weight:700; letter-spacing:-.012em; line-height:1.3; color:var(--sg-ink); }
+.ssg .pvar{
+  display:flex; flex-wrap:wrap; gap:5px; margin-top:11px;
+}
+.ssg .pvar span{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.12em;
+  color:var(--sg-ink-faint); border:1px solid var(--sg-line-2); border-radius:5px;
+  padding:4px 7px; background:rgba(0,0,0,.28); white-space:nowrap;
+}
+.ssg .pvar span b{ color:var(--sg-ink); font-weight:500; }
+.ssg .pgate{ margin-top:auto; padding-top:14px; display:flex; flex-direction:column; gap:8px; }
+.ssg .pgate .btn{ width:100%; }
+.ssg .pgate-note{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.13em; color:var(--sg-ink-faint); text-align:center; }
+
+/* ============================================================================
+   8 · ORDERING — case logic + reorder, side by side
+   ========================================================================= */
+.ssg .ordgrid{ display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:clamp(16px,2vw,28px); }
+.ssg .panel{ border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); background:rgba(255,255,255,.022); overflow:hidden; box-shadow:var(--sg-glass-inset); display:flex; flex-direction:column; }
+.ssg .panel-h{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:14px 18px; border-bottom:1px solid var(--sg-line); background:rgba(255,255,255,.03);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.17em; color:var(--sg-ink-faint);
+}
+.ssg .panel-b{ padding:clamp(18px,2vw,26px); flex:1; }
+.ssg .panel-b > p{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.65; }
+.ssg .packs{ display:grid; gap:10px; margin-top:18px; }
+.ssg .pack{
+  display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:14px; align-items:center;
+  border:1px solid var(--sg-line-2); border-left:2px solid var(--sg-accent); border-radius:var(--sg-r-sm);
+  padding:14px 16px; background:rgba(0,0,0,.24);
+}
+.ssg .pack .pk{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.18em; color:var(--sg-accent-bright); }
+.ssg .pack .pd{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); }
+.ssg .pack .pd b{ color:var(--sg-ink); font-weight:600; }
+.ssg .pack .pq{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint); white-space:nowrap; }
+.ssg .pack.master{ border-left-color:var(--sg-accent-live); }
+
+.ssg .reorder{ display:grid; gap:10px; margin-top:18px; }
+.ssg .rstep{
+  display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:start;
+  padding:14px 0; border-bottom:1px solid var(--sg-line-2);
+}
+.ssg .rstep:last-of-type{ border-bottom:0; }
+.ssg .rstep .rn{
+  width:26px; height:26px; border-radius:50%; display:grid; place-items:center; flex:none;
+  border:1px solid var(--sg-line-accent); background:var(--sg-accent-tint-08);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-nano); font-weight:700; color:var(--sg-accent-bright);
+}
+.ssg .rstep h4{ font-size:var(--sg-fs-h4); font-weight:700; line-height:1.3; }
+.ssg .rstep p{ margin-top:6px; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.6; }
+.ssg .polookup{
+  display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; padding-top:18px; border-top:1px solid var(--sg-line);
+}
+.ssg .polookup input{
+  flex:1 1 180px; min-width:0; height:44px; padding-inline:14px;
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-btn); background:rgba(0,0,0,.45);
+  color:var(--sg-ink); font-family:var(--sg-mono); font-size:12px; letter-spacing:.06em; outline:none;
+}
+.ssg .polookup input::placeholder{ color:var(--sg-ink-faint); }
+.ssg .polookup input:focus{ border-color:var(--sg-line-accent); }
+.ssg .polookup .btn{ height:44px; flex:0 0 auto; }
+
+/* ============================================================================
+   9 · ROUTES
+   ========================================================================= */
+.ssg .routes{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.3vw,18px); }
+.ssg .route{
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-md); padding:20px;
+  background:rgba(255,255,255,.022); display:flex; flex-direction:column; gap:10px;
+  transition:border-color var(--sg-t-fast) var(--sg-ease), background var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .route:hover{ border-color:var(--sg-line-accent); background:var(--sg-accent-tint-08); }
+.ssg .route-h{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.ssg .route-n{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.18em; color:var(--sg-ink-faint); }
+.ssg .route h3{ font-size:var(--sg-fs-h4); font-weight:700; line-height:1.25; }
+.ssg .route p{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.6; }
+.ssg .route .rmeta{ margin-top:auto; padding-top:12px; border-top:1px solid var(--sg-line-2); font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint); }
+.ssg .route.will{ border-color:var(--sg-line-accent); background:var(--sg-accent-fill-08); }
+
+/* ============================================================================
+   10 · TWO LANES — just landed / closeout
+   ========================================================================= */
+.ssg .lanes{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(18px,2.4vw,40px); }
+.ssg .lane-h{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  padding-bottom:12px; margin-bottom:16px; border-bottom:1px solid var(--sg-line);
+}
+.ssg .lane-h h3{ font-size:var(--sg-fs-h3); font-weight:800; letter-spacing:var(--sg-tr-head); }
+.ssg .lane .prods{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+
+/* ============================================================================
+   11 · BRAND MARQUEE — two rows, opposing
+   ========================================================================= */
+.ssg .brands{ border-block:1px solid var(--sg-line); background:var(--sg-bg-deep); padding-block:clamp(30px,3.6vw,48px); overflow:hidden; }
+.ssg .brands-h{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-bottom:24px; }
+.ssg .mq{ overflow:hidden; mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent); -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent); }
+.ssg .mq + .mq{ margin-top:11px; }
+.ssg .mq-track{ display:flex; width:max-content; gap:11px; animation:mqa 52s linear infinite; }
+.ssg .mq.rev .mq-track{ animation-name:mqb; animation-duration:64s; }
+.ssg .mq-track span{
+  flex:none; font-family:var(--sg-mono); font-size:var(--sg-fs-xs); font-weight:500;
+  text-transform:uppercase; letter-spacing:.14em; color:var(--sg-ink-faint);
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-sm); padding:11px 16px;
+  background:rgba(255,255,255,.022); white-space:nowrap;
+}
+@keyframes mqa{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+@keyframes mqb{ from{ transform:translateX(-50%); } to{ transform:translateX(0); } }
+@media (prefers-reduced-motion: reduce){ .ssg .mq-track{ animation:none; } }
+
+/* ============================================================================
+   12 · ACCOUNT STEPS + CTA
+   ========================================================================= */
+.ssg .acct{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(12px,1.4vw,20px); }
+.ssg .astep{
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); padding:clamp(20px,2.2vw,30px);
+  background:rgba(255,255,255,.022); display:flex; flex-direction:column; gap:12px;
+}
+.ssg .astep .an{
+  font-family:var(--sg-mono); font-size:34px; font-weight:700; line-height:1;
+  letter-spacing:-.04em; color:var(--sg-accent-bright);
+}
+.ssg .astep h3{ font-size:var(--sg-fs-h4); font-weight:700; line-height:1.3; }
+.ssg .astep p{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.65; }
+.ssg .astep .areq{ margin-top:auto; padding-top:14px; border-top:1px solid var(--sg-line-2); display:flex; flex-wrap:wrap; gap:6px; }
+
+.ssg .cta{
+  position:relative; overflow:hidden; border-block:1px solid var(--sg-line);
+  background:
+    radial-gradient(110% 130% at 16% -20%, rgba(43,189,107,.16), transparent 58%),
+    radial-gradient(120% 120% at 100% 120%, rgba(0,0,0,.70), transparent 62%),
+    var(--sg-bg-deep);
+  padding-block:clamp(52px,6.4vw,104px);
+}
+.ssg .cta-in{ display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr); gap:clamp(24px,3vw,56px); align-items:center; }
+.ssg .cta h2{ font-size:var(--sg-fs-h2); font-weight:800; max-width:16ch; line-height:1.05; margin-top:16px; }
+.ssg .cta p{ margin-top:18px; max-width:54ch; font-size:var(--sg-fs-lead); color:var(--sg-ink-soft); line-height:1.6; }
+.ssg .cta-acts{ display:grid; gap:11px; justify-items:stretch; }
+.ssg .cta-acts .btn{ width:100%; }
+.ssg .cta-acts .fine{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); text-transform:uppercase; letter-spacing:.13em; color:var(--sg-ink-faint); line-height:1.8; }
+
+/* ============================================================================
+   13 · FOOTER — a utility surface, not a link stack
+   ========================================================================= */
+.ssg .foot{ background:var(--sg-bg-deep); border-top:1px solid var(--sg-line); }
+
+.ssg .foot-reorder{ border-bottom:1px solid var(--sg-line); background:rgba(43,189,107,.045); }
+.ssg .foot-reorder-in{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; padding-block:22px; }
+.ssg .foot-reorder .fr-t{ min-width:0; }
+.ssg .foot-reorder h3{ font-size:var(--sg-fs-h4); font-weight:700; }
+.ssg .foot-reorder p{ margin-top:6px; font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); letter-spacing:.04em; }
+.ssg .foot-reorder .fr-a{ display:flex; flex-wrap:wrap; gap:9px; }
+
+.ssg .foot-dir{ padding-block:clamp(34px,4vw,54px); border-bottom:1px solid var(--sg-line-2); }
+.ssg .foot-dir h3, .ssg .foot-col h4{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  text-transform:uppercase; letter-spacing:.2em; color:var(--sg-accent-bright);
+  padding-bottom:11px; border-bottom:1px solid var(--sg-line); margin-bottom:12px;
+}
+.ssg .dir-grid{ display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:1px 26px; }
+.ssg .dir-grid a{
+  display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:7px 0;
+  border-bottom:1px solid var(--sg-line-2); font-size:var(--sg-fs-sm); color:var(--sg-ink-soft);
+  transition:color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .dir-grid a:hover{ color:var(--sg-accent-bright); }
+.ssg .dir-grid a span{ font-family:var(--sg-mono); font-size:var(--sg-fs-nano); color:var(--sg-ink-faint); letter-spacing:.07em; flex:none; }
+
+.ssg .foot-cols{ display:grid; grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr)); gap:clamp(20px,2.4vw,38px); padding-block:clamp(34px,4vw,54px); }
+.ssg .foot-col ul li a{
+  display:block; padding:7px 0; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft);
+  transition:color var(--sg-t-fast) var(--sg-ease);
+}
+.ssg .foot-col ul li a:hover{ color:var(--sg-accent-bright); }
+.ssg .foot-about p{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.7; margin-top:16px; max-width:44ch; }
+.ssg .foot-addr{
+  margin-top:18px; padding:15px 16px; border:1px solid var(--sg-line); border-radius:var(--sg-r-md);
+  background:rgba(255,255,255,.022); font-style:normal;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.85;
+}
+.ssg .foot-addr b{ color:var(--sg-ink); font-weight:500; }
+.ssg .foot-addr .hrs{ margin-top:10px; padding-top:10px; border-top:1px solid var(--sg-line-2); display:grid; gap:4px; }
+.ssg .foot-addr .hrs span{ display:flex; justify-content:space-between; gap:12px; }
+.ssg .foot-creds{ display:flex; flex-wrap:wrap; gap:7px; margin-top:16px; }
+
+.ssg .foot-bot{
+  display:flex; flex-wrap:wrap; gap:14px 28px; justify-content:space-between; align-items:flex-start;
+  padding-block:24px 34px; border-top:1px solid var(--sg-line);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.85;
+}
+.ssg .foot-legal{ max-width:82ch; }
+.ssg .foot-bot nav{ display:flex; flex-wrap:wrap; gap:6px 16px; }
+.ssg .foot-bot nav a:hover{ color:var(--sg-accent-bright); }
+
+/* ============================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width:1240px){
+  .ssg .mega-in{ grid-template-columns:minmax(0,1.9fr) minmax(0,1fr); }
+  .ssg .mega-col.util{ grid-column:1 / -1; }
+  .ssg .figs-in{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .ssg .fig:nth-child(4){ border-left:0; }
+  .ssg .fig:nth-child(n+4){ border-top:1px solid var(--sg-line-2); }
+  .ssg .dir-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .ssg .foot-cols{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .ssg .foot-about{ grid-column:1 / -1; }
+}
+@media (max-width:1080px){
+  .ssg .depts{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .prods{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .dindex{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .ssg .cta-in{ grid-template-columns:minmax(0,1fr); }
+  .ssg .hero-lay{ grid-template-columns:minmax(0,1fr); align-items:start; }
+  .ssg .ledger{ max-width:520px; }
+  .ssg .brand-txt{ display:none; }
+}
+@media (max-width:920px){
+  .ssg .cbar-in{ flex-wrap:wrap; min-height:0; padding-block:12px; gap:10px; }
+  .ssg .brand{ margin-right:auto; }
+  .ssg .brand-txt{ display:flex; }
+  .ssg .csearch{ order:10; flex:1 1 100%; }
+  .ssg .cbar-acts .btn-primary span.long{ display:none; }
+  .ssg .mega-tree{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .ordgrid{ grid-template-columns:minmax(0,1fr); }
+  .ssg .routes{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .lanes{ grid-template-columns:minmax(0,1fr); }
+  .ssg .acct{ grid-template-columns:minmax(0,1fr); }
+  .ssg .dir-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .ssg .board{ margin-top:clamp(-96px,-9vw,-70px); }
+}
+@media (max-width:720px){
+  .ssg .rail-l > *.opt, .ssg .rail-r > *.opt{ display:none; }
+  .ssg .mega-in{ grid-template-columns:minmax(0,1fr); }
+  .ssg .mega-col + .mega-col{ margin-top:6px; }
+  .ssg .figs-in{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .fig{ border-left:0; border-top:1px solid var(--sg-line-2); }
+  .ssg .fig:nth-child(-n+2){ border-top:0; }
+  .ssg .fig:nth-child(even){ border-left:1px solid var(--sg-line-2); }
+  .ssg .dindex{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .dir-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .foot-cols{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ssg .routes{ grid-template-columns:minmax(0,1fr); }
+  .ssg .shead h2{ max-width:none; }
+}
+@media (max-width:560px){
+  .ssg .depts{ grid-template-columns:minmax(0,1fr); }
+  .ssg .dept{ aspect-ratio:auto; min-height:0; }
+  .ssg .dept img{ position:relative; height:auto; aspect-ratio:16/10; }
+  .ssg .dept::after{ inset:0 0 auto 0; height:100%; background:linear-gradient(180deg, rgba(8,7,6,.16) 0%, rgba(8,7,6,.10) 40%, rgba(8,7,6,.55) 100%); }
+  .ssg .dept-bot{ position:relative; padding:15px 15px 17px; background:var(--sg-bg-2); }
+  .ssg .dept-top{ padding:13px 13px 0; }
+  .ssg .prods{ grid-template-columns:minmax(0,1fr); }
+  .ssg .lane .prods{ grid-template-columns:minmax(0,1fr); }
+  .ssg .mega-tree{ grid-template-columns:minmax(0,1fr); }
+  .ssg .hero-in{ padding-bottom:clamp(104px,26vw,150px); }
+  .ssg .board{ margin-top:-72px; }
+  .ssg .deptbtn .cnt{ display:none; }
+}
+@media (max-width:420px){
+  .ssg .dindex, .ssg .dir-grid, .ssg .foot-cols{ grid-template-columns:minmax(0,1fr); }
+  .ssg .figs-in{ grid-template-columns:minmax(0,1fr); }
+  .ssg .fig{ border-left:0 !important; border-top:1px solid var(--sg-line-2); }
+  .ssg .fig:first-child{ border-top:0; }
+  .ssg .cbar-acts .login{ display:none; }
+  .ssg .pack{ grid-template-columns:minmax(0,1fr); gap:7px; }
+  .ssg .pack .pq{ text-align:left; }
+}
+
+/* ===== MOBILE NAV CONSOLIDATION — 5 rows collapse to 2 ===================
+   row 1: hamburger + brand + actions   row 2: department rail (categories)
+   the trade rail hides entirely; every link it held already lives in the
+   mega panel, which the hamburger opens. ================================= */
+@media (max-width:720px){
+  .ssg .rail{ display:none; }
+  .ssg .cbar-in{ display:flex; flex-wrap:nowrap; align-items:center; gap:10px; padding-top:10px; padding-bottom:10px; }
+  .ssg .csearch{ display:none; }
+  .ssg .deptbtn{ order:-1; flex:0 0 auto; padding:9px 11px; gap:0; }
+  .ssg .deptbtn-txt, .ssg .deptbtn .cnt{ display:none; }
+  .ssg .brand{ flex:1 1 auto; min-width:0; }
+  .ssg .brand-name{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block; }
+  .ssg .brand-sub{ display:none; }
+  .ssg .cbar-acts{ flex:0 0 auto; gap:8px; }
+  .ssg .cbar-acts .login{ display:none; }
+  .ssg .msearch{ display:flex; }
+  .ssg .mtrade{ display:flex; }
+  .ssg .drail-scroll{ padding-top:0; padding-bottom:0; }
+}
+@media (max-width:420px){
+  .ssg .brand-mark{ width:30px; height:30px; font-size:10px; }
+  .ssg .brand-name{ font-size:14px; }
+  .ssg .cbar-in{ gap:8px; }
+}
+/* mega-panel mobile search + trade line — hidden above 720 */
+.ssg .msearch{ display:none; align-items:center; gap:10px; width:100%; margin-bottom:14px;
+  background:var(--sg-bg-2); border:1px solid var(--sg-line); border-radius:var(--sg-r-btn); padding:12px 14px; color:var(--sg-ink-faint); }
+.ssg .msearch svg{ flex:0 0 auto; color:var(--sg-accent-bright); }
+.ssg .msearch input{ flex:1 1 auto; min-width:0; background:none; border:0; outline:none; color:var(--sg-ink);
+  font-family:var(--sg-mono); font-size:13px; }
+.ssg .msearch input::placeholder{ color:var(--sg-ink-faint); }
+.ssg .msearch:focus-within{ border-color:var(--sg-line-accent); }
+.ssg .mtrade{ display:none; flex-direction:column; gap:4px; width:100%; margin-bottom:16px;
+  font-family:var(--sg-mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--sg-ink-faint); }
+.ssg .mtrade .live{ color:var(--sg-accent-bright); display:inline-flex; align-items:center; gap:7px; }
+.ssg .mtrade .live i{ width:6px; height:6px; border-radius:50%; background:var(--sg-accent-live); box-shadow:var(--sg-glow-live); }
+</style>
+
+<div class="ssg" id="top">
+
+  <!-- ══ 1 · TRADE RAIL — account & ordering tier ═══════════════════════ -->
+  <div class="rail">
+    <div class="wrap rail-in">
+      <div class="rail-l">
+        <span class="live"><i aria-hidden="true"></i>Wholesale only</span>
+        <span>Licensed retailers &amp; businesses</span>
+        <span class="opt">Distributing from <b>Albuquerque, NM</b></span>
+        <span class="opt">Will&#8209;call <b>Mon&ndash;Fri</b></span>
+      </div>
+      <div class="rail-r">
+        <a href="#routes" class="opt">Delivery routes</a>
+        <a href="#reorder" class="opt">Reorder</a>
+        <a href="#apply">Apply for an account</a>
+        <a href="#login"><b>Log in &rarr;</b></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 2 · CATALOGUE BAR — search-forward, mega panel, department rail ═ -->
+  <header class="cbar">
+    <input type="checkbox" id="ssg-mega" class="megatoggle">
+
+    <div class="wrap cbar-in">
+      <a href="#top" class="brand" aria-label="Smoke Shop Gurus — wholesale distribution, home">
+        <span class="brand-mark" aria-hidden="true">SSG</span>
+        <span class="brand-txt">
+          <span class="brand-name">Smoke Shop Gurus</span>
+          <span class="brand-sub">Wholesale &middot; ABQ</span>
+        </span>
+      </a>
+
+      <label for="ssg-mega" class="deptbtn">
+        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="deptbtn-txt">All departments</span>
+        <span class="cnt">27</span>
+      </label>
+
+      <label class="csearch" for="ssg-q">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+        <span class="vh">Search the catalogue by product, brand, flavour or SKU</span>
+        <input id="ssg-q" type="search" autocomplete="off" placeholder="Search 3,498 SKUs — try “foger 30k cherry bomb”">
+        <span class="kbd" aria-hidden="true">/</span>
+      </label>
+
+      <div class="cbar-acts">
+        <a href="#login" class="icon-btn login" aria-label="Log in to your trade account">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.8-4 3.9-6 7.5-6s6.7 2 7.5 6"/></svg>
+        </a>
+        <a href="#reorder" class="icon-btn" aria-label="Purchase order — 0 lines">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5h2l2.2 10.2a2 2 0 0 0 2 1.6h7.1a2 2 0 0 0 2-1.5L21 8H7"/><circle cx="10.5" cy="20" r="1.3" fill="currentColor" stroke="none"/><circle cx="17.5" cy="20" r="1.3" fill="currentColor" stroke="none"/></svg>
+          <span class="count">0</span>
+        </a>
+        <a href="#apply" class="btn btn-primary">
+          Apply<span class="long">&nbsp;for wholesale</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- persistent department rail -->
+    <nav class="drail" aria-label="Departments">
+      <div class="drail-scroll">
+        <label class="all" for="ssg-mega">All 27 departments</label>
+        <a href="#departments">E&#8209;Liquid <b>853</b></a>
+        <a href="#departments">Papers, Cones &amp; Wraps <b>253</b></a>
+        <a href="#departments">Lighters &amp; Torches <b>193</b></a>
+        <a href="#departments">Electric Rigs <b>45</b></a>
+        <a href="#departments">Glass <b>37</b></a>
+        <a href="#departments">Vape Devices <b>26</b></a>
+        <a href="#departments">Incense <b>26</b></a>
+        <a href="#departments">Mushrooms <b>26</b></a>
+        <a href="#departments">Silicone <b>22</b></a>
+        <a href="#departments">Topicals <b>20</b></a>
+        <a href="#departments">Coils &amp; Pods <b>16</b></a>
+        <a href="#departments">General Tobacco <b>16</b></a>
+        <a href="#departments">Batteries <b>14</b></a>
+        <a href="#departments">CBD <b>10</b></a>
+        <a href="#departments">Scales <b>9</b></a>
+        <a href="#brands">Brands <b>186</b></a>
+      </div>
+    </nav>
+
+    <!-- the catalogue tree, full width -->
+    <div class="mega" id="mega">
+      <div class="wrap mega-in">
+
+        <label class="msearch" for="ssg-qm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          <span class="vh">Search the catalogue by product, brand, flavour or SKU</span>
+          <input id="ssg-qm" type="search" autocomplete="off" placeholder="Search 3,498 SKUs…">
+        </label>
+
+        <div class="mtrade">
+          <span class="live"><i aria-hidden="true"></i>Wholesale only · licensed retailers</span>
+          <span>Albuquerque, NM · will‑call Mon–Fri · 5 delivery routes</span>
+        </div>
+
+        <div class="mega-col">
+          <h3>Departments &mdash; 27 &middot; 3,498 SKUs</h3>
+          <div class="mega-tree">
+            <a href="#departments">E&#8209;Liquid <span>853</span></a>
+            <a href="#departments">Papers, Cones &amp; Wraps <span>253</span></a>
+            <a href="#departments">Lighters &amp; Torches <span>193</span></a>
+            <a href="#departments">Electric Rigs <span>45</span></a>
+            <a href="#departments">Glass <span>37</span></a>
+            <a href="#departments">Vape Devices <span>26</span></a>
+            <a href="#departments">Incense <span>26</span></a>
+            <a href="#departments">Mushrooms <span>26</span></a>
+            <a href="#departments">Silicone <span>22</span></a>
+            <a href="#departments">Topicals <span>20</span></a>
+            <a href="#departments">General Tobacco <span>16</span></a>
+            <a href="#departments">Coils &amp; Pods <span>16</span></a>
+            <a href="#departments">Batteries <span>14</span></a>
+            <a href="#departments">CBD <span>10</span></a>
+            <a href="#departments">Scales <span>9</span></a>
+            <a href="#departments">Novelties <span>6</span></a>
+            <a href="#departments">Reclaimers <span>6</span></a>
+            <a href="#departments">Hemp &amp; Delta <span>6</span></a>
+            <a href="#departments">Cream Whip <span>3</span></a>
+            <a href="#departments">Wooden Pipes <span>3</span></a>
+            <a href="#departments">E&#8209;Cig Accessories <span>2</span></a>
+            <a href="#departments">Bath Bombs <span>2</span></a>
+            <a href="#departments">Edibles <span>1</span></a>
+            <a href="#departments">Prerolls <span>1</span></a>
+            <a href="#departments">Tinctures <span>1</span></a>
+            <a href="#departments">Neon <span>1</span></a>
+            <a href="#departments">GeekVape <span>1</span></a>
+          </div>
+        </div>
+
+        <div class="mega-col">
+          <h3>Top brands &mdash; 186 stocked</h3>
+          <div class="mega-list">
+            <a href="#brands">Skunk <span>291 SKUs</span></a>
+            <a href="#brands">Lost Mary <span>276 SKUs</span></a>
+            <a href="#brands">Foger <span>157 SKUs</span></a>
+            <a href="#brands">aLeaf <span>141 SKUs</span></a>
+            <a href="#brands">Lookah <span>116 SKUs</span></a>
+            <a href="#brands">Geek Bar <span>109 SKUs</span></a>
+            <a href="#brands">Raw <span>73 SKUs</span></a>
+            <a href="#brands">Zig Zag <span>43 SKUs</span></a>
+            <a href="#brands">Juicy Jay's <span>40 SKUs</span></a>
+            <a href="#brands">YoCan <span>36 SKUs</span></a>
+            <a href="#brands">Smoke Buddy <span>32 SKUs</span></a>
+            <a href="#brands">King Palm <span>30 SKUs</span></a>
+            <a href="#brands">Puffco <span>27 SKUs</span></a>
+            <a href="#brands">Cartisan <span>25 SKUs</span></a>
+            <a href="#brands">Elements <span>22 SKUs</span></a>
+            <a href="#brands">Blazy Susan <span>19 SKUs</span></a>
+            <a href="#brands">Full brand directory <span>186 &rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="mega-col util">
+          <h3>Buy another way</h3>
+          <div class="mega-list">
+            <a href="#sheet">What&rsquo;s on the floor today <span>1,765 in stock</span></a>
+            <a href="#lanes">Just landed &amp; closeout <span>2 lanes</span></a>
+            <a href="#ordering">Case &amp; master&#8209;case packs <span>pack logic</span></a>
+            <a href="#reorder">Reorder a past purchase order <span>account</span></a>
+            <a href="#routes">Delivery routes across New Mexico <span>5 routes</span></a>
+            <a href="#apply">Licence &amp; compliance requirements <span>before you order</span></a>
+          </div>
+          <p class="mega-note">Pricing, case quantities and pack sizes are visible to <b>approved trade accounts</b> only. Search covers every flavour, style, size and colour &mdash; not just the line name.</p>
+          <div class="mega-acts">
+            <a href="#apply" class="btn btn-primary">Apply for an account</a>
+            <a href="#login" class="btn btn-ghost">Log in for pricing</a>
+          </div>
+        </div>
+
+      </div>
+      <label for="ssg-mega" class="megaclose">Close &times;</label>
+    </div>
+  </header>
+
+  <!-- ══ 3 · HERO — full-bleed trade counter ════════════════════════════ -->
+  <section class="hero" aria-label="Smoke Shop Gurus wholesale">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="img/hero-wholesale.jpg" width="1024" height="576" alt="" loading="eager">
+    </div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+
+    <div class="wrap hero-in">
+      <div class="hero-top">
+        <span class="eyebrow dot">Albuquerque, New Mexico</span>
+        <span class="chip accent">Trade counter &middot; B2B only</span>
+        <span class="chip">Est. line &middot; 186 brands</span>
+      </div>
+
+      <div class="hero-lay">
+        <div>
+          <h1>Pull the whole shop off <em>one purchase order</em>.</h1>
+          <p class="hero-sub">
+            Glass, papers, torches, vape hardware, hemp and functional mushrooms &mdash;
+            <b>3,498 orderable SKUs</b> across <b>568 lines</b> and <b>186 brands</b>,
+            held in one Albuquerque warehouse and sold only to the shops that resell them.
+            Every flavour, every style, every colour is its own line on the order.
+          </p>
+          <div class="hero-cta">
+            <a href="#apply" class="btn btn-primary">
+              Apply for an account
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#login" class="btn btn-ghost">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+              Log in for pricing
+            </a>
+          </div>
+        </div>
+
+        <div class="ledger">
+          <div class="ledger-h"><span>Counter ledger</span><b>Open</b></div>
+          <dl>
+            <div class="row"><dt>Orderable SKUs</dt><dd>3,498</dd></div>
+            <div class="row"><dt>Lines &middot; departments</dt><dd>568 &middot; 27</dd></div>
+            <div class="row"><dt>Brands &middot; suppliers</dt><dd>186 &middot; 60</dd></div>
+            <div class="row"><dt>In stock now</dt><dd class="ok">1,765 SKUs</dd></div>
+            <div class="row"><dt>Ships &amp; delivers</dt><dd>New Mexico</dd></div>
+            <div class="row"><dt>Will&#8209;call pickup</dt><dd class="ok">Albuquerque</dd></div>
+            <div class="row"><dt>Who can buy</dt><dd>Licensed retail</dd></div>
+            <div class="row"><dt>Pricing</dt><dd>In account only</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- the counter board bleeds over the hero's bottom edge -->
+    <div class="wrap board">
+      <div class="board-h">
+        <span>Straight to the shelf &mdash; today&rsquo;s counter board</span>
+        <span class="live"><i aria-hidden="true"></i>Stock counted this morning</span>
+      </div>
+      <div class="board-scroll">
+        <a class="bcard" href="#departments">
+          <img src="img/cat-cones.jpg" width="1024" height="1024" alt="Pre-rolled paper cones in unbleached brown and white, fanned upright with an open display box behind.">
+          <span class="bmeta"><span class="bt">Papers, Cones &amp; Wraps</span><span class="bs">253 SKUs &middot; 144 in stock</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/cat-glass.jpg" width="1024" height="1024" alt="Three borosilicate pieces of varying heights — a beaker bong, a bubbler and a hand pipe — in clear and deep emerald glass.">
+          <span class="bmeta"><span class="bt">Glass</span><span class="bs">37 SKUs &middot; 10 lines</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/aleaf-torch-5.jpg" width="1024" height="1024" alt="Compact handheld butane torch with a matte black body, brass nozzle and trigger ignition.">
+          <span class="bmeta"><span class="bt">Lighters &amp; Torches</span><span class="bs">193 SKUs &middot; 117 in stock</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/cat-mushroom.jpg" width="1024" height="1024" alt="Matte-black supplement pouch with a small amber jar of mushroom capsules and two dried functional mushroom caps.">
+          <span class="bmeta"><span class="bt">Mushrooms</span><span class="bs">26 SKUs &middot; 15 in stock</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/aleaf-beaker.jpg" width="1024" height="1024" alt="aLeaf 10 inch beaker-base bong with an ice-pinch neck, removable downstem and bowl, finished with emerald accents.">
+          <span class="bmeta"><span class="bt">Boxed Glass</span><span class="bs">37 styles &middot; one line</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/cat-pet-treats.jpg" width="1024" height="1024" alt="Amber glass jar of CBD dog treats with a wooden lid, bone-shaped biscuits and a green botanical sprig alongside.">
+          <span class="bmeta"><span class="bt">CBD &amp; Topicals</span><span class="bs">30 SKUs &middot; 13 lines</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/aleaf-grinder.jpg" width="1024" height="1024" alt="63mm four-piece anodised aluminium grinder in matte black, opened to show the milled teeth and threaded edge.">
+          <span class="bmeta"><span class="bt">Grinders</span><span class="bs">63mm &middot; 5 colours</span></span>
+        </a>
+        <a class="bcard" href="#departments">
+          <img src="img/aleaf-matrix.jpg" width="1024" height="1024" alt="aLeaf 12 inch clear glass water pipe with stacked gridded double matrix percolators.">
+          <span class="bmeta"><span class="bt">Water Pipes</span><span class="bs">Boxed &middot; case packs</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 4 · THE FIGURES ════════════════════════════════════════════════ -->
+  <section class="figs" aria-label="Catalogue figures">
+    <div class="wrap">
+      <div class="figs-in">
+        <div class="fig hi"><span class="fig-v">3,498</span><span class="fig-l">Orderable SKUs<br>every flavour &amp; style</span></div>
+        <div class="fig"><span class="fig-v">568</span><span class="fig-l">Product lines<br>6.16 SKUs per line</span></div>
+        <div class="fig"><span class="fig-v">186</span><span class="fig-l">Brands stocked<br>one purchase order</span></div>
+        <div class="fig"><span class="fig-v">27</span><span class="fig-l">Departments<br>on the shelf and online</span></div>
+        <div class="fig"><span class="fig-v">60</span><span class="fig-l">Suppliers<br>direct and distributed</span></div>
+        <div class="fig hi"><span class="fig-v">ABQ</span><span class="fig-l">Albuquerque warehouse<br>will-call and delivery</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 5 · DEPARTMENTS ════════════════════════════════════════════════ -->
+  <section class="sec" id="departments">
+    <div class="wrap">
+      <header class="shead">
+        <div>
+          <span class="eyebrow">The catalogue</span>
+          <h2>Buy the department, not the item.</h2>
+          <p class="lead">Twenty&#8209;seven departments, 568 lines, 3,498 orderable SKUs. Unit and case quantities show on every line &mdash; pricing appears the moment your account is approved.</p>
+        </div>
+        <label class="shead-link" for="ssg-mega" style="cursor:pointer">
+          Open the full catalogue tree
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </label>
+      </header>
+
+      <div class="depts">
+
+        <a class="dept" href="#sheet">
+          <img src="img/cat-cones.jpg" width="1024" height="1024" alt="Pre-rolled paper cones in unbleached brown and white, fanned upright with an open display box behind.">
+          <span class="dept-top"><span class="n">02</span><span class="s">Fast turn</span></span>
+          <span class="dept-bot">
+            <span class="dept-title">Papers, Cones &amp; Wraps</span>
+            <span class="dept-nums"><span><b>253</b> SKUs</span><span><b>30</b> lines</span><span class="ok"><b>144</b> in stock</span></span>
+            <span class="dept-go">Browse department
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="dept" href="#sheet">
+          <img src="img/cat-glass.jpg" width="1024" height="1024" alt="Three borosilicate pieces of varying heights — a beaker bong, a bubbler and a hand pipe — in clear and deep emerald glass.">
+          <span class="dept-top"><span class="n">05</span><span class="s">Boxed for transport</span></span>
+          <span class="dept-bot">
+            <span class="dept-title">Glass &mdash; Bongs, Rigs &amp; Pipes</span>
+            <span class="dept-nums"><span><b>37</b> SKUs</span><span><b>10</b> lines</span><span><b>5</b> brands</span></span>
+            <span class="dept-go">Browse department
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="dept" href="#sheet">
+          <img src="img/cat-mushroom.jpg" width="1024" height="1024" alt="Matte-black supplement pouch with a small amber jar of mushroom capsules and two dried functional mushroom caps.">
+          <span class="dept-top"><span class="n">08</span><span class="s">Behind the register</span></span>
+          <span class="dept-bot">
+            <span class="dept-title">Functional Mushrooms</span>
+            <span class="dept-nums"><span><b>26</b> SKUs</span><span><b>3</b> lines</span><span class="ok"><b>15</b> in stock</span></span>
+            <span class="dept-go">Browse department
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </span>
+          </span>
+        </a>
+
+        <a class="dept" href="#sheet">
+          <img src="img/cat-pet-treats.jpg" width="1024" height="1024" alt="Amber glass jar of CBD dog treats with a wooden lid, bone-shaped biscuits and a green botanical sprig alongside.">
+          <span class="dept-top"><span class="n">14</span><span class="s">Compliance copy on label</span></span>
+          <span class="dept-bot">
+            <span class="dept-title">CBD, Topicals &amp; Pet</span>
+            <span class="dept-nums"><span><b>30</b> SKUs</span><span><b>13</b> lines</span><span><b>8</b> brands</span></span>
+            <span class="dept-go">Browse department
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </span>
+          </span>
+        </a>
+
+      </div>
+
+      <div class="dindex">
+        <a href="#sheet">E&#8209;Liquid <span>853 SKUs</span></a>
+        <a href="#sheet">Lighters &amp; Torches <span>193 SKUs</span></a>
+        <a href="#sheet">Electric Rigs <span>45 SKUs</span></a>
+        <a href="#sheet">Vape Devices <span>26 SKUs</span></a>
+        <a href="#sheet">Incense <span>26 SKUs</span></a>
+        <a href="#sheet">Silicone <span>22 SKUs</span></a>
+        <a href="#sheet">Topicals <span>20 SKUs</span></a>
+        <a href="#sheet">General Tobacco <span>16 SKUs</span></a>
+        <a href="#sheet">Coils &amp; Pods <span>16 SKUs</span></a>
+        <a href="#sheet">Batteries <span>14 SKUs</span></a>
+        <a href="#sheet">CBD <span>10 SKUs</span></a>
+        <a href="#sheet">Scales <span>9 SKUs</span></a>
+        <a href="#sheet">Novelties <span>6 SKUs</span></a>
+        <a href="#sheet">Reclaimers <span>6 SKUs</span></a>
+        <a href="#sheet">Hemp &amp; Delta <span>6 SKUs</span></a>
+        <a href="#sheet">Cream Whip <span>3 SKUs</span></a>
+        <a href="#sheet">Wooden Pipes <span>3 SKUs</span></a>
+        <a href="#sheet">E&#8209;Cig Accessories <span>2 SKUs</span></a>
+        <a href="#sheet">Bath Bombs <span>2 SKUs</span></a>
+        <a href="#sheet">Edibles &middot; Prerolls &middot; Tinctures <span>3 SKUs</span></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-feather">
+
+  <!-- ══ 6 · LINE SHEET ═════════════════════════════════════════════════ -->
+  <section class="sec sec-warm" id="sheet">
+    <div class="wrap">
+      <header class="shead">
+        <div>
+          <span class="eyebrow dot">On the floor today</span>
+          <h2>1,765 SKUs in stock, across 444 lines.</h2>
+          <p class="lead">The deepest lines we hold, in the unit you order in. A line is one page; the flavours, styles and colours under it are separate SKUs, separately counted and separately reordered.</p>
+        </div>
+        <a class="shead-link" href="#login">
+          Log in for the full line sheet
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+      </header>
+
+      <div class="sheet-wrap">
+        <div class="sheet-h">
+          <span>Deep lines &mdash; stock counted this morning</span>
+          <span><b>8</b> of 568 lines shown</span>
+        </div>
+        <div class="sheet-scroll">
+          <table class="sheet">
+            <thead>
+              <tr>
+                <th scope="col">Brand</th>
+                <th scope="col">Line</th>
+                <th scope="col">Options</th>
+                <th scope="col" style="text-align:right">SKUs</th>
+                <th scope="col">In stock</th>
+                <th scope="col" style="text-align:right">Order</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="brandc">Foger</td>
+                <td class="linec">Foger 30K</td>
+                <td class="axc">82 flavours &times; 2 styles (Pod, Kit)</td>
+                <td class="skuc">157</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>20 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">aLeaf</td>
+                <td class="linec">aLeaf Torches</td>
+                <td class="axc">7 sizes &times; 18 colours</td>
+                <td class="skuc">72</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>63 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">Lost Mary</td>
+                <td class="linec">Off&#8209;Stamp Crystal 35K</td>
+                <td class="axc">28 flavours &times; 2 styles</td>
+                <td class="skuc">56</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>31 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">Lookah</td>
+                <td class="linec">Lookah 510 Battery</td>
+                <td class="axc">4 styles &times; 13 colours</td>
+                <td class="skuc">52</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>32 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">Geek Bar</td>
+                <td class="linec">Geek Bar Pulse 15K</td>
+                <td class="axc">49 flavours</td>
+                <td class="skuc">49</td>
+                <td class="stkc"><span class="chip warn"><i aria-hidden="true"></i>7 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">Lost Mary</td>
+                <td class="linec">MT35K</td>
+                <td class="axc">46 flavours</td>
+                <td class="skuc">46</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>21 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">Skunk</td>
+                <td class="linec">Skunk Sidekick</td>
+                <td class="axc">3 scents &times; 16 colours</td>
+                <td class="skuc">36</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>19 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+              <tr>
+                <td class="brandc">Smoke Buddy</td>
+                <td class="linec">Smoke Buddy</td>
+                <td class="axc">2 sizes &times; 16 colours</td>
+                <td class="skuc">32</td>
+                <td class="stkc"><span class="chip accent"><i aria-hidden="true"></i>22 SKUs</span></td>
+                <td class="actc"><a class="gatelink" href="#login">Log in for pricing</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sheet-f">
+          <span>Stock figures are SKU counts, not case counts. Pack sizes and pricing show inside an approved account.</span>
+          <a class="gatelink" href="#apply">Apply for an account &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 7 · HOUSE LINE ═════════════════════════════════════════════════ -->
+  <section class="sec" id="house">
+    <div class="wrap">
+      <header class="shead">
+        <div>
+          <span class="eyebrow">House line</span>
+          <h2>aLeaf glass, stocked deep.</h2>
+          <p class="lead">The line we hold in depth so you are not waiting on a factory. Boxed, barcoded and ready to go straight on a shelf &mdash; 141 SKUs across five aLeaf lines.</p>
+        </div>
+        <a class="shead-link" href="#sheet">
+          All aLeaf
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+      </header>
+
+      <div class="prods">
+
+        <article class="pcard">
+          <div class="pmedia">
+            <span class="chip ptag">Boxed glass</span>
+            <span class="chip accent pstock"><i aria-hidden="true"></i>In stock</span>
+            <img src="img/aleaf-beaker.jpg" width="1024" height="1024" alt="aLeaf 10 inch beaker-base bong with an ice-pinch neck, removable downstem and bowl, finished with emerald accents.">
+          </div>
+          <div class="pbody">
+            <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Case pack</span></div>
+            <h3 class="pname">10&quot; Bubble Beaker</h3>
+            <div class="pvar">
+              <span>Ice pinch</span><span>Borosilicate</span><span>Line: <b>37 styles</b></span>
+            </div>
+            <div class="pgate">
+              <a href="#login" class="btn btn-ghost btn-sm">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+                Log in for pricing
+              </a>
+              <span class="pgate-note">Licensed retailers only</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <div class="pmedia">
+            <span class="chip ptag">Boxed glass</span>
+            <span class="chip accent pstock"><i aria-hidden="true"></i>In stock</span>
+            <img src="img/aleaf-matrix.jpg" width="1024" height="1024" alt="aLeaf 12 inch clear glass water pipe with stacked gridded double matrix percolators.">
+          </div>
+          <div class="pbody">
+            <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Case pack</span></div>
+            <h3 class="pname">12&quot; Double Matrix</h3>
+            <div class="pvar">
+              <span>Dual perc</span><span>Boxed</span><span>Line: <b>37 styles</b></span>
+            </div>
+            <div class="pgate">
+              <a href="#login" class="btn btn-ghost btn-sm">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+                Log in for pricing
+              </a>
+              <span class="pgate-note">Licensed retailers only</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <div class="pmedia">
+            <span class="chip ptag">Dab rig</span>
+            <span class="chip accent pstock"><i aria-hidden="true"></i>In stock</span>
+            <img src="img/aleaf-boxrig.jpg" width="1024" height="1024" alt="aLeaf 8 inch box-shaped glass dab rig in lavender UV-reactive glass with an internal recycler, bent neck and side-joint quartz banger.">
+          </div>
+          <div class="pbody">
+            <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Case pack</span></div>
+            <h3 class="pname">8&quot; Interstellar Box Rig &mdash; Lavender UV</h3>
+            <div class="pvar">
+              <span>Recycler</span><span>UV reactive</span><span>Line: <b>37 styles</b></span>
+            </div>
+            <div class="pgate">
+              <a href="#login" class="btn btn-ghost btn-sm">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+                Log in for pricing
+              </a>
+              <span class="pgate-note">Licensed retailers only</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <div class="pmedia">
+            <span class="chip ptag">Concentrate</span>
+            <span class="chip accent pstock"><i aria-hidden="true"></i>In stock</span>
+            <img src="img/aleaf-nectar.jpg" width="1024" height="1024" alt="aLeaf glass nectar collector — slim borosilicate tube with a tapered quartz tip and a coloured accent band.">
+          </div>
+          <div class="pbody">
+            <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Case pack</span></div>
+            <h3 class="pname">8&quot; Nectar Collector</h3>
+            <div class="pvar">
+              <span>Quartz tip</span><span>Boxed</span><span>Bangers &amp; kits: <b>23</b></span>
+            </div>
+            <div class="pgate">
+              <a href="#login" class="btn btn-ghost btn-sm">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+                Log in for pricing
+              </a>
+              <span class="pgate-note">Licensed retailers only</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 8 · ORDERING — case logic + reorder ════════════════════════════ -->
+  <section class="sec sec-2" id="ordering">
+    <div class="wrap">
+      <header class="shead">
+        <div>
+          <span class="eyebrow">How an order is built</span>
+          <h2>By the unit, the inner or the master case.</h2>
+          <p class="lead">Every line carries its own pack structure. You choose the level you buy at, mix levels inside one purchase order, and reorder the whole thing next month without rebuilding it.</p>
+        </div>
+      </header>
+
+      <div class="ordgrid">
+
+        <div class="panel">
+          <div class="panel-h"><span>Pack structure</span><span>Per line</span></div>
+          <div class="panel-b">
+            <p>A line like <strong>Foger 30K</strong> carries 82 flavours across two styles &mdash; 157 orderable SKUs. You can take a single flavour by the inner, or the whole display by the master case. Quantities and pricing for each level appear on the line inside your account.</p>
+            <div class="packs">
+              <div class="pack">
+                <span class="pk">Unit</span>
+                <span class="pd"><b>Single SKU</b> &mdash; one flavour, one style, one colour. The smallest thing you can put on an order.</span>
+                <span class="pq">Qty in account</span>
+              </div>
+              <div class="pack">
+                <span class="pk">Inner</span>
+                <span class="pd"><b>Shelf pack</b> &mdash; the sealed inner a shop puts straight on the counter without breaking it down.</span>
+                <span class="pq">Qty in account</span>
+              </div>
+              <div class="pack master">
+                <span class="pk">Master</span>
+                <span class="pd"><b>Master case</b> &mdash; full factory case, mixed or single flavour depending on the line. Palletised for delivery.</span>
+                <span class="pq">Qty in account</span>
+              </div>
+            </div>
+            <p style="margin-top:18px"><span class="chip warn">Minimum order applies</span> <span class="chip">Mixed cases allowed on most lines</span></p>
+          </div>
+        </div>
+
+        <div class="panel" id="reorder">
+          <div class="panel-h"><span>Reorder</span><span>Three clicks</span></div>
+          <div class="panel-b">
+            <p>Most of what a shop buys is the same list, month after month. Your order history is the list &mdash; open it, adjust what moved, send it.</p>
+            <div class="reorder">
+              <div class="rstep">
+                <span class="rn">1</span>
+                <div>
+                  <h4>Open a past purchase order</h4>
+                  <p>Every order you have placed stays in your account, line by line, with the flavour and colour breakdown intact.</p>
+                </div>
+              </div>
+              <div class="rstep">
+                <span class="rn">2</span>
+                <div>
+                  <h4>Swap what sold and what did not</h4>
+                  <p>Out-of-stock SKUs are flagged against the current count so nothing silently drops off the order.</p>
+                </div>
+              </div>
+              <div class="rstep">
+                <span class="rn">3</span>
+                <div>
+                  <h4>Send it to the trade desk</h4>
+                  <p>Pick will&#8209;call in Albuquerque or the next delivery route running your way.</p>
+                </div>
+              </div>
+            </div>
+            <form class="polookup" onsubmit="return false;">
+              <label class="vh" for="ssg-po">Purchase order number</label>
+              <input id="ssg-po" type="text" placeholder="PO number or order reference" autocomplete="off">
+              <button type="submit" class="btn btn-primary btn-sm">Find my order</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 9 · ROUTES ═════════════════════════════════════════════════════ -->
+  <section class="sec" id="routes">
+    <div class="wrap">
+      <header class="shead">
+        <div>
+          <span class="eyebrow">Getting it to you</span>
+          <h2>Five routes out of Albuquerque.</h2>
+          <p class="lead">We run our own routes across New Mexico rather than handing every order to a carrier. Your route sets your cut&#8209;off; the trade desk confirms it when your account is approved.</p>
+        </div>
+        <a class="shead-link" href="#apply">
+          Ask the trade desk about your route
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+      </header>
+
+      <div class="routes">
+        <div class="route will">
+          <div class="route-h"><span class="route-n">Route 00</span><span class="chip accent"><i aria-hidden="true"></i>Open now</span></div>
+          <h3>Will&#8209;call &mdash; Albuquerque</h3>
+          <p>Pull your own order off the counter. Pick, check and load at the warehouse door, Monday to Friday.</p>
+          <div class="rmeta">Bernalillo County &middot; collect same day</div>
+        </div>
+        <div class="route">
+          <div class="route-h"><span class="route-n">Route 01</span><span class="chip">Metro</span></div>
+          <h3>Albuquerque &amp; Rio Rancho</h3>
+          <p>The metro run &mdash; Albuquerque, Rio Rancho, Bernalillo, Los Lunas and Belen.</p>
+          <div class="rmeta">Bernalillo &middot; Sandoval &middot; Valencia</div>
+        </div>
+        <div class="route">
+          <div class="route-h"><span class="route-n">Route 02</span><span class="chip">North</span></div>
+          <h3>Santa Fe &amp; Española</h3>
+          <p>Up the corridor through Santa Fe, Española, Los Alamos and Taos.</p>
+          <div class="rmeta">Santa Fe &middot; Rio Arriba &middot; Taos</div>
+        </div>
+        <div class="route">
+          <div class="route-h"><span class="route-n">Route 03</span><span class="chip">South</span></div>
+          <h3>Las Cruces &amp; the border</h3>
+          <p>Down I&#8209;25 to Socorro, Truth or Consequences, Las Cruces, Deming and Anthony.</p>
+          <div class="rmeta">Doña Ana &middot; Sierra &middot; Luna</div>
+        </div>
+        <div class="route">
+          <div class="route-h"><span class="route-n">Route 04</span><span class="chip">West</span></div>
+          <h3>Gallup &amp; Four Corners</h3>
+          <p>West to Grants and Gallup, then north to Farmington, Aztec and Bloomfield.</p>
+          <div class="rmeta">McKinley &middot; Cibola &middot; San Juan</div>
+        </div>
+        <div class="route">
+          <div class="route-h"><span class="route-n">Route 05</span><span class="chip">East</span></div>
+          <h3>Roswell &amp; the east side</h3>
+          <p>Out to Clovis, Portales, Roswell, Artesia, Carlsbad and Hobbs.</p>
+          <div class="rmeta">Chaves &middot; Eddy &middot; Lea &middot; Curry</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 10 · TWO LANES ═════════════════════════════════════════════════ -->
+  <section class="sec sec-warm" id="lanes">
+    <div class="wrap">
+      <div class="lanes">
+
+        <div class="lane">
+          <div class="lane-h">
+            <div>
+              <span class="eyebrow dot">Lane one</span>
+              <h3 style="margin-top:12px">Just landed</h3>
+            </div>
+            <a class="shead-link" href="#sheet">All new
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="prods">
+            <article class="pcard">
+              <div class="pmedia">
+                <span class="chip accent ptag">New</span>
+                <img src="img/aleaf-torch-6.jpg" width="1024" height="1024" alt="Larger dual-jet butane torch in matte black and gunmetal with an angled nozzle head and ergonomic grip.">
+              </div>
+              <div class="pbody">
+                <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Display case</span></div>
+                <h3 class="pname">6&quot; Dual&#8209;Jet Torch</h3>
+                <div class="pvar"><span>Butane</span><span>Line: <b>7 sizes</b></span><span><b>18 colours</b></span></div>
+                <div class="pgate">
+                  <a href="#login" class="btn btn-ghost btn-sm">Log in for pricing</a>
+                  <span class="pgate-note">Licensed retailers only</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard">
+              <div class="pmedia">
+                <span class="chip accent ptag">New</span>
+                <img src="img/aleaf-grinder.jpg" width="1024" height="1024" alt="63mm four-piece anodised aluminium grinder in matte black, opened to show the milled teeth and threaded edge.">
+              </div>
+              <div class="pbody">
+                <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Case pack</span></div>
+                <h3 class="pname">63mm Four&#8209;Piece Grinder</h3>
+                <div class="pvar"><span>Anodised</span><span><b>5 colours</b></span></div>
+                <div class="pgate">
+                  <a href="#login" class="btn btn-ghost btn-sm">Log in for pricing</a>
+                  <span class="pgate-note">Licensed retailers only</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="lane">
+          <div class="lane-h">
+            <div>
+              <span class="eyebrow">Lane two</span>
+              <h3 style="margin-top:12px">Closeout &amp; last cases</h3>
+            </div>
+            <a class="shead-link" href="#sheet">All closeout
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="prods">
+            <article class="pcard">
+              <div class="pmedia">
+                <span class="chip warn ptag">Last cases</span>
+                <img src="img/aleaf-torch-5.jpg" width="1024" height="1024" alt="Compact handheld butane torch with a matte black body, brass nozzle and trigger ignition.">
+              </div>
+              <div class="pbody">
+                <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Display case</span></div>
+                <h3 class="pname">5&quot; Single&#8209;Jet Torch</h3>
+                <div class="pvar"><span>Butane</span><span>While stock lasts</span></div>
+                <div class="pgate">
+                  <a href="#login" class="btn btn-ghost btn-sm">Log in for pricing</a>
+                  <span class="pgate-note">Licensed retailers only</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard">
+              <div class="pmedia">
+                <span class="chip warn ptag">Assorted</span>
+                <img src="img/aleaf-triangle-pipe.jpg" width="1024" height="1024" alt="Glycerin-filled glass hand pipe with a triangular body, glitter suspended in the coil and an iridescent sheen.">
+              </div>
+              <div class="pbody">
+                <div class="pbrandline"><span class="pbrand">aLeaf</span><span class="ppack">Assorted case</span></div>
+                <h3 class="pname">Glitter Glycerin Triangle Pipe</h3>
+                <div class="pvar"><span>Freezable</span><span>Assorted colours</span></div>
+                <div class="pgate">
+                  <a href="#login" class="btn btn-ghost btn-sm">Log in for pricing</a>
+                  <span class="pgate-note">Licensed retailers only</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 11 · BRANDS ════════════════════════════════════════════════════ -->
+  <section class="brands" id="brands" aria-label="Brands stocked">
+    <div class="wrap brands-h">
+      <span class="eyebrow">186 brands &middot; one purchase order</span>
+      <a class="shead-link" href="#brands">
+        Full brand directory
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="mq">
+      <div class="mq-track">
+        <span>Skunk</span><span>Lost Mary</span><span>Foger</span><span>aLeaf</span><span>Lookah</span><span>Geek Bar</span><span>Raw</span><span>Zig Zag</span><span>Juicy Jay&rsquo;s</span><span>King Palm</span><span>Puffco</span><span>YoCan</span><span>Elements</span><span>Blazy Susan</span>
+        <span aria-hidden="true">Skunk</span><span aria-hidden="true">Lost Mary</span><span aria-hidden="true">Foger</span><span aria-hidden="true">aLeaf</span><span aria-hidden="true">Lookah</span><span aria-hidden="true">Geek Bar</span><span aria-hidden="true">Raw</span><span aria-hidden="true">Zig Zag</span><span aria-hidden="true">Juicy Jay&rsquo;s</span><span aria-hidden="true">King Palm</span><span aria-hidden="true">Puffco</span><span aria-hidden="true">YoCan</span><span aria-hidden="true">Elements</span><span aria-hidden="true">Blazy Susan</span>
+      </div>
+    </div>
+    <div class="mq rev">
+      <div class="mq-track">
+        <span>Cartisan</span><span>Smoke Buddy</span><span>Afghan Hemp</span><span>Good Hemptations</span><span>Organabus</span><span>Glasshouse</span><span>Hillside Glass</span><span>Ooze</span><span>MJ Arsenal</span><span>White Rhino</span><span>Wulf</span><span>Vibes</span><span>Clipper</span><span>Horizon Tech</span>
+        <span aria-hidden="true">Cartisan</span><span aria-hidden="true">Smoke Buddy</span><span aria-hidden="true">Afghan Hemp</span><span aria-hidden="true">Good Hemptations</span><span aria-hidden="true">Organabus</span><span aria-hidden="true">Glasshouse</span><span aria-hidden="true">Hillside Glass</span><span aria-hidden="true">Ooze</span><span aria-hidden="true">MJ Arsenal</span><span aria-hidden="true">White Rhino</span><span aria-hidden="true">Wulf</span><span aria-hidden="true">Vibes</span><span aria-hidden="true">Clipper</span><span aria-hidden="true">Horizon Tech</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 12 · ACCOUNT ═══════════════════════════════════════════════════ -->
+  <section class="sec" id="apply">
+    <div class="wrap">
+      <header class="shead">
+        <div>
+          <span class="eyebrow">Opening an account</span>
+          <h2>Three steps to a trade account.</h2>
+          <p class="lead">We sell to licensed retail businesses only &mdash; smoke shops, vape shops, dispensary retail and convenience stores. Never to the public.</p>
+        </div>
+      </header>
+
+      <div class="acct">
+        <div class="astep">
+          <span class="an">01</span>
+          <h3>Apply with your credentials</h3>
+          <p>Business name, resale certificate and any licences your categories require. One form, one review.</p>
+          <div class="areq">
+            <span class="chip">Resale certificate</span><span class="chip">Business licence</span><span class="chip">21+</span>
+          </div>
+        </div>
+        <div class="astep">
+          <span class="an">02</span>
+          <h3>We verify, then unlock the catalogue</h3>
+          <p>Once your documents check out, pricing, pack sizes and case quantities appear across all 3,498 SKUs in your account.</p>
+          <div class="areq">
+            <span class="chip accent">3,498 SKUs unlocked</span><span class="chip">568 lines</span>
+          </div>
+        </div>
+        <div class="astep">
+          <span class="an">03</span>
+          <h3>Order, collect or take the route</h3>
+          <p>Build a purchase order across 186 brands, collect at will&#8209;call in Albuquerque or take the next route running your way, then reorder from history.</p>
+          <div class="areq">
+            <span class="chip">Will&#8209;call</span><span class="chip">5 delivery routes</span><span class="chip warn">Minimum order applies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 13 · CTA ═══════════════════════════════════════════════════════ -->
+  <section class="cta" id="login">
+    <div class="wrap cta-in">
+      <div>
+        <span class="eyebrow dot">Trade accounts open</span>
+        <h2>Stop buying retail to fill your own shelves.</h2>
+        <p>One distributor in Albuquerque, 186 brands, 3,498 orderable SKUs and pricing that only makes sense if you are the one reselling it.</p>
+      </div>
+      <div class="cta-acts">
+        <a href="#apply" class="btn btn-primary">
+          Apply for wholesale
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#login" class="btn btn-ghost">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+          Existing account &mdash; log in
+        </a>
+        <span class="fine">Licensed retailers only &middot; Credentials verified before approval &middot; No pricing shown to the public</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 14 · FOOTER — a utility surface ════════════════════════════════ -->
+  <footer class="foot">
+
+    <div class="foot-reorder">
+      <div class="wrap foot-reorder-in">
+        <div class="fr-t">
+          <h3>Reorder your last purchase order</h3>
+          <p>Account holders &mdash; pull a past order, adjust it, send it. Out-of-stock lines flagged against this morning&rsquo;s count.</p>
+        </div>
+        <div class="fr-a">
+          <a href="#reorder" class="btn btn-primary btn-sm">Open order history</a>
+          <a href="#login" class="btn btn-ghost btn-sm">Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap foot-dir">
+      <h3>Department directory &mdash; 27 departments, 3,498 SKUs</h3>
+      <div class="dir-grid">
+        <a href="#departments">E&#8209;Liquid <span>853</span></a>
+        <a href="#departments">Papers, Cones &amp; Wraps <span>253</span></a>
+        <a href="#departments">Lighters &amp; Torches <span>193</span></a>
+        <a href="#departments">Electric Rigs <span>45</span></a>
+        <a href="#departments">Glass <span>37</span></a>
+        <a href="#departments">Vape Devices <span>26</span></a>
+        <a href="#departments">Incense <span>26</span></a>
+        <a href="#departments">Mushrooms <span>26</span></a>
+        <a href="#departments">Silicone <span>22</span></a>
+        <a href="#departments">Topicals <span>20</span></a>
+        <a href="#departments">General Tobacco <span>16</span></a>
+        <a href="#departments">Coils &amp; Pods <span>16</span></a>
+        <a href="#departments">Batteries <span>14</span></a>
+        <a href="#departments">CBD <span>10</span></a>
+        <a href="#departments">Scales <span>9</span></a>
+        <a href="#departments">Novelties <span>6</span></a>
+        <a href="#departments">Reclaimers <span>6</span></a>
+        <a href="#departments">Hemp &amp; Delta <span>6</span></a>
+        <a href="#departments">Cream Whip <span>3</span></a>
+        <a href="#departments">Wooden Pipes <span>3</span></a>
+        <a href="#departments">E&#8209;Cig Accessories <span>2</span></a>
+        <a href="#departments">Bath Bombs <span>2</span></a>
+        <a href="#departments">Edibles <span>1</span></a>
+        <a href="#departments">Prerolls <span>1</span></a>
+        <a href="#departments">Tinctures <span>1</span></a>
+        <a href="#departments">Neon <span>1</span></a>
+        <a href="#departments">GeekVape <span>1</span></a>
+      </div>
+    </div>
+
+    <div class="wrap foot-cols">
+
+      <div class="foot-col foot-about">
+        <h4>Smoke Shop Gurus</h4>
+        <p>Smoke, vape, hemp and wellness distribution out of Albuquerque, New Mexico. We supply licensed smoke shops, vape shops, dispensary retail and convenience stores across the state &mdash; never the end consumer.</p>
+        <address class="foot-addr">
+          <b>Warehouse &amp; will&#8209;call</b><br>
+          Albuquerque, New Mexico<br>
+          Bernalillo County
+          <span class="hrs">
+            <span>Will&#8209;call<b>Mon&ndash;Fri</b></span>
+            <span>Trade desk<b>Mon&ndash;Fri</b></span>
+            <span>Route cut&#8209;off<b>Confirmed in account</b></span>
+          </span>
+        </address>
+        <div class="foot-creds">
+          <span class="chip accent">Licensed distributor</span>
+          <span class="chip">B2B only</span>
+          <span class="chip">Albuquerque, NM</span>
+          <span class="chip">21+</span>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Ordering</h4>
+        <ul>
+          <li><a href="#ordering">Unit, inner &amp; master case</a></li>
+          <li><a href="#ordering">Mixed cases</a></li>
+          <li><a href="#ordering">Minimum order policy</a></li>
+          <li><a href="#reorder">Reorder from history</a></li>
+          <li><a href="#reorder">Purchase order lookup</a></li>
+          <li><a href="#sheet">Stock &amp; backorder policy</a></li>
+          <li><a href="#apply">Special orders &amp; indent</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Delivery &amp; pickup</h4>
+        <ul>
+          <li><a href="#routes">Will&#8209;call &mdash; Albuquerque</a></li>
+          <li><a href="#routes">Route 01 &mdash; ABQ &amp; Rio Rancho</a></li>
+          <li><a href="#routes">Route 02 &mdash; Santa Fe &amp; Española</a></li>
+          <li><a href="#routes">Route 03 &mdash; Las Cruces &amp; border</a></li>
+          <li><a href="#routes">Route 04 &mdash; Gallup &amp; Four Corners</a></li>
+          <li><a href="#routes">Route 05 &mdash; Roswell &amp; east side</a></li>
+          <li><a href="#routes">Breakage, shortages &amp; returns</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Licence &amp; compliance</h4>
+        <ul>
+          <li><a href="#apply">Who can open an account</a></li>
+          <li><a href="#apply">Documents we need</a></li>
+          <li><a href="#apply">Resale certificate</a></li>
+          <li><a href="#apply">Age&#8209;restricted categories</a></li>
+          <li><a href="#apply">New Mexico retail rules</a></li>
+          <li><a href="#apply">Product legality by category</a></li>
+          <li><a href="#apply">Responsible retailing</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Your account</h4>
+        <ul>
+          <li><a href="#login">Log in</a></li>
+          <li><a href="#apply">Apply for an account</a></li>
+          <li><a href="#reorder">Order history</a></li>
+          <li><a href="#reorder">Saved buying lists</a></li>
+          <li><a href="#login">Statements &amp; terms</a></li>
+          <li><a href="#apply">Talk to the trade desk</a></li>
+          <li><a href="#brands">Brand directory &mdash; 186</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="wrap foot-bot">
+      <span class="foot-legal">
+        &copy; 2026 Smoke Shop Gurus &middot; Albuquerque, New Mexico. Wholesale only &mdash; sold to licensed retail businesses for resale. 21+. All products intended for legal use only; category availability varies by state and by licence. Pricing, pack sizes and case quantities are visible to approved trade accounts and are never shown to the public.
+      </span>
+      <nav aria-label="Legal">
+        <a href="#apply">Terms of trade</a>
+        <a href="#apply">Privacy</a>
+        <a href="#routes">Shipping &amp; routes</a>
+        <a href="#apply">Accessibility</a>
+      </nav>
+    </div>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
