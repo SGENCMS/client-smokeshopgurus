@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>The Market You Already Stock</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="280,300 searches a month sit undefended in this market. 116,140 of them name products Smoke Shop Gurus already stocks. A measured look at the market, the competition, the catalogue and the gap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<style>
+/* ============================================================================
+   SGEN-GREEN — shared design tokens v1 · DARK-FIRST
+   Palette approved and carried unchanged from sgen-green-tokens.css.
+   ========================================================================== */
+:root{
+  --sg-font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sg-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --sg-fs-hero:    clamp(38px, 8.2vw, 108px);
+  --sg-fs-h2:      clamp(26px, 4.8vw, 62px);
+  --sg-fs-h3:      clamp(21px, 2.4vw, 30px);
+  --sg-fs-h4:      clamp(17px, 1.4vw, 20px);
+  --sg-fs-lead:    clamp(17px, 1.5vw, 21px);
+  --sg-fs-body:    18px;
+  --sg-fs-sm:      15px;
+  --sg-fs-xs:      13px;
+  --sg-fs-eyebrow: 11px;
+  --sg-fs-micro:   10px;
+
+  --sg-lh-tight: 1.05;  --sg-lh-snug: 1.25;  --sg-lh-body: 1.6;
+  --sg-tr-hero: -.045em; --sg-tr-head: -.02em; --sg-tr-label: .18em;
+
+  --sg-r-sm: 8px;  --sg-r-md: 12px;  --sg-r-lg: 16px;
+  --sg-r-btn: 8px;
+  --sg-r-pill: 9999px;
+  --sg-r-squircle: clamp(24px, 4vw, 56px);
+
+  --sg-ease:        cubic-bezier(.16,.84,.36,1);
+  --sg-t-fast: .2s;  --sg-t-reveal: .6s;
+
+  --sg-maxw: 1320px;
+  --sg-readw: 720px;
+  --sg-pad: clamp(54px, 7.4vw, 112px);
+  --sg-gutter: clamp(16px, 4vw, 44px);
+
+  --sg-accent-darkest: #0a4a2a;
+  --sg-accent-deep:    #145c37;
+  --sg-accent:         #1c7a45;
+  --sg-accent-lift:    #1f8c4f;
+  --sg-accent-bright:  #2bbd6b;
+  --sg-accent-live:    #3ddc84;
+
+  --sg-accent-tint-08: rgba(43,189,107,.08);
+  --sg-accent-tint-14: rgba(43,189,107,.14);
+  --sg-accent-tint-22: rgba(43,189,107,.22);
+  --sg-accent-fill-08: rgba(28,122,69,.08);
+  --sg-accent-fill-18: rgba(28,122,69,.18);
+
+  --sg-bg-deep: #080706;
+  --sg-bg:      #0d0d0f;
+  --sg-bg-2:    #16161a;
+  --sg-bg-warm: #121214;
+  --sg-bg-header: linear-gradient(180deg,#141112,#0c0b0d);
+
+  --sg-ink:       #f4f2ee;
+  --sg-ink-soft:  rgba(255,255,255,.62);
+  --sg-ink-faint: rgba(255,255,255,.46);
+  --sg-ink-on-accent: #ffffff;
+
+  --sg-line:         rgba(255,255,255,.10);
+  --sg-line-2:       rgba(255,255,255,.06);
+  --sg-line-accent:  rgba(43,189,107,.28);
+  --sg-card-bg:      rgba(255,255,255,.04);
+  --sg-card-bg-2:    rgba(255,255,255,.07);
+  --sg-card-border:  rgba(255,255,255,.10);
+  --sg-card-border-hover: rgba(43,189,107,.45);
+
+  --sg-success:      #2bbd6b;
+  --sg-success-bg:   rgba(43,189,107,.12);
+  --sg-danger:       #ff4d4f;
+  --sg-danger-bg:    rgba(255,77,79,.12);
+  --sg-warn:         #e0a93b;
+  --sg-warn-bg:      rgba(224,169,59,.12);
+  --sg-info:         #4a8fe0;
+  --sg-info-bg:      rgba(74,143,224,.12);
+  --sg-neutral:      #cdc8c0;
+
+  --sg-chart-track: rgba(255,255,255,.055);
+
+  --sg-shadow:      0 40px 90px -30px rgba(0,0,0,.80);
+  --sg-shadow-2:    0 50px 120px -24px rgba(0,0,0,.72);
+  --sg-glass-inset: inset 0 1px 0 rgba(255,255,255,.06);
+
+  --sg-grad-accent: linear-gradient(135deg, var(--sg-accent-deep), var(--sg-accent-lift));
+  --sg-grad-text:   linear-gradient(100deg, #3ddc84, #2bbd6b 60%, #1f8c4f);
+  --sg-divider-feather: linear-gradient(to right, rgba(43,189,107,0), rgba(43,189,107,.85) 50%, rgba(43,189,107,0));
+
+  color-scheme: dark;
+}
+
+/* ============================ RESET / BASE ================================ */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ animation:none !important; transition:none !important; } }
+body{
+  margin:0;
+  background:var(--sg-bg);
+  color:var(--sg-ink);
+  font-family:var(--sg-font);
+  font-size:var(--sg-fs-body);
+  line-height:var(--sg-lh-body);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{ max-width:100%; display:block; }
+h1,h2,h3,h4,p,ul,ol,figure,blockquote{ margin:0; }
+ul,ol{ padding:0; list-style:none; }
+a{ color:var(--sg-accent-bright); text-decoration:none; }
+a:hover{ color:var(--sg-accent-live); }
+:focus-visible{ outline:2px solid var(--sg-accent-live); outline-offset:3px; border-radius:4px; }
+
+body::before{
+  content:""; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.045;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.55'/></svg>");
+  mix-blend-mode:overlay;
+}
+
+/* ============================== CHROME =================================== */
+.topbar{
+  position:sticky; top:0; z-index:200;
+  background:var(--sg-bg-header);
+  border-bottom:1px solid var(--sg-line);
+  backdrop-filter:saturate(160%) blur(14px);
+}
+.topbar-in{
+  max-width:var(--sg-maxw); margin:0 auto;
+  padding:12px var(--sg-gutter);
+  display:flex; align-items:center; gap:16px; justify-content:space-between;
+}
+.brandmark{ display:flex; align-items:center; gap:10px; min-width:0; }
+.brandmark .dot{
+  width:9px; height:9px; border-radius:var(--sg-r-pill);
+  background:var(--sg-accent-live);
+  box-shadow:0 0 0 4px rgba(61,220,132,.14), 0 0 14px rgba(61,220,132,.55);
+  flex:none;
+}
+.brandmark .name{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--sg-ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.topbar .meta{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--sg-ink-faint); white-space:nowrap;
+}
+@media (max-width:620px){ .topbar .meta{ display:none; } }
+
+.progress{ height:2px; background:var(--sg-line-2); position:relative; overflow:hidden; }
+.progress span{
+  display:block; height:100%; width:100%; transform-origin:0 50%; transform:scaleX(0);
+  background:linear-gradient(90deg,var(--sg-accent-deep),var(--sg-accent-live));
+  animation:grow linear both; animation-timeline:scroll(root block);
+}
+@keyframes grow{ to{ transform:scaleX(1); } }
+
+/* ============================== LAYOUT =================================== */
+.wrap{ width:100%; max-width:var(--sg-maxw); margin:0 auto; padding-left:var(--sg-gutter); padding-right:var(--sg-gutter); }
+.slide{
+  position:relative; padding-top:var(--sg-pad); padding-bottom:var(--sg-pad);
+  border-bottom:1px solid var(--sg-line-2); overflow:hidden;
+  background:var(--sg-bg);
+}
+.slide, .closer{ scroll-margin-top:64px; }
+.slide.alt{ background:var(--sg-bg-warm); }
+.slide.raised{ background:var(--sg-bg-2); }
+.slide.deep{ background:var(--sg-bg-deep); }
+
+.slide .wm{
+  position:absolute; right:-.06em; top:50%; transform:translateY(-50%);
+  font-family:var(--sg-font); font-weight:900; font-size:clamp(180px,30vw,420px);
+  line-height:.75; letter-spacing:-.06em; color:rgba(255,255,255,.022);
+  -webkit-text-stroke:1px rgba(255,255,255,.035);
+  pointer-events:none; user-select:none; z-index:0;
+}
+.slide > .wrap{ position:relative; z-index:1; }
+
+/* ============================ TYPOGRAPHY ================================= */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-eyebrow); font-weight:500;
+  letter-spacing:var(--sg-tr-label); text-transform:uppercase;
+  color:var(--sg-accent-bright); margin-bottom:22px;
+}
+.eyebrow::before{ content:""; width:24px; height:1px; background:var(--sg-line-accent); flex:none; }
+.eyebrow .num{ color:var(--sg-ink-faint); }
+
+h1.headline{ font-size:var(--sg-fs-hero); }
+h2.headline{ font-size:var(--sg-fs-h2); }
+.headline{
+  font-weight:800; line-height:var(--sg-lh-tight); letter-spacing:var(--sg-tr-hero);
+  color:var(--sg-ink); max-width:19ch; overflow-wrap:break-word; hyphens:manual;
+}
+h2.headline{ letter-spacing:var(--sg-tr-head); max-width:22ch; line-height:1.08; }
+.headline em{ font-style:normal; background:var(--sg-grad-text); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+.lead{ font-size:var(--sg-fs-lead); color:var(--sg-ink-soft); margin-top:26px; max-width:66ch; }
+.body{ color:var(--sg-ink-soft); margin-top:22px; max-width:68ch; }
+.body strong{ color:var(--sg-ink); font-weight:600; }
+
+.datastrip{
+  margin-top:30px; padding:14px 18px;
+  border:1px solid var(--sg-line); border-left:2px solid var(--sg-line-accent);
+  border-radius:var(--sg-r-sm); background:var(--sg-accent-fill-08);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); font-weight:400;
+  line-height:1.9; color:var(--sg-ink-faint); overflow-wrap:anywhere;
+}
+.datastrip b{ color:var(--sg-accent-bright); font-weight:500; }
+
+/* ======================= PRESENTER NOTE (secondary) ====================== */
+.note{
+  margin-top:40px; max-width:62ch;
+  border:1px dashed rgba(255,255,255,.13); border-radius:var(--sg-r-md);
+  background:rgba(255,255,255,.018);
+  padding:16px 18px 18px;
+}
+.note-label{
+  display:flex; align-items:center; gap:8px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--sg-ink-faint);
+  margin-bottom:9px;
+}
+.note-label::before{
+  content:""; width:5px; height:5px; border-radius:var(--sg-r-pill);
+  background:var(--sg-ink-faint); flex:none;
+}
+.note p{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); font-weight:300;
+  line-height:1.75; color:var(--sg-ink-faint);
+}
+
+/* =============================== CARDS =================================== */
+.grid{ display:grid; gap:18px; margin-top:44px; }
+.g2{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+.g3{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.g4{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media (max-width:900px){ .g3,.g4{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:620px){ .g2,.g3,.g4{ grid-template-columns:minmax(0,1fr); } }
+
+.card{
+  border:1px solid var(--sg-card-border); border-radius:var(--sg-r-lg);
+  background:var(--sg-card-bg); padding:24px;
+  box-shadow:var(--sg-glass-inset);
+  transition:border-color var(--sg-t-fast) var(--sg-ease), background var(--sg-t-fast) var(--sg-ease);
+}
+.card:hover{ border-color:var(--sg-card-border-hover); background:var(--sg-card-bg-2); }
+.card .k{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.16em;
+  text-transform:uppercase; color:var(--sg-ink-faint); margin-bottom:12px;
+}
+.card .v{
+  font-family:var(--sg-mono); font-weight:700; font-size:clamp(28px,4vw,44px);
+  line-height:1; letter-spacing:-.03em; color:var(--sg-ink); overflow-wrap:anywhere;
+}
+.card .v.accent{ color:var(--sg-accent-bright); }
+.card .v.danger{ color:var(--sg-danger); }
+.card .v.neutral{ color:var(--sg-neutral); }
+.card .v.warn{ color:var(--sg-warn); }
+.card .s{ margin-top:12px; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.5; }
+.card .u{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); margin-top:6px; }
+.card.lead-card{ border-color:var(--sg-line-accent); background:var(--sg-accent-fill-08); }
+
+/* ===================== CENTREPIECE — TWO DECLARED SCALES ================= */
+.centre{
+  margin-top:52px; border:1px solid var(--sg-line); border-radius:var(--sg-r-squircle);
+  background:
+    radial-gradient(120% 90% at 50% -20%, rgba(43,189,107,.10), transparent 58%),
+    rgba(255,255,255,.022);
+  padding:clamp(22px,4vw,52px); box-shadow:var(--sg-shadow-2), var(--sg-glass-inset);
+}
+.scaleblock + .scaleblock{ margin-top:34px; padding-top:30px; border-top:1px solid var(--sg-line); }
+.scale-head{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.2em;
+  text-transform:uppercase; color:var(--sg-ink-faint); margin-bottom:26px;
+}
+.scale-head b{ color:var(--sg-accent-bright); font-weight:500; letter-spacing:.16em; }
+.sets{ display:grid; gap:14px; }
+.setrow{ display:grid; grid-template-columns:minmax(0,1fr); gap:10px; }
+.setlabel{
+  display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 14px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint);
+  letter-spacing:.04em;
+}
+.setlabel .n{ font-weight:700; font-size:var(--sg-fs-sm); color:var(--sg-ink); letter-spacing:0; }
+.setbar{ height:clamp(40px,6vw,64px); border-radius:var(--sg-r-sm); background:var(--sg-chart-track); position:relative; overflow:hidden; }
+.setbar i{
+  position:absolute; inset:0 auto 0 0; display:block; border-radius:var(--sg-r-sm);
+  background:var(--sg-grad-accent); box-shadow:inset 0 1px 0 rgba(255,255,255,.10);
+}
+.setbar.hero i{ background:linear-gradient(135deg,var(--sg-accent),var(--sg-accent-live)); box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 0 40px rgba(43,189,107,.22); }
+.setbar.pos i{ background:linear-gradient(135deg,#243028,#3a4a3f); }
+.setbar.tiny i{ background:var(--sg-accent-live); box-shadow:0 0 22px rgba(61,220,132,.55); }
+.setbar em{
+  position:absolute; top:50%; transform:translateY(-50%); left:14px;
+  font-style:normal; font-family:var(--sg-mono); font-weight:700;
+  font-size:clamp(17px,2.6vw,28px); letter-spacing:-.02em; color:var(--sg-ink); z-index:2;
+}
+.setbar em.out{ left:auto; right:14px; color:var(--sg-ink-faint); font-weight:400; font-size:var(--sg-fs-xs); }
+@media (max-width:440px){ .setbar em.out{ display:none; } }
+
+.overlap{
+  margin-top:32px; padding-top:28px; border-top:1px solid var(--sg-line);
+  display:flex; flex-wrap:wrap; align-items:center; gap:clamp(16px,3vw,40px);
+}
+.overlap .big{
+  font-family:var(--sg-mono); font-weight:700; font-size:clamp(70px,13vw,150px);
+  line-height:.8; letter-spacing:-.06em; color:var(--sg-accent-live);
+  text-shadow:0 0 60px rgba(61,220,132,.30);
+}
+.overlap .txt{ flex:1 1 260px; min-width:0; }
+.overlap .txt .t1{ font-size:var(--sg-fs-h3); font-weight:700; letter-spacing:var(--sg-tr-head); color:var(--sg-ink); line-height:1.15; }
+.overlap .txt .t2{ margin-top:10px; font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.8; }
+
+/* ============================== BAR CHART ================================ */
+.chart{ margin-top:44px; }
+.chart-head{
+  display:flex; flex-wrap:wrap; gap:8px 18px; align-items:baseline;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.18em;
+  text-transform:uppercase; color:var(--sg-ink-faint);
+  padding-bottom:12px; border-bottom:1px solid var(--sg-line); margin-bottom:22px;
+}
+.chart-head .unit{ margin-left:auto; color:var(--sg-ink-faint); }
+.bars{ display:grid; gap:15px; }
+.bar{ display:grid; grid-template-columns:minmax(120px,178px) minmax(0,1fr) minmax(74px,auto); gap:14px; align-items:center; }
+@media (max-width:680px){
+  .bar{ grid-template-columns:minmax(0,1fr) auto; gap:6px 10px; }
+  .bar .name{ grid-column:1; }
+  .bar .val{ grid-column:2; text-align:right; }
+  .bar .track{ grid-column:1 / -1; }
+}
+.bar .name{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint);
+  letter-spacing:.02em; overflow-wrap:anywhere;
+}
+.bar .track{ height:clamp(22px,3vw,30px); border-radius:6px; background:var(--sg-chart-track); position:relative; overflow:hidden; }
+.bar .track i{ position:absolute; inset:0 auto 0 0; border-radius:6px; background:rgba(205,200,192,.22); box-shadow:inset 0 1px 0 rgba(255,255,255,.07); }
+.bar .val{ font-family:var(--sg-mono); font-size:var(--sg-fs-sm); font-weight:500; color:var(--sg-ink-soft); text-align:right; white-space:nowrap; }
+.bar.you .name, .bar.hl .name{ color:var(--sg-accent-bright); font-weight:700; }
+.bar.you .track i, .bar.hl .track i{ background:var(--sg-grad-accent); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 26px rgba(43,189,107,.30); }
+.bar.you .val, .bar.hl .val{ color:var(--sg-accent-bright); font-weight:700; }
+.bar.you .track::after{
+  content:"YOU"; position:absolute; top:50%; right:9px; transform:translateY(-50%);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.2em; color:var(--sg-ink-faint);
+}
+.bar .track i.min{ min-width:3px; }
+.chart-foot{ margin-top:18px; font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.8; }
+
+/* ===================== VARIANT-AXIS / LONG-TAIL BLOCK ==================== */
+.axes{ display:grid; gap:12px; margin-top:38px; }
+.ax{ display:grid; grid-template-columns:minmax(96px,132px) minmax(0,1fr) minmax(112px,auto); gap:14px; align-items:center; }
+@media (max-width:680px){
+  .ax{ grid-template-columns:minmax(0,1fr) auto; gap:5px 10px; }
+  .ax .axn{ grid-column:1; } .ax .axv{ grid-column:2; text-align:right; } .ax .axt{ grid-column:1 / -1; }
+}
+.ax .axn{ font-family:var(--sg-mono); font-size:var(--sg-fs-sm); font-weight:500; color:var(--sg-ink); letter-spacing:.02em; }
+.ax .axt{ height:clamp(20px,2.6vw,26px); border-radius:5px; background:var(--sg-chart-track); position:relative; overflow:hidden; }
+.ax .axt i{ position:absolute; inset:0 auto 0 0; border-radius:5px; background:var(--sg-grad-accent); box-shadow:inset 0 1px 0 rgba(255,255,255,.10); min-width:4px; }
+.ax .axv{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); text-align:right; white-space:nowrap; }
+.ax .axv b{ color:var(--sg-ink-soft); font-weight:500; }
+
+.famblock{
+  margin-top:40px; border:1px solid var(--sg-line-accent); border-radius:var(--sg-r-lg);
+  background:var(--sg-accent-fill-08); padding:clamp(20px,3vw,32px);
+}
+.famblock .fh{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.2em;
+  text-transform:uppercase; color:var(--sg-ink-faint); margin-bottom:18px;
+}
+.famblock .fname{ font-size:var(--sg-fs-h3); font-weight:700; letter-spacing:var(--sg-tr-head); color:var(--sg-ink); line-height:1.15; }
+.fmath{
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin-top:20px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-sm); color:var(--sg-ink-soft);
+}
+.fmath span.op{ color:var(--sg-ink-faint); }
+.fmath b{ color:var(--sg-accent-bright); font-weight:700; font-size:clamp(20px,2.8vw,30px); letter-spacing:-.02em; line-height:1; }
+.queries{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.queries span{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-neutral);
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-sm);
+  background:rgba(0,0,0,.30); padding:7px 11px; overflow-wrap:anywhere;
+}
+.queries span::before{ content:"⌕ "; color:var(--sg-ink-faint); }
+
+/* ============================== FUNNEL =================================== */
+.funnel{ display:grid; gap:12px; margin-top:40px; }
+.fstep{
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center;
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-md);
+  padding:18px 20px; background:rgba(255,255,255,.022);
+}
+.fstep .fl{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); }
+.fstep .fv{ font-family:var(--sg-mono); font-weight:700; font-size:clamp(24px,3.4vw,34px); line-height:1; letter-spacing:-.03em; color:var(--sg-ink); white-space:nowrap; }
+.fstep.zero{ border-color:rgba(255,77,79,.32); background:var(--sg-danger-bg); }
+.fstep.zero .fv{ color:var(--sg-danger); }
+.fstep.zero .fl{ color:var(--sg-ink); }
+.fchev{ text-align:center; font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); letter-spacing:.3em; }
+
+/* =========================== QUOTE / SPECIMENS =========================== */
+.specimens{ display:grid; gap:10px; margin-top:34px; }
+.spec{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-sm); color:var(--sg-neutral);
+  border:1px solid var(--sg-line); border-left:2px solid var(--sg-warn);
+  border-radius:var(--sg-r-sm); background:var(--sg-warn-bg);
+  padding:13px 16px; overflow-wrap:anywhere;
+}
+.spec .tag{ display:block; font-size:var(--sg-fs-micro); letter-spacing:.18em; text-transform:uppercase; color:var(--sg-ink-faint); margin-bottom:6px; }
+
+/* ======================== SERVED vs RENDERED ============================= */
+.compare{ display:grid; gap:18px; margin-top:44px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:760px){ .compare{ grid-template-columns:minmax(0,1fr); } }
+.pane{ border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); background:rgba(255,255,255,.022); overflow:hidden; }
+.pane-head{
+  display:flex; flex-wrap:wrap; gap:6px 12px; align-items:baseline; justify-content:space-between;
+  padding:14px 18px; border-bottom:1px solid var(--sg-line); background:rgba(255,255,255,.025);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.18em; text-transform:uppercase; color:var(--sg-ink-faint);
+}
+.pane-head b{ color:var(--sg-ink); font-weight:500; letter-spacing:.14em; }
+.pane ul{ padding:8px 0; }
+.pane li{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; justify-content:space-between;
+  padding:11px 18px; border-bottom:1px solid var(--sg-line-2);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-soft);
+}
+.pane li:last-child{ border-bottom:0; }
+.pane li span{ overflow-wrap:anywhere; }
+.chip{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:500; letter-spacing:.14em;
+  text-transform:uppercase; padding:4px 9px; border-radius:var(--sg-r-pill); white-space:nowrap; flex:none;
+}
+.chip.bad{ color:var(--sg-danger); background:var(--sg-danger-bg); border:1px solid rgba(255,77,79,.30); }
+.chip.good{ color:var(--sg-success); background:var(--sg-success-bg); border:1px solid var(--sg-line-accent); }
+.chip.warn{ color:var(--sg-warn); background:var(--sg-warn-bg); border:1px solid rgba(224,169,59,.30); }
+.chip.info{ color:var(--sg-info); background:var(--sg-info-bg); border:1px solid rgba(74,143,224,.30); }
+
+/* =========================== POSITION TILES ============================== */
+.postiles{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:38px; }
+@media (max-width:900px){ .postiles{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:480px){ .postiles{ grid-template-columns:minmax(0,1fr); } }
+.ptile{ border:1px solid var(--sg-line); border-radius:var(--sg-r-md); padding:22px; background:rgba(255,255,255,.022); text-align:left; }
+.ptile .pk{ font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.18em; text-transform:uppercase; color:var(--sg-ink-faint); }
+.ptile .pv{ font-family:var(--sg-mono); font-weight:700; font-size:clamp(34px,5vw,52px); line-height:1; letter-spacing:-.04em; margin-top:14px; color:var(--sg-ink); }
+.ptile.z .pv{ color:var(--sg-danger); }
+.ptile.t .pv{ color:var(--sg-accent-bright); }
+.ptile.w .pv{ color:var(--sg-warn); }
+.ptile .ps{ margin-top:10px; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); }
+
+/* ============================== SOURCES ================================== */
+.sources{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:34px; }
+@media (max-width:760px){ .sources{ grid-template-columns:minmax(0,1fr); } }
+.src{
+  display:flex; gap:12px; align-items:flex-start;
+  border:1px solid var(--sg-line-2); border-radius:var(--sg-r-sm);
+  background:rgba(255,255,255,.018); padding:14px 16px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.7;
+}
+.src b{ color:var(--sg-accent-bright); font-weight:500; flex:none; }
+
+/* ============================== STEPS ==================================== */
+.steps{ counter-reset:s; display:grid; gap:16px; margin-top:38px; }
+.step{
+  counter-increment:s; position:relative;
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-lg);
+  background:rgba(255,255,255,.022); padding:26px 26px 26px 78px;
+}
+.step::before{
+  content:counter(s,decimal-leading-zero); position:absolute; left:24px; top:24px;
+  font-family:var(--sg-mono); font-weight:700; font-size:20px; letter-spacing:-.02em;
+  color:var(--sg-accent-bright);
+}
+@media (max-width:520px){
+  .step{ padding:22px 20px; }
+  .step::before{ position:static; display:block; margin-bottom:10px; }
+}
+.step h3{ font-size:var(--sg-fs-h4); font-weight:700; letter-spacing:var(--sg-tr-head); color:var(--sg-ink); line-height:1.3; }
+.step p{ margin-top:10px; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); }
+.step .sm{ margin-top:14px; font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.8; overflow-wrap:anywhere; }
+.step.gate{ border-color:var(--sg-line-accent); background:var(--sg-accent-fill-08); }
+
+.order{ display:grid; gap:12px; margin-top:32px; }
+.ord{
+  display:grid; grid-template-columns:auto minmax(0,1fr); gap:16px; align-items:center;
+  border:1px solid var(--sg-line); border-left:3px solid var(--sg-accent); border-radius:var(--sg-r-md);
+  padding:18px 20px; background:rgba(255,255,255,.022);
+}
+@media (max-width:520px){ .ord{ grid-template-columns:minmax(0,1fr); gap:8px; } }
+.ord .oi{ font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.2em; text-transform:uppercase; color:var(--sg-accent-bright); }
+.ord .ot{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); }
+.ord .ot b{ color:var(--sg-ink); font-weight:600; }
+.ord.last{ border-left-color:var(--sg-neutral); }
+.ord.last .oi{ color:var(--sg-neutral); }
+
+/* ================================ Q&A =================================== */
+.qa{ display:grid; gap:14px; margin-top:44px; }
+.qitem{ border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); background:rgba(255,255,255,.022); overflow:hidden; }
+.qitem .q{ display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:start; padding:22px 24px 0; }
+.qitem .qm{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); font-weight:700; color:var(--sg-danger); letter-spacing:.1em; line-height:1.7; }
+.qitem .qt{ font-size:var(--sg-fs-h4); font-weight:700; letter-spacing:var(--sg-tr-head); color:var(--sg-ink); line-height:1.35; }
+.qitem .a{ display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:start; padding:14px 24px 24px; }
+.qitem .am{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); font-weight:700; color:var(--sg-accent-bright); letter-spacing:.1em; line-height:1.75; }
+.qitem .at{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.7; }
+.qitem .at b{ color:var(--sg-ink); font-weight:600; }
+@media (max-width:520px){ .qitem .q, .qitem .a{ grid-template-columns:minmax(0,1fr); gap:8px; } }
+
+/* =============================== CLOSER ================================== */
+.closer{
+  position:relative; overflow:hidden;
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(43,189,107,.14), transparent 55%),
+    radial-gradient(140% 120% at 50% 120%, rgba(0,0,0,.68), transparent 60%),
+    var(--sg-bg-deep);
+  padding-top:clamp(68px,10vw,136px); padding-bottom:clamp(68px,10vw,136px);
+  border-bottom:1px solid var(--sg-line-2);
+}
+.closer .headline{ max-width:24ch; }
+.throughline{ margin-top:34px; max-width:78ch; font-size:var(--sg-fs-lead); color:var(--sg-ink-soft); line-height:1.65; }
+.throughline b{ color:var(--sg-ink); font-weight:600; }
+.throughline em{ font-style:normal; color:var(--sg-accent-bright); font-weight:600; }
+
+/* =============================== FOOTER ================================== */
+.foot{ position:relative; background:var(--sg-bg-deep); padding:60px 0 0; overflow:hidden; }
+.foot-in{ position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:18px 32px; justify-content:space-between; align-items:flex-end; padding-bottom:clamp(90px,16vw,150px); }
+.foot .fm{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.9; max-width:62ch; }
+.foot .fm b{ color:var(--sg-ink-soft); font-weight:500; }
+.ft-watermark{
+  position:absolute; left:0; right:0; bottom:-.14em; z-index:0; text-align:center;
+  pointer-events:none; user-select:none; white-space:nowrap;
+  font-weight:900; font-size:clamp(38px,11vw,150px); line-height:.8; letter-spacing:-.05em;
+  color:rgba(255,255,255,.035); -webkit-text-stroke:1px rgba(255,255,255,.05);
+}
+
+/* ================================ MISC =================================== */
+.divider{ height:1px; background:var(--sg-divider-feather); margin:48px 0; opacity:.55; }
+.kicker{
+  display:inline-block; margin-top:28px; padding:10px 16px;
+  border:1px solid var(--sg-line-accent); border-radius:var(--sg-r-pill);
+  background:var(--sg-accent-fill-08);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-accent-bright);
+  letter-spacing:.06em; overflow-wrap:anywhere;
+}
+.contents{ display:flex; flex-wrap:wrap; gap:8px; margin-top:40px; }
+.contents a{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--sg-ink-faint); border:1px solid var(--sg-line); border-radius:var(--sg-r-pill);
+  padding:7px 13px; transition:color var(--sg-t-fast) var(--sg-ease), border-color var(--sg-t-fast) var(--sg-ease);
+}
+.contents a:hover{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); }
+
+/* ---- presenter mode: notes hidden unless explicitly revealed ---- */
+.note{display:none}
+body.presenter .note{display:block}
+#presenterToggle{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:99;font-family:var(--sg-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.06);color:var(--sg-ink-faint);border:1px solid var(--sg-line);border-radius:var(--sg-r-pill);padding:8px 14px;cursor:pointer;backdrop-filter:blur(8px);transition:color .2s,border-color .2s}
+#presenterToggle:hover,#presenterToggle:focus-visible{color:var(--sg-accent-bright);border-color:var(--sg-line-accent);outline:none}
+body.presenter #presenterToggle{color:var(--sg-accent-bright);border-color:var(--sg-line-accent)}
+@media print{#presenterToggle{display:none}}
+
+/* ========================================================================== *
+   V3 ADDITIONS — act structure, keyphrase tables, opportunity visual
+ * ========================================================================== */
+
+/* ------------------------------- ACT OPENER ------------------------------ */
+.actopen{
+  position:relative; overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 12% -20%, rgba(43,189,107,.16), transparent 60%),
+    var(--sg-bg-deep);
+  border-bottom:1px solid var(--sg-line-2);
+  padding-top:clamp(52px,7vw,96px); padding-bottom:clamp(52px,7vw,96px);
+  scroll-margin-top:64px;
+}
+.actopen .actno{
+  font-family:var(--sg-mono); font-weight:700; font-size:clamp(11px,1.4vw,13px);
+  letter-spacing:.34em; text-transform:uppercase; color:var(--sg-accent-bright);
+}
+.actopen .acth{
+  margin-top:16px; font-weight:800; font-size:clamp(30px,6.4vw,76px);
+  line-height:1.02; letter-spacing:var(--sg-tr-hero); color:var(--sg-ink); max-width:20ch;
+}
+.actopen .acth em{ font-style:normal; background:var(--sg-grad-text); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.actopen .actsub{ margin-top:22px; max-width:64ch; font-size:var(--sg-fs-lead); color:var(--sg-ink-soft); }
+.actopen .actrail{
+  margin-top:30px; display:flex; flex-wrap:wrap; gap:8px;
+}
+.actopen .actrail span{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.16em; text-transform:uppercase;
+  color:var(--sg-ink-faint); border:1px solid var(--sg-line); border-radius:var(--sg-r-pill); padding:6px 12px;
+}
+.actopen .actrail span.on{ color:var(--sg-accent-bright); border-color:var(--sg-line-accent); background:var(--sg-accent-fill-08); }
+
+/* ------------------------------ HERO STAT -------------------------------- */
+.bigstat{
+  margin-top:48px; border:1px solid var(--sg-line-accent); border-radius:var(--sg-r-squircle);
+  background:
+    radial-gradient(120% 100% at 50% -30%, rgba(43,189,107,.16), transparent 60%),
+    rgba(255,255,255,.022);
+  padding:clamp(24px,4vw,54px); box-shadow:var(--sg-shadow-2), var(--sg-glass-inset);
+}
+.bigstat .bsrow{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(18px,3vw,40px); }
+@media (max-width:820px){ .bigstat .bsrow{ grid-template-columns:minmax(0,1fr); gap:26px; } }
+.bsc{ min-width:0; }
+.bsc + .bsc{ border-left:1px solid var(--sg-line); padding-left:clamp(18px,3vw,40px); }
+@media (max-width:820px){ .bsc + .bsc{ border-left:0; padding-left:0; border-top:1px solid var(--sg-line); padding-top:26px; } }
+.bsc .bk{ font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.18em; text-transform:uppercase; color:var(--sg-ink-faint); }
+.bsc .bv{
+  margin-top:14px; font-family:var(--sg-mono); font-weight:700;
+  font-size:clamp(40px,7.4vw,76px); line-height:.92; letter-spacing:-.045em; color:var(--sg-accent-live);
+  text-shadow:0 0 60px rgba(61,220,132,.24); overflow-wrap:anywhere;
+}
+.bsc.muted .bv{ color:var(--sg-ink); text-shadow:none; }
+.bsc.warnv .bv{ color:var(--sg-warn); text-shadow:none; }
+.bsc .bs{ margin-top:14px; font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.55; }
+
+/* --------------------------- KEYPHRASE TABLE ----------------------------- */
+.ktable{ margin-top:38px; border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); overflow:hidden; background:rgba(255,255,255,.018); }
+.khead, .krow{
+  display:grid; align-items:center; gap:10px 14px;
+  grid-template-columns:minmax(0,2.3fr) minmax(64px,.85fr) minmax(56px,.7fr) minmax(62px,.8fr) minmax(74px,.95fr);
+  padding:13px clamp(14px,2vw,20px);
+}
+.ktable.k6 .khead, .ktable.k6 .krow{
+  grid-template-columns:minmax(0,2.2fr) minmax(64px,.8fr) minmax(52px,.6fr) minmax(58px,.7fr) minmax(58px,.7fr) minmax(70px,.85fr);
+}
+.ktable.k4 .khead, .ktable.k4 .krow{
+  grid-template-columns:minmax(0,2.4fr) minmax(64px,.9fr) minmax(56px,.7fr) minmax(96px,1.15fr);
+}
+.khead{
+  background:rgba(255,255,255,.035); border-bottom:1px solid var(--sg-line);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.16em;
+  text-transform:uppercase; color:var(--sg-ink-faint);
+}
+.krow{ border-bottom:1px solid var(--sg-line-2); }
+.krow:last-child{ border-bottom:0; }
+.krow:nth-child(even){ background:rgba(255,255,255,.014); }
+.krow.hi{ background:var(--sg-accent-fill-08); border-left:2px solid var(--sg-accent); }
+.kp{ font-family:var(--sg-mono); font-size:var(--sg-fs-sm); color:var(--sg-ink); overflow-wrap:anywhere; line-height:1.4; }
+.kp small{ display:block; font-size:var(--sg-fs-micro); color:var(--sg-ink-faint); letter-spacing:.04em; margin-top:3px; }
+.kn{ font-family:var(--sg-mono); font-size:var(--sg-fs-sm); font-weight:500; color:var(--sg-ink-soft); white-space:nowrap; text-align:right; }
+.kn.strong{ color:var(--sg-ink); font-weight:700; }
+.kn.dim{ color:var(--sg-ink-faint); }
+.kcell{ text-align:right; }
+
+.kdchip, .posb{
+  display:inline-block; font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:700;
+  letter-spacing:.08em; padding:4px 9px; border-radius:var(--sg-r-pill); white-space:nowrap;
+}
+.kdchip.easy{ color:var(--sg-success); background:var(--sg-success-bg); border:1px solid var(--sg-line-accent); }
+.kdchip.mid{ color:var(--sg-warn); background:var(--sg-warn-bg); border:1px solid rgba(224,169,59,.30); }
+.kdchip.hard{ color:var(--sg-danger); background:var(--sg-danger-bg); border:1px solid rgba(255,77,79,.30); }
+.posb.p1{ color:#0a1b11; background:var(--sg-accent-live); border:1px solid var(--sg-accent-live); }
+.posb.p3{ color:var(--sg-accent-bright); background:var(--sg-accent-tint-14); border:1px solid var(--sg-line-accent); }
+.posb.p10{ color:var(--sg-neutral); background:rgba(255,255,255,.05); border:1px solid var(--sg-line); }
+.posb.pnone{ color:var(--sg-ink-faint); background:transparent; border:1px dashed var(--sg-line); }
+
+@media (max-width:820px){
+  .khead{ display:none; }
+  .ktable, .ktable.k6, .ktable.k4{ border-radius:var(--sg-r-md); }
+  .krow, .ktable.k6 .krow, .ktable.k4 .krow{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px 12px; padding:16px clamp(14px,3vw,18px);
+  }
+  .kp{ grid-column:1 / -1; font-size:var(--sg-fs-body); font-weight:600; }
+  .kcell{ text-align:left; }
+  .kn{ text-align:left; }
+  .kcell::before, .kn::before{
+    content:attr(data-l); display:block;
+    font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:400;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--sg-ink-faint);
+    margin-bottom:5px; white-space:normal;
+  }
+}
+@media (max-width:400px){
+  .krow, .ktable.k6 .krow, .ktable.k4 .krow{ grid-template-columns:minmax(0,1fr); }
+}
+
+/* ----------------------- HEAD vs FLANK OPPORTUNITY ----------------------- */
+.oppsplit{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:44px; }
+@media (max-width:880px){ .oppsplit{ grid-template-columns:minmax(0,1fr); } }
+.opp{
+  border:1px solid var(--sg-line); border-radius:var(--sg-r-lg); overflow:hidden;
+  background:rgba(255,255,255,.022); display:flex; flex-direction:column;
+}
+.opp.free{ border-color:var(--sg-line-accent); background:var(--sg-accent-fill-08); }
+.opp-head{ padding:20px clamp(16px,2.4vw,24px) 18px; border-bottom:1px solid var(--sg-line); }
+.opp-head .oe{ font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.2em; text-transform:uppercase; color:var(--sg-ink-faint); }
+.opp-head .ot2{ margin-top:10px; font-size:var(--sg-fs-h3); font-weight:700; letter-spacing:var(--sg-tr-head); color:var(--sg-ink); line-height:1.15; }
+.opp.free .opp-head .ot2{ color:var(--sg-accent-bright); }
+.opp-head .om{
+  margin-top:14px; display:flex; flex-wrap:wrap; gap:8px 10px;
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint);
+}
+.opp-head .om b{ color:var(--sg-ink); font-weight:700; font-size:var(--sg-fs-sm); }
+.opp-body{ padding:16px clamp(16px,2.4vw,24px) 22px; display:grid; gap:11px; }
+.orow{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center; }
+.orow .on{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-soft); overflow-wrap:anywhere; }
+.orow .ov{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); white-space:nowrap; display:flex; gap:7px; align-items:center; }
+.orow .otrack{ grid-column:1 / -1; height:9px; border-radius:5px; background:var(--sg-chart-track); position:relative; overflow:hidden; margin-top:2px; }
+.orow .otrack i{ position:absolute; inset:0 auto 0 0; border-radius:5px; background:rgba(205,200,192,.26); min-width:3px; }
+.opp.free .orow .otrack i{ background:var(--sg-grad-accent); box-shadow:0 0 18px rgba(43,189,107,.28); }
+.opp-foot{
+  margin-top:auto; padding:16px clamp(16px,2.4vw,24px); border-top:1px solid var(--sg-line);
+  font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.75;
+}
+.opp.free .opp-foot{ color:var(--sg-ink-soft); }
+
+/* ------------------------------ MATCH ROWS ------------------------------- */
+.matchset{ margin-top:40px; display:grid; gap:12px; }
+.mrow{
+  display:grid; grid-template-columns:minmax(0,2.1fr) minmax(0,1fr) minmax(0,1.25fr);
+  gap:10px 18px; align-items:center;
+  border:1px solid var(--sg-line); border-left:3px solid var(--sg-accent); border-radius:var(--sg-r-md);
+  background:rgba(255,255,255,.022); padding:16px clamp(14px,2vw,20px);
+}
+@media (max-width:820px){ .mrow{ grid-template-columns:minmax(0,1fr); gap:12px; } }
+.mrow .mq{ font-family:var(--sg-mono); font-size:var(--sg-fs-sm); color:var(--sg-ink); overflow-wrap:anywhere; }
+.mrow .mq b{ color:var(--sg-accent-bright); font-weight:700; }
+.mrow .mq small{ display:block; margin-top:4px; font-size:var(--sg-fs-micro); color:var(--sg-ink-faint); letter-spacing:.04em; }
+.mrow .mt, .mrow .my{ font-family:var(--sg-mono); font-size:var(--sg-fs-xs); color:var(--sg-ink-faint); line-height:1.6; }
+.mrow .my b{ display:block; font-size:var(--sg-fs-sm); color:var(--sg-ink); font-weight:700; }
+.mrow .mt::before, .mrow .my::before{
+  content:attr(data-l); display:block; font-size:var(--sg-fs-micro); letter-spacing:.16em;
+  text-transform:uppercase; color:var(--sg-ink-faint); margin-bottom:5px;
+}
+
+/* ------------------------------ CORRECTION ------------------------------- */
+.correction{
+  margin-top:44px; border:1px solid rgba(224,169,59,.34); border-radius:var(--sg-r-lg);
+  background:var(--sg-warn-bg); padding:clamp(20px,3vw,32px);
+}
+.correction .ch{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); letter-spacing:.2em;
+  text-transform:uppercase; color:var(--sg-warn); margin-bottom:16px;
+}
+.correction .cwas, .correction .cnow{ display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:start; }
+.correction .cnow{ margin-top:18px; padding-top:18px; border-top:1px solid rgba(255,255,255,.10); }
+.correction .cl{
+  font-family:var(--sg-mono); font-size:var(--sg-fs-micro); font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; padding:5px 10px; border-radius:var(--sg-r-pill); white-space:nowrap; flex:none;
+}
+.correction .cwas .cl{ color:var(--sg-danger); background:var(--sg-danger-bg); border:1px solid rgba(255,77,79,.30); }
+.correction .cnow .cl{ color:var(--sg-success); background:var(--sg-success-bg); border:1px solid var(--sg-line-accent); }
+.correction .ct{ font-size:var(--sg-fs-sm); color:var(--sg-ink-soft); line-height:1.65; }
+.correction .ct b{ color:var(--sg-ink); font-weight:700; }
+@media (max-width:520px){
+  .correction .cwas, .correction .cnow{ grid-template-columns:minmax(0,1fr); gap:9px; }
+  .correction .cl{ justify-self:start; }
+}
+</style>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brandmark">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="name">The Market You Already Stock</span>
+    </div>
+    <div class="meta">Smoke Shop Gurus &middot; measured 2026&#8209;09&#8209;20</div>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+
+<main>
+
+<!-- ############################ ACT 1 OPENER ############################ -->
+<section class="actopen" id="act1">
+  <div class="wrap">
+    <div class="actno">Act one of five</div>
+    <h1 class="acth">The <em>market</em>.</h1>
+    <p class="actsub">Before anything about your website: how much demand is actually out there, whether it can be measured, and who is holding it today. Every figure in this act was pulled from the live ranked&#8209;keyword data for the two largest wholesalers in your category.</p>
+    <div class="actrail">
+      <span class="on">1 &middot; The market</span>
+      <span>2 &middot; The competition</span>
+      <span>3 &middot; What you own</span>
+      <span>4 &middot; The gap</span>
+      <span>5 &middot; The plan</span>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== 01 OPEN ============================== -->
+<section class="slide" id="s1" style="padding-top:clamp(50px,8vw,110px);">
+  <div class="wm" aria-hidden="true">01</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">01</span> &middot; The opening position</div>
+    <h1 class="headline">Two companies take <em>25,233 visits a month</em> out of your market. You are not one of them.</h1>
+    <p class="lead">There are <strong>17 distinct wholesale&#8209;intent phrases</strong> that VapeRanger and MiPod Wholesale currently rank for between them. Those phrases carry <strong>82,420 searches a month</strong>, and the two sites convert them into an estimated <strong>25,233 visits a month</strong>. This is measured demand in your exact category, with named holders and known positions &mdash; not a forecast.</p>
+
+    <div class="bigstat">
+      <div class="bsrow">
+        <div class="bsc">
+          <div class="bk">Wholesale&#8209;intent searches / month</div>
+          <div class="bv">82,420</div>
+          <div class="bs">Across 17 distinct phrases the two market leaders rank for. Counted once per phrase, not once per site.</div>
+        </div>
+        <div class="bsc">
+          <div class="bk">Estimated visits they take / month</div>
+          <div class="bv">25,233</div>
+          <div class="bs">VapeRanger 19,786 and MiPod 5,447, from those phrases alone. Two different sites, so these add.</div>
+        </div>
+        <div class="bsc muted">
+          <div class="bk">Of the four biggest phrases, VapeRanger holds</div>
+          <div class="bv">#1 #1 #1</div>
+          <div class="bs">First place on three of the top four head terms and third on the fourth. Those four alone are 62,500 searches a month.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="datastrip">
+      <b>17</b> distinct wholesale&#8209;intent phrases &middot; <b>82,420</b> searches/mo &middot; <b>25,233</b> estimated visits/mo to two sites &middot; VapeRanger ranks for <b>14</b> of the 17, MiPod for <b>11</b> &middot; both rank for <b>8</b> of them &middot; measured <b>2026&#8209;09&#8209;20</b>
+    </div>
+
+    <nav class="contents" aria-label="Contents">
+      <a href="#act1">Act 1 &middot; The market</a>
+      <a href="#act2">Act 2 &middot; The competition</a>
+      <a href="#act3">Act 3 &middot; What you own</a>
+      <a href="#act4">Act 4 &middot; The gap</a>
+      <a href="#act5">Act 5 &middot; The plan</a>
+      <a href="#s18">Questions</a>
+    </nav>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>Open on the money, not on his website. He asked to see the market first and he was right. Do not mention his site at all in this act &mdash; the diagnosis is Act 4 and it lands much harder after he has seen what is on the table. The 25,233 is two different sites' visits added together, which is legitimate; the 82,420 is deduplicated to one row per phrase, which is the part people usually get wrong.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 02 THE HEAD TERMS ========================== -->
+<section class="slide alt" id="s2">
+  <div class="wm" aria-hidden="true">02</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">02</span> &middot; The market</div>
+    <h2 class="headline">This is the whole wholesale head, with the holders named.</h2>
+    <p class="body">Every phrase below is a live ranked keyword for at least one of the two leaders. <strong>Volume</strong> is reported monthly searches. <strong>Difficulty</strong> is the tool&rsquo;s 0&ndash;100 competitiveness score. The two position columns are where each site actually sits today, and <strong>visits</strong> is the estimated monthly traffic the better&#8209;placed of the two takes from that phrase.</p>
+
+    <div class="ktable k6">
+      <div class="khead">
+        <div>Phrase</div><div class="kcell">Volume</div><div class="kcell">Diff.</div><div class="kcell">VapeRanger</div><div class="kcell">MiPod</div><div class="kcell">Est. visits</div>
+      </div>
+      <div class="krow hi"><div class="kp">vape wholesalers</div><div class="kn" data-l="Volume">18,100</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">58</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb p10">#10</span></div><div class="kn strong" data-l="Est. visits">5,502</div></div>
+      <div class="krow hi"><div class="kp">vapes wholesale</div><div class="kn" data-l="Volume">14,800</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">62</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb p3">#4</span></div><div class="kn strong" data-l="Est. visits">4,499</div></div>
+      <div class="krow hi"><div class="kp">vaping wholesale</div><div class="kn" data-l="Volume">14,800</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">53</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb p3">#2</span></div><div class="kn strong" data-l="Est. visits">4,499</div></div>
+      <div class="krow"><div class="kp">vapers wholesale</div><div class="kn" data-l="Volume">14,800</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">62</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p3">#3</span></div><div class="kcell" data-l="MiPod"><span class="posb p10">#10</span></div><div class="kn" data-l="Est. visits">1,440</div></div>
+      <div class="krow"><div class="kp">wholesale vapes</div><div class="kn" data-l="Volume">4,400</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">62</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb p10">#9</span></div><div class="kn" data-l="Est. visits">1,338</div></div>
+      <div class="krow"><div class="kp">wholesale vaping</div><div class="kn" data-l="Volume">4,400</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">58</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p10">#6</span></div><div class="kcell" data-l="MiPod"><span class="posb p10">#9</span></div><div class="kn" data-l="Est. visits">428</div></div>
+      <div class="krow"><div class="kp">bulk vapes</div><div class="kn" data-l="Volume">1,900</div><div class="kcell" data-l="Difficulty"><span class="kdchip mid">15</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb p10">#7</span></div><div class="kn" data-l="Est. visits">578</div></div>
+      <div class="krow"><div class="kp">vapes in bulk</div><div class="kn" data-l="Volume">1,900</div><div class="kcell" data-l="Difficulty"><span class="kdchip mid">32</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb pnone">&mdash;</span></div><div class="kn" data-l="Est. visits">578</div></div>
+      <div class="krow"><div class="kp">vapes bulk</div><div class="kn" data-l="Volume">1,900</div><div class="kcell" data-l="Difficulty"><span class="kdchip mid">13</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p3">#2</span></div><div class="kcell" data-l="MiPod"><span class="posb pnone">&mdash;</span></div><div class="kn" data-l="Est. visits">308</div></div>
+      <div class="krow"><div class="kp">geek bar wholesale</div><div class="kn" data-l="Volume">1,000</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">3</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p3">#3</span></div><div class="kcell" data-l="MiPod"><span class="posb pnone">&mdash;</span></div><div class="kn" data-l="Est. visits">97</div></div>
+      <div class="krow"><div class="kp">geek bars wholesale</div><div class="kn" data-l="Volume">1,000</div><div class="kcell" data-l="Difficulty"><span class="kdchip mid">13</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p3">#3</span></div><div class="kcell" data-l="MiPod"><span class="posb p3">#4</span></div><div class="kn" data-l="Est. visits">97</div></div>
+      <div class="krow"><div class="kp">mi pod wholesale</div><div class="kn" data-l="Volume">720</div><div class="kcell" data-l="Difficulty"><span class="kdchip mid">13</span></div><div class="kcell" data-l="VapeRanger"><span class="posb pnone">&mdash;</span></div><div class="kcell" data-l="MiPod"><span class="posb p1">#1</span></div><div class="kn" data-l="Est. visits">219</div></div>
+      <div class="krow"><div class="kp">mi&#8209;pod wholesale</div><div class="kn" data-l="Volume">720</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">7</span></div><div class="kcell" data-l="VapeRanger"><span class="posb pnone">&mdash;</span></div><div class="kcell" data-l="MiPod"><span class="posb p1">#1</span></div><div class="kn" data-l="Est. visits">219</div></div>
+      <div class="krow"><div class="kp">vaping distributors</div><div class="kn" data-l="Volume">590</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">53</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p3">#4</span></div><div class="kcell" data-l="MiPod"><span class="posb pnone">&mdash;</span></div><div class="kn" data-l="Est. visits">179</div></div>
+      <div class="krow"><div class="kp">1oak wholesale</div><div class="kn" data-l="Volume">590</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">6</span></div><div class="kcell" data-l="VapeRanger"><span class="posb pnone">&mdash;</span></div><div class="kcell" data-l="MiPod"><span class="posb p3">#2</span></div><div class="kn" data-l="Est. visits">96</div></div>
+      <div class="krow"><div class="kp">buying vapes in bulk</div><div class="kn" data-l="Volume">480</div><div class="kcell" data-l="Difficulty"><span class="kdchip mid">24</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p1">#1</span></div><div class="kcell" data-l="MiPod"><span class="posb pnone">&mdash;</span></div><div class="kn" data-l="Est. visits">146</div></div>
+      <div class="krow"><div class="kp">e cigarettes wholesale suppliers</div><div class="kn" data-l="Volume">320</div><div class="kcell" data-l="Difficulty"><span class="kdchip hard">53</span></div><div class="kcell" data-l="VapeRanger"><span class="posb p3">#4</span></div><div class="kcell" data-l="MiPod"><span class="posb pnone">&mdash;</span></div><div class="kn" data-l="Est. visits">97</div></div>
+    </div>
+
+    <div class="chart-foot">Seventeen distinct phrases, 82,420 searches a month. &ldquo;Est. visits&rdquo; is a modelled figure &mdash; reported search volume multiplied by a click&#8209;through model for the position held &mdash; and it is an estimate on every row. The volumes, the difficulty scores and the positions are reported values, not estimates.</div>
+
+    <div class="datastrip">
+      Top four head terms: <b>18,100</b> + <b>14,800</b> + <b>14,800</b> + <b>14,800</b> = <b>62,500</b>/mo &middot; VapeRanger takes <b>15,940</b> estimated visits from those four, MiPod <b>4,364</b> &middot; head&#8209;term difficulty runs <b>53&ndash;62</b>
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>Let him read the table. The row that does the work is the first one: 18,100 searches a month, VapeRanger first, MiPod tenth. If he asks why some rows show a dash &mdash; that site does not rank in the top hundred for that phrase, so there is no position to report. Be exact about &ldquo;est. visits&rdquo; being modelled; it is the only modelled column on the slide and saying so first is what buys the rest of the numbers.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ############################ ACT 2 OPENER ############################ -->
+<section class="actopen" id="act2">
+  <div class="wrap">
+    <div class="actno">Act two of five</div>
+    <h1 class="acth">What the competition is <em>taking</em> from it.</h1>
+    <p class="actsub">Two companies hold most of this. One of them wins the expensive way, on the hardest phrases in the category. The other wins the cheap way, on phrases with a difficulty score of zero. The second method is the one that matters to you.</p>
+    <div class="actrail">
+      <span>1 &middot; The market</span>
+      <span class="on">2 &middot; The competition</span>
+      <span>3 &middot; What you own</span>
+      <span>4 &middot; The gap</span>
+      <span>5 &middot; The plan</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 04 VAPERANGER — THE HEAD ===================== -->
+<section class="slide raised" id="s3">
+  <div class="wm" aria-hidden="true">03</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">03</span> &middot; The competition</div>
+    <h2 class="headline">VapeRanger owns the head of this market <em>outright</em>.</h2>
+    <p class="body">Across its <strong>top 40 ranked phrases</strong> &mdash; <strong>203,400 searches a month</strong>, <strong>30,794 estimated visits</strong> &mdash; VapeRanger sits at <strong>position one on twelve of them</strong>, including every major wholesale head term. On the four biggest phrases in the category it is first, first, first and third. Domain&#8209;wide it ranks for <strong>8,593 keywords</strong> returning an estimated <strong>48,937 visits a month</strong>, and <strong>1,868 of those sit in the top 20</strong> &mdash; page one or two, which is the only part of a ranking that earns clicks.</p>
+
+    <div class="chart">
+      <div class="chart-head"><span>VapeRanger &mdash; where it sits on the wholesale head</span><span class="unit">est. visits / month</span></div>
+      <div class="bars">
+        <div class="bar hl"><div class="name">vape wholesalers &middot; #1</div><div class="track"><i style="width:100%"></i></div><div class="val">5,502</div></div>
+        <div class="bar hl"><div class="name">vapes wholesale &middot; #1</div><div class="track"><i style="width:81.77%"></i></div><div class="val">4,499</div></div>
+        <div class="bar hl"><div class="name">vaping wholesale &middot; #1</div><div class="track"><i style="width:81.77%"></i></div><div class="val">4,499</div></div>
+        <div class="bar"><div class="name">vapers wholesale &middot; #3</div><div class="track"><i style="width:26.17%"></i></div><div class="val">1,440</div></div>
+        <div class="bar hl"><div class="name">wholesale vapes &middot; #1</div><div class="track"><i style="width:24.32%"></i></div><div class="val">1,338</div></div>
+        <div class="bar hl"><div class="name">bulk vapes &middot; #1</div><div class="track"><i style="width:10.50%"></i></div><div class="val">578</div></div>
+        <div class="bar hl"><div class="name">vapes in bulk &middot; #1</div><div class="track"><i style="width:10.50%"></i></div><div class="val">578</div></div>
+        <div class="bar"><div class="name">wholesale vaping &middot; #6</div><div class="track"><i style="width:7.78%"></i></div><div class="val">428</div></div>
+      </div>
+      <div class="chart-foot">Drawn to scale against its best phrase at 5,502 estimated visits. Green rows are the ones it holds at position one. These eight wholesale phrases alone return an estimated 18,862 visits a month.</div>
+    </div>
+
+    <div class="grid g4">
+      <div class="card lead-card"><div class="k">Position&#8209;one phrases</div><div class="v accent">12</div><div class="u">of its top 40 ranked phrases</div></div>
+      <div class="card"><div class="k">Top&#8209;40 search volume</div><div class="v">203,400</div><div class="u">per month, summed across rows</div></div>
+      <div class="card"><div class="k">Top&#8209;40 estimated visits</div><div class="v">30,794</div><div class="u">per month, modelled</div></div>
+      <div class="card"><div class="k">Domain&#8209;wide</div><div class="v neutral">8,593</div><div class="u">ranking keywords &middot; <b>1,868</b> of them in the top 20</div></div>
+    </div>
+
+    <div class="datastrip">
+      VapeRanger top 40: <b>203,400</b>/mo volume, <b>30,794</b> est. visits, <b>12</b> phrases at position one &middot; wholesale&#8209;intent subset <b>14</b> phrases, <b>80,390</b>/mo, <b>19,786</b> est. visits &middot; domain&#8209;wide <b>8,593</b> ranking keywords, <b>1,868</b> of them in the <b>top 20</b>, <b>48,937</b> est. visits
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>This is the &ldquo;do not kid yourself&rdquo; slide. VapeRanger is genuinely strong at the top and I am not going to pretend those head terms are winnable soon &mdash; difficulty 53 to 62 is a multi&#8209;year fight. The value of showing it is that it sets up the next two slides, where the same market is available at difficulty zero. If he asks &ldquo;can we beat them&rdquo; on this slide, the honest answer is not here, not first, and the next slide is where we can.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 05 MIPOD — THE FLANK ======================= -->
+<section class="slide" id="s4">
+  <div class="wm" aria-hidden="true">04</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">04</span> &middot; The competition</div>
+    <h2 class="headline">MiPod plays a different game &mdash; <em>brand and flavour names</em> at difficulty zero.</h2>
+    <p class="body">MiPod&rsquo;s top 60 ranked phrases carry <strong>341,620 searches a month</strong>. Almost none of that is the wholesale head. It is product language &mdash; brand names, device names, flavour names &mdash; and most of it scores <strong>zero or one for difficulty</strong>. MiPod is not even winning these convincingly: it sits at positions five to eleven on the biggest ones. They are held loosely, by a site that simply published a page for each.</p>
+
+    <div class="ktable k4">
+      <div class="khead"><div>Phrase</div><div class="kcell">Volume</div><div class="kcell">Diff.</div><div class="kcell">MiPod position</div></div>
+      <div class="krow hi"><div class="kp">off stamp vapes <small>&ldquo;off&#8209;stamp vapes&rdquo; reports the same 40,500 and sits at #10</small></div><div class="kn strong" data-l="Volume">40,500</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">1</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#11</span></div></div>
+      <div class="krow hi"><div class="kp">ut bar</div><div class="kn strong" data-l="Volume">22,200</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#7</span></div></div>
+      <div class="krow hi"><div class="kp">off&#8209;stamp</div><div class="kn strong" data-l="Volume">18,100</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#6</span></div></div>
+      <div class="krow"><div class="kp">fifty fifty bar</div><div class="kn" data-l="Volume">18,100</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#18</span></div></div>
+      <div class="krow hi"><div class="kp">watermelon ice geek bar</div><div class="kn strong" data-l="Volume">9,900</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#5</span></div></div>
+      <div class="krow hi"><div class="kp">meta moon foger flavor</div><div class="kn strong" data-l="Volume">5,400</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#6</span></div></div>
+      <div class="krow hi"><div class="kp">off stamp flavors</div><div class="kn strong" data-l="Volume">5,400</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#9</span></div></div>
+      <div class="krow"><div class="kp">meta moon geek bar</div><div class="kn" data-l="Volume">3,600</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#10</span></div></div>
+      <div class="krow hi"><div class="kp">sour gush geek bar</div><div class="kn strong" data-l="Volume">2,900</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">4</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#7</span></div></div>
+      <div class="krow hi"><div class="kp">off&#8209;stamp battery</div><div class="kn strong" data-l="Volume">2,400</div><div class="kcell" data-l="Difficulty"><span class="kdchip easy">0</span></div><div class="kcell" data-l="MiPod position"><span class="posb p10">#5</span></div></div>
+    </div>
+
+    <div class="chart-foot">Ten of MiPod&rsquo;s top 60. Difficulty is the tool&rsquo;s 0&ndash;100 score; a 0 means no established competitor is defending the phrase. The rows marked in green are the ones you stock &mdash; that is Act 3.</div>
+
+    <div class="grid g3">
+      <div class="card"><div class="k">MiPod top&#8209;60 volume</div><div class="v">341,620</div><div class="s">Per month, summed across rows &mdash; well above VapeRanger&rsquo;s top 40, from far weaker positions.</div></div>
+      <div class="card"><div class="k">MiPod top&#8209;60 est. visits</div><div class="v neutral">15,747</div><div class="s">Half VapeRanger&rsquo;s, from almost double the volume. That gap is position, and position is what is loose here.</div></div>
+      <div class="card lead-card"><div class="k">Of its top 60, difficulty 10 or under and 2,000+ volume</div><div class="v accent">22</div><div class="s">Twenty&#8209;two phrases carrying 207,900 searches a month, none of them defended.</div></div>
+    </div>
+
+    <p class="body">The scale of what it has published this way is the part worth sitting with. MiPod ranks for <strong>8,303 keywords</strong> in total, and <strong>4,083 of them &mdash; just under half &mdash; sit in the top 20</strong>. That is not a handful of lucky pages. It is a catalogue published as pages, each one picking up the brand and flavour language on it.</p>
+
+    <div class="datastrip">
+      MiPod top 60: <b>341,620</b>/mo volume, <b>15,747</b> est. visits &middot; wholesale&#8209;intent subset <b>11</b> phrases, <b>76,230</b>/mo, <b>5,447</b> est. visits &middot; domain&#8209;wide <b>8,303</b> ranking keywords, <b>4,083</b> of them in the <b>top 20</b>, <b>40,934</b> est. visits &middot; <b>22</b> phrases at difficulty &le;10 and volume &ge;2,000
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>This is the hinge of the whole deck. MiPod gets 341,620 of volume in front of it and converts less of it than VapeRanger does from 203,400 &mdash; because it sits fifth to eleventh, not first. That is the proof that these phrases are not defended. Do not say we will outrank them; say nobody is holding these properly, and he stocks the products they name. Then go to the next slide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 THE OPPORTUNITY — HEAD vs FLANK ============= -->
+<section class="slide alt" id="s5">
+  <div class="wm" aria-hidden="true">05</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">05</span> &middot; The opportunity set</div>
+    <h2 class="headline">The head of this market is expensive. The <em>flank is unguarded</em>.</h2>
+    <p class="body">Split the same competitor data two ways. On the left, the four head terms everyone fights over: <strong>62,500 searches a month at difficulty 53 to 62</strong>. On the right, every phrase either competitor ranks for that scores <strong>10 or under for difficulty and carries 2,000 or more searches</strong>: <strong>37 distinct phrases, 280,300 searches a month</strong>. Four and a half times the volume, at a fraction of the contest.</p>
+
+    <div class="oppsplit">
+
+      <div class="opp">
+        <div class="opp-head">
+          <div class="oe">The head &mdash; contested</div>
+          <div class="ot2">4 phrases</div>
+          <div class="om"><span><b>62,500</b> searches / mo</span><span>&middot;</span><span>difficulty <b>53&ndash;62</b></span></div>
+        </div>
+        <div class="opp-body">
+          <div class="orow"><div class="on">vape wholesalers</div><div class="ov"><span class="kdchip hard">58</span>18,100</div><div class="otrack"><i style="width:44.7%"></i></div></div>
+          <div class="orow"><div class="on">vapes wholesale</div><div class="ov"><span class="kdchip hard">62</span>14,800</div><div class="otrack"><i style="width:36.5%"></i></div></div>
+          <div class="orow"><div class="on">vaping wholesale</div><div class="ov"><span class="kdchip hard">53</span>14,800</div><div class="otrack"><i style="width:36.5%"></i></div></div>
+          <div class="orow"><div class="on">vapers wholesale</div><div class="ov"><span class="kdchip hard">62</span>14,800</div><div class="otrack"><i style="width:36.5%"></i></div></div>
+        </div>
+        <div class="opp-foot">Held by VapeRanger at #1, #1, #1 and #3. Winnable eventually, not first, and not cheaply. Nothing in the plan depends on taking these.</div>
+      </div>
+
+      <div class="opp free">
+        <div class="opp-head">
+          <div class="oe">The flank &mdash; undefended</div>
+          <div class="ot2">37 phrases</div>
+          <div class="om"><span><b>280,300</b> searches / mo</span><span>&middot;</span><span>difficulty <b>0&ndash;10</b></span></div>
+        </div>
+        <div class="opp-body">
+          <div class="orow"><div class="on">off stamp vapes <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; MiPod #11</em></div><div class="ov"><span class="kdchip easy">1</span>40,500</div><div class="otrack"><i style="width:100%"></i></div></div>
+          <div class="orow"><div class="on">ut bar <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; MiPod #7</em></div><div class="ov"><span class="kdchip easy">0</span>22,200</div><div class="otrack"><i style="width:54.8%"></i></div></div>
+          <div class="orow"><div class="on">off&#8209;stamp <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; MiPod #6</em></div><div class="ov"><span class="kdchip easy">0</span>18,100</div><div class="otrack"><i style="width:44.7%"></i></div></div>
+          <div class="orow"><div class="on">raz flavors <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; VapeRanger #8</em></div><div class="ov"><span class="kdchip easy">0</span>12,100</div><div class="otrack"><i style="width:29.9%"></i></div></div>
+          <div class="orow"><div class="on">cali vapes <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; VapeRanger #8</em></div><div class="ov"><span class="kdchip easy">0</span>9,900</div><div class="otrack"><i style="width:24.4%"></i></div></div>
+          <div class="orow"><div class="on">watermelon ice geek bar <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; MiPod #5</em></div><div class="ov"><span class="kdchip easy">0</span>9,900</div><div class="otrack"><i style="width:24.4%"></i></div></div>
+          <div class="orow"><div class="on">hookalit <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; VapeRanger #8</em></div><div class="ov"><span class="kdchip easy">0</span>8,100</div><div class="otrack"><i style="width:20.0%"></i></div></div>
+          <div class="orow"><div class="on">cali bars <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; VapeRanger #1</em></div><div class="ov"><span class="kdchip easy">0</span>8,100</div><div class="otrack"><i style="width:20.0%"></i></div></div>
+          <div class="orow"><div class="on">kangvape <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; VapeRanger #9</em></div><div class="ov"><span class="kdchip easy">10</span>6,600</div><div class="otrack"><i style="width:16.3%"></i></div></div>
+          <div class="orow"><div class="on">meta moon foger flavor <em style="font-style:normal;color:var(--sg-ink-faint)">&middot; MiPod #6</em></div><div class="ov"><span class="kdchip easy">0</span>5,400</div><div class="otrack"><i style="width:13.3%"></i></div></div>
+        </div>
+        <div class="opp-foot">Ten of the 37 shown, drawn to scale against 40,500. Every one of these is a brand, device or flavour name &mdash; the language of a product page. Held at fifth to eleventh place by sites that published a page and nothing more.</div>
+      </div>
+
+    </div>
+
+    <div class="grid g3">
+      <div class="card"><div class="k">VapeRanger&rsquo;s share of the flank</div><div class="v">17</div><div class="s">Seventeen phrases at difficulty 10 or under and 2,000+ volume, carrying 115,300 searches a month.</div></div>
+      <div class="card"><div class="k">MiPod&rsquo;s share of the flank</div><div class="v">22</div><div class="s">Twenty&#8209;two phrases on the same test, carrying 207,900 searches a month.</div></div>
+      <div class="card lead-card"><div class="k">Combined, spelling variants merged</div><div class="v accent">37</div><div class="s">280,300 searches a month at difficulty 0 to 10. This is the target list.</div></div>
+    </div>
+
+    <div class="datastrip">
+      Head: <b>4</b> phrases, <b>62,500</b>/mo, difficulty <b>53&ndash;62</b> &middot; Flank: <b>37</b> distinct phrases, <b>280,300</b>/mo, difficulty <b>0&ndash;10</b> &middot; raw row count <b>39</b> before merging two hyphen variants (&ldquo;off stamp vapes&rdquo; and &ldquo;off&#8209;stamp battery&rdquo;)
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>If he only looks at one slide, make it this one. The 37 is deduplicated &mdash; the raw count is 39 and two of those are hyphen spellings of phrases already in the list, so I merged them rather than count the same demand twice. Expect him to ask why these are so easy: nobody has written a proper page for a flavour name, because most wholesalers publish a catalogue dump, not product pages. Next slide is the one where these become his.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 07 WHAT THEY PUBLISH ========================= -->
+<section class="slide" id="s6">
+  <div class="wm" aria-hidden="true">06</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">06</span> &middot; How they hold it</div>
+    <h2 class="headline">They hold it with <em>published pages</em>. That is the whole mechanism.</h2>
+    <p class="body">Counted from each site&rsquo;s own sitemap on the same day. The two sites holding the head publish <strong>3,559</strong> and <strong>3,567</strong> product pages and run a full brand tier on top &mdash; <strong>656</strong> and <strong>140</strong> brand pages. They are not even the largest publisher in this market: <strong>vapewholesaleusa publishes 7,552 URLs</strong>, more than either of them. Page count is the entry ticket rather than the prize &mdash; vapewholesaleusa publishes the most and holds none of the head &mdash; but you cannot rank for a flavour name without a page carrying that flavour name.</p>
+
+    <div class="chart">
+      <div class="chart-head"><span>Product pages in each site&rsquo;s own sitemap</span><span class="unit">measured same day</span></div>
+      <div class="bars">
+        <div class="bar"><div class="name">vapewholesaleusa</div><div class="track"><i style="width:100%"></i></div><div class="val">~4,700</div></div>
+        <div class="bar"><div class="name">mipodwholesale</div><div class="track"><i style="width:75.89%"></i></div><div class="val">3,567</div></div>
+        <div class="bar"><div class="name">vaperanger</div><div class="track"><i style="width:75.72%"></i></div><div class="val">3,559</div></div>
+        <div class="bar"><div class="name">tokershub</div><div class="track"><i style="width:53.43%"></i></div><div class="val">2,511</div></div>
+        <div class="bar"><div class="name">vapeshopwholesale</div><div class="track"><i style="width:1.02%"></i></div><div class="val">48</div></div>
+        <div class="bar"><div class="name">upends</div><div class="track"><i class="min" style="width:0%"></i></div><div class="val">0</div></div>
+      </div>
+      <div class="chart-foot">Drawn to scale against vapewholesaleusa. Its sitemap carries <b>7,552</b> URLs; ~4,700 of them are product pages on a conservative read of the slug structure, against roughly 1,100 category pages. Total sitemap size the same day: vapewholesaleusa 7,552 URLs, vaperanger 5,037, mipodwholesale 4,212, tokershub 2,701, vapeshopwholesale 104, upends 61. Your own site is deliberately left off this chart &mdash; it belongs in Act 4.</div>
+    </div>
+
+    <div class="grid g4">
+      <div class="card lead-card"><div class="k">Largest publisher in the set</div><div class="v accent">7,552</div><div class="s">vapewholesaleusa URLs &mdash; more than either site that holds the head, and it holds none of it.</div></div>
+      <div class="card"><div class="k">VapeRanger brand pages</div><div class="v">656</div><div class="s">One index plus 655 brand pages, many served at the site root rather than under /brands/.</div></div>
+      <div class="card"><div class="k">MiPod brand pages</div><div class="v">140</div><div class="s">A separate brands sitemap carrying one index plus 139 brand pages.</div></div>
+      <div class="card"><div class="k">What a brand page is built from</div><div class="v accent">1 field</div><div class="s">A brand name on a product record. Both head-holders generate their entire brand tier out of a field they already fill in.</div></div>
+    </div>
+
+    <div class="datastrip">
+      vapewholesaleusa <b>7,552</b> URLs (~<b>4,700</b> product) &middot; vaperanger <b>5,037</b> URLs (<b>3,559</b> product, <b>656</b> brand) &middot; mipodwholesale <b>4,212</b> URLs (<b>3,567</b> product, <b>250</b> category, <b>140</b> brand) &middot; tokershub <b>2,701</b> URLs (<b>2,511</b> product, <b>60</b> brand) &middot; vapeshopwholesale <b>104</b> URLs (<b>48</b> product) &middot; upends <b>61</b> URLs
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>Two methodology notes I will volunteer if asked. First, an automated classifier originally scored VapeRanger at 553 brand pages and MiPod at zero, because it keyed on a /brands/ path and both serve brand pages at the root; re&#8209;checked against the brands sitemaps the real figures are 656 and 140. Second, vapewholesaleusa was originally recorded as unreachable &mdash; that was a 403 from an automated fetch being fingerprinted, not a refusal; a normal browser request returns the sitemap fine. Leaving it out would have scaled this chart to a false maximum and flattered the gap, so it is back in and the chart is scaled to it. The ~4,700 is a conservative lower bound from slug depth, not a declared product count, and I say &ldquo;about&rdquo; every time. His site stays off this chart &mdash; he sees that in Act 4.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ############################ ACT 3 OPENER ############################ -->
+<section class="actopen" id="act3">
+  <div class="wrap">
+    <div class="actno">Act three of five</div>
+    <h1 class="acth">What you <em>already own</em> that lets you compete.</h1>
+    <p class="actsub">The phrases on the flank are brand names, device names and flavour names. That is not a coincidence &mdash; it is the part of this market that is decided by what is on your shelves. Here is what the point&#8209;of&#8209;sale export says is on yours.</p>
+    <div class="actrail">
+      <span>1 &middot; The market</span>
+      <span>2 &middot; The competition</span>
+      <span class="on">3 &middot; What you own</span>
+      <span>4 &middot; The gap</span>
+      <span>5 &middot; The plan</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== 08 THE CATALOGUE ========================== -->
+<section class="slide raised" id="s7">
+  <div class="wm" aria-hidden="true">07</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">07</span> &middot; The asset</div>
+    <h2 class="headline">A catalogue of <em>3,498 orderable SKUs</em> across 568 product lines and 186 brands.</h2>
+    <p class="body">Counted from your own point&#8209;of&#8209;sale export. Every one of the <strong>3,498 rows</strong> carries its own SKU code, its own stock count and its own cost &mdash; a shop orders a flavour and a style, not an abstract product. Those SKUs group under <strong>568 handles</strong>, which is the number of <em>pages</em> it takes to publish them with flavours and styles as options. <strong>3,498 is how big the catalogue is. 568 is how much building it takes.</strong></p>
+
+    <div class="grid g4">
+      <div class="card lead-card"><div class="k">Orderable SKUs</div><div class="v accent">3,498</div><div class="u">3,387 currently active</div></div>
+      <div class="card"><div class="k">Product lines</div><div class="v">568</div><div class="u">pages needed to publish them</div></div>
+      <div class="card"><div class="k">Brands</div><div class="v">186</div><div class="u">46 of them carry 20+ SKUs</div></div>
+      <div class="card"><div class="k">Suppliers</div><div class="v">60</div><div class="u">restock and lead time come from here</div></div>
+    </div>
+
+    <p class="body">The depth is where the market language lives. <strong>1,369 of your SKUs vary by flavour across 678 distinct flavour names.</strong> Another <strong>953 vary by style</strong> and <strong>432 by type</strong>. Every one of those values is a phrase somebody types &mdash; and, as Act 2 showed, the phrases on the unguarded flank are exactly this shape.</p>
+
+    <div class="axes">
+      <div class="ax"><div class="axn">Flavor</div><div class="axt"><i style="width:100%"></i></div><div class="axv"><b>1,369</b> SKUs &middot; 678 values</div></div>
+      <div class="ax"><div class="axn">Style</div><div class="axt"><i style="width:69.61%"></i></div><div class="axv"><b>953</b> SKUs &middot; 422 values</div></div>
+      <div class="ax"><div class="axn">Color / Colour</div><div class="axt"><i style="width:51.06%"></i></div><div class="axv"><b>699</b> SKUs &middot; 184 values</div></div>
+      <div class="ax"><div class="axn">Size</div><div class="axt"><i style="width:37.62%"></i></div><div class="axv"><b>515</b> SKUs &middot; 130 values</div></div>
+      <div class="ax"><div class="axn">Type</div><div class="axt"><i style="width:31.56%"></i></div><div class="axv"><b>432</b> SKUs &middot; 173 values</div></div>
+      <div class="ax"><div class="axn">Name</div><div class="axt"><i style="width:16.73%"></i></div><div class="axv"><b>229</b> SKUs &middot; 203 values</div></div>
+      <div class="ax"><div class="axn">Scent</div><div class="axt"><i style="width:5.70%"></i></div><div class="axv"><b>78</b> SKUs &middot; 40 values</div></div>
+    </div>
+    <div class="chart-foot">Counted across all three variant slots in the export, drawn to scale against Flavor at 1,369 SKUs. The colour axis is carried under <b>two spellings</b> &mdash; &ldquo;Color&rdquo; on 626 SKUs and &ldquo;Colour&rdquo; on 73 &mdash; and <b>33 values appear under both</b>. So it is 699 SKUs across <b>184 distinct values</b>, not the 217 you get by adding the two lists together. That split is itself one of the merges the rebuild has to make: today a buyer filtering on one spelling cannot see the stock filed under the other.</div>
+
+    <div class="famblock">
+      <div class="fh">The brands behind the flank phrases</div>
+      <div class="fname">Off Stamp &mdash; 110 SKUs across 3 product lines</div>
+      <div class="fmath">
+        <b>110</b> <span>Off Stamp SKUs</span> <span class="op">&middot;</span> <b>157</b> <span>Foger</span> <span class="op">&middot;</span> <b>109</b> <span>Geek Bar</span> <span class="op">&middot;</span> <b>276</b> <span>Lost Mary</span> <span class="op">&middot;</span> <b>24</b> <span>KangVape</span>
+      </div>
+      <div class="queries">
+        <span>lost-mary-off-stamp-crystal-35k &mdash; 56 SKUs</span>
+        <span>lost-mary-off-stamp-25k &mdash; 52 SKUs</span>
+        <span>off-stamp-by-lost-mary &mdash; 2 SKUs</span>
+      </div>
+      <div class="chart-foot" style="margin-top:18px">All 110 Off Stamp SKUs are filed in the export under the brand name &ldquo;Lost Mary&rdquo;, which is why they are inside the 276 rather than additional to it. Foger&rsquo;s 157 SKUs sit on a single handle; Geek Bar&rsquo;s 109 across three.</div>
+    </div>
+
+    <div class="datastrip">
+      <b>3,498</b> SKUs (<b>3,387</b> active, <b>1,765</b> carrying stock across <b>444</b> lines) &middot; <b>568</b> lines, <b>6.16</b> SKUs each, largest carries <b>157</b> &middot; <b>186</b> brands &middot; <b>60</b> suppliers &middot; Flavor <b>1,369</b> SKUs / <b>678</b> values &middot; Style <b>953</b> / <b>422</b> &middot; Color+Colour <b>699</b> / <b>184</b> (two spellings, <b>33</b> shared values)
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>Two units, declared out loud, because mixing them is the easiest way to lose him. If he pushes on 568, that is the page count and not the catalogue. If he pushes on 3,498, that is what a shop orders and every row has its own SKU code. The Off Stamp filing point matters: do not add 110 to 276 on a slide, they are the same rows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 09 THE MATCH ========================== -->
+<section class="slide" id="s8">
+  <div class="wm" aria-hidden="true">08</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">08</span> &middot; The argument</div>
+    <h2 class="headline">The undefended phrases name products that are <em>already on your shelves</em>.</h2>
+    <p class="body">Every row below was checked both ways: the phrase against the competitor&rsquo;s live ranked keywords, and the product against your export &mdash; matched on brand and, where the phrase names a flavour, on the flavour value in the variant field. Together these phrases carry <strong>116,140 searches a month</strong>, they score <strong>zero to ten for difficulty</strong>, and you hold stock against every one.</p>
+
+    <div class="matchset">
+
+      <div class="mrow">
+        <div class="mq"><b>off stamp vapes</b> &middot; 40,500 / mo <small>difficulty 1 &mdash; &ldquo;off&#8209;stamp vapes&rdquo; reports the same volume at difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #11 &mdash; and #10 on the hyphenated spelling</div>
+        <div class="my" data-l="What you stock"><b>110 SKUs</b>across 3 Off Stamp product lines</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>off&#8209;stamp</b> &middot; 18,100 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #6</div>
+        <div class="my" data-l="What you stock"><b>110 SKUs</b>the same three lines</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>watermelon ice geek bar</b> &middot; 9,900 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #5</div>
+        <div class="my" data-l="What you stock"><b>8 SKUs</b>that exact flavour, in Geek Bar &mdash; 109 Geek Bar SKUs in total</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>hookalit</b> &middot; 8,100 / mo <small>difficulty 0 &mdash; &ldquo;olit hookalit&rdquo; reports the same volume</small></div>
+        <div class="mt" data-l="Who holds it">VapeRanger, #8 &mdash; and #4 on &ldquo;olit hookalit&rdquo;</div>
+        <div class="my" data-l="What you stock"><b>10 SKUs</b>Olit HookaLit Pro</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>kangvape</b> &middot; 6,600 / mo <small>difficulty 10</small></div>
+        <div class="mt" data-l="Who holds it">VapeRanger, #9</div>
+        <div class="my" data-l="What you stock"><b>24 SKUs</b>KangVape Speedy Beast X 60K</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>meta moon foger flavor</b> &middot; 5,400 / mo <small>difficulty 0 &mdash; the shorter phrase difficulty 0 &mdash; plus &ldquo;meta moon foger&rdquo; at 1,000ldquo;meta moon fogerdifficulty 0 &mdash; plus &ldquo;meta moon foger&rdquo; at 1,000rdquo; reports a further 1,000/mo, not counted in the total below</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #6 on both</div>
+        <div class="my" data-l="What you stock"><b>2 SKUs</b>Foger 30K in Meta Moon &mdash; 157 Foger SKUs in total</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>off stamp flavors</b> &middot; 5,400 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #9</div>
+        <div class="my" data-l="What you stock"><b>110 SKUs</b>the flavour list itself is the page</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>meta moon geek bar</b> &middot; 3,600 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #10</div>
+        <div class="my" data-l="What you stock"><b>1 SKU</b>Geek Bar Pulse 15K in Meta Moon</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>hookalit pro</b> &middot; 2,900 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">VapeRanger, #6</div>
+        <div class="my" data-l="What you stock"><b>10 SKUs</b>the product is literally named this</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>sour gush geek bar</b> &middot; 2,900 / mo <small>difficulty 4</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #7</div>
+        <div class="my" data-l="What you stock"><b>3 SKUs</b>that exact flavour, in Geek Bar</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>off&#8209;stamp battery</b> &middot; 2,400 / mo <small>difficulty 0 &mdash; unhyphenated reports the same volume</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #5 &mdash; and #7 unhyphenated</div>
+        <div class="my" data-l="What you stock"><b>110 SKUs</b>the Off Stamp range</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>white peach raspberry geek bar</b> &middot; 1,900 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #7</div>
+        <div class="my" data-l="What you stock"><b>5 SKUs</b>that exact flavour, in Geek Bar</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>lost mary miami mint</b> &middot; 1,900 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #7</div>
+        <div class="my" data-l="What you stock"><b>14 SKUs</b>Miami Mint across the Lost Mary range</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>strawberry banana geek bar</b> &middot; 1,900 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #9</div>
+        <div class="my" data-l="What you stock"><b>4 SKUs</b>that exact flavour, in Geek Bar</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>tigers blood lost mary flavor</b> &middot; 1,600 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #7</div>
+        <div class="my" data-l="What you stock"><b>1 SKU</b>Lost Mary MT35K in Tigers Blood</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>lost mary blue razz ice</b> &middot; 1,300 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #6</div>
+        <div class="my" data-l="What you stock"><b>14 SKUs</b>Blue Razz Ice across the Lost Mary range</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>geek bar wholesale</b> &middot; 1,000 / mo <small>difficulty 3 &mdash; the only wholesale&#8209;intent phrase on this list</small></div>
+        <div class="mt" data-l="Who holds it">VapeRanger, #3</div>
+        <div class="my" data-l="What you stock"><b>109 SKUs</b>Geek Bar, across 3 lines</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>berry burst lost mary flavor</b> &middot; 480 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #4</div>
+        <div class="my" data-l="What you stock"><b>3 SKUs</b>Berry Burst, in Lost Mary</div>
+      </div>
+
+      <div class="mrow">
+        <div class="mq"><b>rocket freeze off stamp</b> &middot; 260 / mo <small>difficulty 0</small></div>
+        <div class="mt" data-l="Who holds it">MiPod, #2</div>
+        <div class="my" data-l="What you stock"><b>2 SKUs</b>Lost Mary Off&#8209;Stamp 25K in Rocket Pop</div>
+      </div>
+
+    </div>
+
+    <div class="bigstat">
+      <div class="bsrow">
+        <div class="bsc">
+          <div class="bk">Searches a month on phrases you stock</div>
+          <div class="bv">116,140</div>
+          <div class="bs">Across the 19 verified phrases above, counted once per phrase. Spelling variants of the same phrase are merged, not added.</div>
+        </div>
+        <div class="bsc warnv">
+          <div class="bk">Highest difficulty on the list</div>
+          <div class="bv">10</div>
+          <div class="bs">Fifteen of the nineteen score exactly zero. The head terms in Act 2 score 53 to 62.</div>
+        </div>
+        <div class="bsc muted">
+          <div class="bk">Pages you publish for any of it</div>
+          <div class="bv">0</div>
+          <div class="bs">Not one of these brands or flavours has a page on your site. That is Act 4.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="datastrip">
+      <b>19</b> verified phrases &middot; <b>116,140</b> searches/mo &middot; difficulty <b>0&ndash;10</b>, fifteen of them at <b>0</b> &middot; largest single phrase <b>40,500</b>/mo against <b>110</b> Off Stamp SKUs &middot; brand and flavour matches checked against the export row by row
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>This is the slide the whole deck exists to deliver. Every SKU count here was run against the export before it went on the slide, and where the phrase names a flavour I matched the flavour value, not just the brand &mdash; so &ldquo;8 SKUs&rdquo; for watermelon ice geek bar means eight rows that are Geek Bar and are Watermelon Ice. Be straight about the thin ones: tigers blood is a single SKU and meta moon geek bar is a single SKU, and I have said so rather than rounding them into the brand total. Also be straight that stocking a product does not by itself rank a page &mdash; it means the page would be truthful and complete, which is the part competitors cannot fake. What I am not saying is that we will take position one, or when.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 10 THE DOORS ========================== -->
+<section class="slide alt" id="s9">
+  <div class="wm" aria-hidden="true">09</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">09</span> &middot; The local base</div>
+    <h2 class="headline">About <em>1,003 sellable doors</em> in New Mexico. 243 of them are in Bernalillo County.</h2>
+    <p class="body">From the Census business counts: roughly <strong>1,003 doors</strong> across New Mexico&rsquo;s <strong>33 counties</strong> &mdash; tobacco retailers, gas and convenience stores. The top nine counties hold about <strong>652</strong> of them, <strong>65%</strong> of the state. Bernalillo alone holds <strong>243</strong>, of which <strong>61</strong> are dedicated smoke or vape shops. That is the addressable base for a wholesaler headquartered where you are, and it is a countable list rather than a guess.</p>
+
+    <div class="chart">
+      <div class="chart-head"><span>Where the doors are</span><span class="unit">US Census, County Business Patterns 2023</span></div>
+      <div class="bars">
+        <div class="bar"><div class="name">all 33 counties</div><div class="track"><i style="width:100%"></i></div><div class="val">~1,003</div></div>
+        <div class="bar"><div class="name">top 9 counties</div><div class="track"><i style="width:65%"></i></div><div class="val">~652</div></div>
+        <div class="bar hl"><div class="name">Bernalillo County</div><div class="track"><i style="width:24.23%"></i></div><div class="val">243</div></div>
+        <div class="bar"><div class="name">Bernalillo &mdash; dedicated smoke/vape</div><div class="track"><i style="width:6.08%"></i></div><div class="val">61</div></div>
+      </div>
+    </div>
+
+    <div class="datastrip">
+      ~<b>1,003</b> doors / <b>33</b> counties (US Census, County Business Patterns 2023) &middot; top 9 counties ~<b>652</b> (<b>65%</b>) &middot; Bernalillo <b>243</b> doors, <b>61</b> dedicated smoke/vape shops
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>This is a count of doors, not a count of buyers &mdash; some will never buy from anyone, some are already someone else&rsquo;s account. I use it because it bounds the local market honestly rather than because it flatters the pitch. It is also the reason the geography pages are worth building eventually, even though the geo phrases sit under the reporting floor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 11 THE MACHINE LAYER ======================= -->
+<section class="slide" id="s10">
+  <div class="wm" aria-hidden="true">10</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">10</span> &middot; The head start</div>
+    <h2 class="headline">You already serve the machine layer. <em>The layer underneath it is missing.</em></h2>
+    <p class="body">Your domain already returns <strong>/llms.txt</strong>, <strong>/agents.md</strong> and a live <strong>/.well&#8209;known/ucp</strong> descriptor advertising an MCP shopping endpoint &mdash; none of it needing JavaScript to read. That is the genuinely hard part, and it is already standing. It is also the part most wholesalers in this category have not touched. What is missing is the ordinary layer beneath it: a title, a description and product structured data on pages that exist.</p>
+
+    <div class="compare">
+      <div class="pane">
+        <div class="pane-head"><b>Already standing</b><span>served without JavaScript</span></div>
+        <ul>
+          <li><span>/llms.txt</span><span class="chip good">Served</span></li>
+          <li><span>/agents.md</span><span class="chip good">Served</span></li>
+          <li><span>/.well&#8209;known/ucp &mdash; MCP shopping endpoint</span><span class="chip good">Live</span></li>
+          <li><span>JavaScript required to read any of it</span><span class="chip good">No</span></li>
+          <li><span>listed in your own sitemap index</span><span class="chip good">Yes</span></li>
+        </ul>
+      </div>
+      <div class="pane">
+        <div class="pane-head"><b>Still missing underneath</b><span>on the pages themselves</span></div>
+        <ul>
+          <li><span>title tag in served HTML</span><span class="chip bad">Absent</span></li>
+          <li><span>meta description in served HTML</span><span class="chip bad">Absent</span></li>
+          <li><span>product structured data in served HTML</span><span class="chip bad">Absent</span></li>
+          <li><span>brand pages of any kind</span><span class="chip bad">None</span></li>
+          <li><span>pages for the 19 phrases in Act 3</span><span class="chip bad">None</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kicker">The hard, unusual part is built. The ordinary part is not &mdash; and the ordinary part is what ranks.</div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <h3 style="font-size:var(--sg-fs-h3);font-weight:700;letter-spacing:var(--sg-tr-head);color:var(--sg-ink);line-height:1.15;">And there is a second surface, measured separately &mdash; <span style="background:var(--sg-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;">AI search</span>.</h3>
+    <p class="body">Measured AI search for &ldquo;vape wholesale&rdquo; runs at <strong>283 a month</strong>, against <strong>105</strong> twelve months earlier &mdash; small, but up, and not in a straight line: it peaked at <strong>443</strong> in March before settling back. The answers drawn on <strong>391 distinct cited domains</strong>, and the most&#8209;cited sources are <strong>not distributors</strong>. They are Reddit, the FDA and state tax authorities.</p>
+
+    <div class="chart">
+      <div class="chart-head"><span>AI search volume &mdash; &ldquo;vape wholesale&rdquo;</span><span class="unit">searches / month</span></div>
+      <div class="bars">
+        <div class="bar"><div class="name">Sep 2025</div><div class="track"><i style="width:23.70%"></i></div><div class="val">105</div></div>
+        <div class="bar"><div class="name">Mar 2026 &mdash; peak</div><div class="track"><i style="width:100%"></i></div><div class="val">443</div></div>
+        <div class="bar hl"><div class="name">Aug 2026 &mdash; latest</div><div class="track"><i style="width:63.88%"></i></div><div class="val">283</div></div>
+      </div>
+      <div class="chart-foot">Drawn to scale against the March peak at 443. This is a small surface, not a flood, and it does not move in a straight line &mdash; it is worth building for because it is cheap to serve, not because the volume is large today.</div>
+    </div>
+
+    <div class="compare">
+      <div class="pane">
+        <div class="pane-head"><b>AI search volume</b><span>per month, by phrase</span></div>
+        <ul>
+          <li><span>vape wholesale</span><span class="chip info">283</span></li>
+          <li><span>disposable vape wholesale</span><span class="chip info">8</span></li>
+          <li><span>wholesale vape distributor</span><span class="chip info">6</span></li>
+          <li><span>smoke shop supplies</span><span class="chip info">4</span></li>
+          <li><span>smoke shop wholesale</span><span class="chip warn">2 &mdash; new since Jul</span></li>
+          <li><span>geek bar wholesale</span><span class="chip info">2</span></li>
+          <li><span>lost mary wholesale</span><span class="chip info">1</span></li>
+          <li><span>every New Mexico geo phrase tested</span><span class="chip bad">0 &mdash; all 12 months</span></li>
+        </ul>
+      </div>
+      <div class="pane">
+        <div class="pane-head"><b>Most&#8209;cited sources</b><span>391 domains in total</span></div>
+        <ul>
+          <li><span>reddit.com</span><span class="chip warn">15</span></li>
+          <li><span>fda.gov</span><span class="chip warn">10</span></li>
+          <li><span>tax.illinois.gov</span><span class="chip warn">9</span></li>
+          <li><span>en.wikipedia.org</span><span class="chip warn">6</span></li>
+          <li><span>smokeaxis.com &middot; legalclarity.org &middot; taxfoundation.org</span><span class="chip warn">5 each</span></li>
+          <li><span>vapeshopwholesale.com &mdash; 48 product pages</span><span class="chip good">4</span></li>
+          <li><span>vapewholesaleusa.com &middot; wisemenwholesale.com</span><span class="chip info">3 each</span></li>
+          <li><span>vaperanger.com &middot; mipodwholesale.com</span><span class="chip bad">Neither in the top 25</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kicker">vapeshopwholesale is cited on this surface with 48 product pages. Page volume is not what wins it.</div>
+
+    <p class="body">That is the whole argument for this surface. The two sites that dominate ordinary search do not appear among the <strong>25 most&#8209;cited sources</strong>, while a site with <strong>48 product pages</strong> does. AI answers are assembled from sources that are <strong>structured and quotable</strong> on shipping rules, state licensing and product legality &mdash; which is exactly what <strong>/llms.txt</strong>, <strong>/agents.md</strong> and a live UCP endpoint exist to serve. You have the plumbing. What it needs is something worth quoting on the other end of it.</p>
+
+    <div class="datastrip">
+      <b>/llms.txt</b> &middot; <b>/agents.md</b> &middot; live <b>/.well&#8209;known/ucp</b> MCP endpoint, all served without JavaScript &middot; against <b>0</b> served titles, <b>0</b> served meta descriptions, <b>0</b> served structured&#8209;data blocks on every page type tested &middot; AI search &ldquo;vape wholesale&rdquo; <b>283</b>/mo, from <b>105</b> twelve months earlier, peaking at <b>443</b> &middot; <b>391</b> cited domains &mdash; Reddit <b>15</b>, FDA <b>10</b>, state tax authorities <b>9</b> &middot; every New Mexico geo phrase <b>0</b> across all 12 months
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>Three honesties. 283 a month is a small surface and it is not a straight line up &mdash; better he hears the 443 peak and the fall back from me than finds it later. On the citation list, only the top 25 of 391 domains were retrieved, so the precise claim is that neither leader appears among the 25 most&#8209;cited sources, not that they are absent from all 391 &mdash; do not upgrade it. And I measured his side of the machine layer directly without auditing every competitor&rsquo;s endpoints, so &ldquo;ahead of the field&rdquo; is my read rather than a count. The geo zeros are useful here: they are the second independent reason geography goes last, and they are about New Mexico phrasing, not about the category.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ############################ ACT 4 OPENER ############################ -->
+<section class="actopen" id="act4">
+  <div class="wrap">
+    <div class="actno">Act four of five</div>
+    <h1 class="acth">The gap &mdash; why <em>none of it</em> is reaching the market.</h1>
+    <p class="actsub">You have the demand, the products and the machine layer. What you do not have is the connection between the catalogue and the internet. This act is the diagnosis, and nothing in it is a critique of how you run the shop.</p>
+    <div class="actrail">
+      <span>1 &middot; The market</span>
+      <span>2 &middot; The competition</span>
+      <span>3 &middot; What you own</span>
+      <span class="on">4 &middot; The gap</span>
+      <span>5 &middot; The plan</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 12 THE FOUR-PRODUCT GAP ===================== -->
+<section class="slide raised" id="s11">
+  <div class="wm" aria-hidden="true">11</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">11</span> &middot; The core defect</div>
+    <h2 class="headline">3,498 SKUs to sell. 568 pages to publish them. <em>Four</em> of them exist.</h2>
+    <p class="body">Your live sitemap holds <strong>82 product pages</strong> out of <strong>139 URLs</strong> in total. Matched slug for slug against your own 568 handles, the two sets overlap on <strong>four</strong>. Your point&#8209;of&#8209;sale system and your website are not two views of one business &mdash; they are two systems that have never met.</p>
+
+    <div class="centre">
+
+      <div class="scaleblock">
+        <div class="scale-head">
+          <span>Scale one &mdash; the catalogue</span><span>&middot;</span>
+          <span>unit: <b>an orderable SKU</b></span><span>&middot;</span><span>3,498 = full width</span>
+        </div>
+        <div class="sets">
+          <div class="setrow">
+            <div class="setlabel"><span class="n">Orderable SKUs in the export</span><span>3,498 distinct SKU codes</span></div>
+            <div class="setbar hero"><i style="width:100%"></i><em>3,498</em><em class="out">SKUs</em></div>
+          </div>
+          <div class="setrow">
+            <div class="setlabel"><span class="n">Of those, carrying stock on the day counted</span><span>across 444 lines</span></div>
+            <div class="setbar pos"><i style="width:50.46%"></i><em>1,765</em><em class="out">in stock</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scaleblock">
+        <div class="scale-head">
+          <span>Scale two &mdash; the website</span><span>&middot;</span>
+          <span>unit: <b>a page</b></span><span>&middot;</span><span>568 = full width</span>
+        </div>
+        <div class="sets">
+          <div class="setrow">
+            <div class="setlabel"><span class="n">Pages needed to publish the catalogue</span><span>568 handles, flavours as options on the page</span></div>
+            <div class="setbar"><i style="width:100%"></i><em>568</em><em class="out">pages needed</em></div>
+          </div>
+          <div class="setrow">
+            <div class="setlabel"><span class="n">Product pages live today</span><span>counted from your live sitemap</span></div>
+            <div class="setbar pos"><i style="width:14.44%"></i><em>82</em><em class="out">live</em></div>
+          </div>
+          <div class="setrow">
+            <div class="setlabel"><span class="n">Present in both, matched slug for slug</span><span>the overlap</span></div>
+            <div class="setbar tiny"><i style="width:0.70%;min-width:5px"></i><em style="left:22px">4</em><em class="out">in both</em></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlap">
+        <div class="big">4</div>
+        <div class="txt">
+          <div class="t1">Four products are present in both systems.</div>
+          <div class="t2">Not four categories. Not four SKUs. Four products, out of 568 lines in the export and 82 pages on the site. Every phrase in Act 3 names a product that is in the export and not on the website.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="datastrip">
+      Catalogue: <b>3,498</b> orderable SKUs (<b>1,765</b> in stock) &middot; Build: <b>568</b> pages, <b>6.16</b> SKUs per page, largest carries <b>157</b> &middot; Live: <b>82</b> product pages of <b>139</b> URLs &middot; Overlap: <b>4</b>
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>I ran the four&#8209;product match several ways before putting it on a slide and it held every way. If he flinches, that is the right reaction &mdash; it is the single most surprising number in the deck. Tie it straight back to Act 3: the reason he ranks for none of those nineteen phrases is not competition, it is that there is no page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 13 THE 49 ============================ -->
+<section class="slide" id="s12">
+  <div class="wm" aria-hidden="true">12</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">12</span> &middot; The gap</div>
+    <h2 class="headline">The <em>49 products</em> you already flagged for online sale have no page on your site.</h2>
+    <p class="body"><strong>359 SKUs</strong> in your export carry the <strong>active_online</strong> flag. They group under <strong>49 handles</strong> &mdash; and not one of the 49 appears in your live sitemap. From the other side, only <strong>4 of the 82</strong> product pages you publish correspond to anything in the export at all. The field that is supposed to mean &ldquo;this is on the website&rdquo; cannot tell you what is on the website, because nothing is reading it.</p>
+
+    <div class="funnel">
+      <div class="fstep"><div class="fl">SKUs carrying the <strong>active_online</strong> flag</div><div class="fv">359</div></div>
+      <div class="fchev" aria-hidden="true">&#8595; group under</div>
+      <div class="fstep"><div class="fl">Product lines behind those SKUs</div><div class="fv">49</div></div>
+      <div class="fchev" aria-hidden="true">&#8595; of which, present in the live sitemap</div>
+      <div class="fstep zero"><div class="fl">Of those 49 lines, appearing in your live sitemap</div><div class="fv">0</div></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card"><div class="k">Looked at from the site side</div><div class="v">4 <span style="font-size:.4em;color:var(--sg-ink-faint);font-weight:400;">of 82</span></div><div class="s">Live product pages that correspond to anything in the export at all.</div></div>
+      <div class="card"><div class="k">What the flag can tell you today</div><div class="v danger">Nothing</div><div class="s">Nothing reads the field, so it cannot report what is live. It is also the cheapest thing on the fix list.</div></div>
+    </div>
+
+    <div class="datastrip">
+      <b>359</b> SKUs flagged active_online &rarr; <b>49</b> lines &middot; <b>0</b> of those 49 in the live sitemap &middot; <b>4</b> of <b>82</b> live product pages present in the export
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>This is the one I would want to know first if it were my business. He may well believe those 49 are live. They are not, and the flag is not lying to him on purpose &mdash; nothing is reading it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== 14 SERVED HTML ========================== -->
+<section class="slide alt" id="s13">
+  <div class="wm" aria-hidden="true">13</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">13</span> &middot; The gap</div>
+    <h2 class="headline">The pages you do have arrive with <em>no title</em>, no description and no structured data.</h2>
+    <p class="body">Your copy is served. Your identity is not. Fetched the way a crawler that does not run JavaScript fetches it, your HTML carries the product name, the price, the stock level and about 250 words of copy &mdash; but <strong>no title tag, no meta description and no structured data</strong>, on every page type tested. A vendor script (<strong>app.greendispensarymarketing.com</strong>) writes those tags client&#8209;side; render the page in a browser and a title, a description and five blocks of structured data appear. The words are there. There is nothing telling a machine what they are.</p>
+
+    <div class="compare">
+      <div class="pane">
+        <div class="pane-head"><b>Served HTML</b><span>no JavaScript</span></div>
+        <ul>
+          <li><span>title tag</span><span class="chip bad">Absent</span></li>
+          <li><span>meta description</span><span class="chip bad">Absent</span></li>
+          <li><span>structured data</span><span class="chip bad">Absent</span></li>
+          <li><span>product name</span><span class="chip good">Present</span></li>
+          <li><span>price</span><span class="chip good">Present</span></li>
+          <li><span>stock level</span><span class="chip good">Present</span></li>
+          <li><span>body copy &mdash; about 250 words</span><span class="chip good">Present</span></li>
+        </ul>
+      </div>
+      <div class="pane">
+        <div class="pane-head"><b>Rendered in a browser</b><span>JavaScript executed</span></div>
+        <ul>
+          <li><span>title tag</span><span class="chip good">Present</span></li>
+          <li><span>meta description</span><span class="chip good">Present</span></li>
+          <li><span>structured data blocks</span><span class="chip good">5 &times; ld+json</span></li>
+          <li><span>written by</span><span class="chip warn">Vendor script</span></li>
+          <li><span>app.greendispensarymarketing.com</span><span class="chip warn">Third party</span></li>
+          <li><span>page types tested with this result</span><span class="chip info">Every one</span></li>
+          <li><span>competitors serving all three in raw HTML</span><span class="chip info">3 of 4</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kicker">Your entire tag layer works only for as long as someone else&rsquo;s script loads.</div>
+
+    <div class="datastrip">
+      Served HTML: title <b>0</b> &middot; meta description <b>0</b> &middot; structured data <b>0</b>, every page type tested &middot; product name, price, stock and ~<b>250</b> words present in raw HTML &middot; JS render produces title + meta + <b>5</b> ld+json &middot; <b>3 of 4</b> measured competitors serve all three in raw HTML
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>He can view&#8209;source his own site and see plenty of text, so be precise: the copy is fine, the label on the box is missing. On the 3 of 4: all four serve a title and description in raw HTML, but mipodwholesale serves zero structured data anywhere in the document &mdash; so the honest framing is three of four serve the full set. Do not upgrade that to &ldquo;every competitor.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 15 DESCRIPTIONS AND TAXONOMY =================== -->
+<section class="slide" id="s14">
+  <div class="wm" aria-hidden="true">14</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">14</span> &middot; The gap</div>
+    <h2 class="headline">The description field holds <em>staff notes</em>. The categories describe your shelves.</h2>
+    <p class="body"><strong>193 of your 3,498 SKUs</strong> have anything at all in the description field, and they resolve to <strong>19 distinct strings</strong> repeated down the variants of <strong>19 lines</strong>. Every one is internal shorthand. <strong>549 of your 568 lines start from a completely blank field</strong>, and the 19 that are not blank contain text to delete rather than text to build on. Product copy is the raw material both search rankings and AI answers are built from, and there is none of it.</p>
+
+    <div class="funnel">
+      <div class="fstep"><div class="fl">SKUs carrying anything at all in the description field</div><div class="fv">193</div></div>
+      <div class="fchev" aria-hidden="true">&#8595; resolve to</div>
+      <div class="fstep"><div class="fl">Distinct strings, across 19 product lines</div><div class="fv">19</div></div>
+      <div class="fchev" aria-hidden="true">&#8595; of which, customer&#8209;facing</div>
+      <div class="fstep zero"><div class="fl">Of 568 lines, carrying copy a customer could read</div><div class="fv">0</div></div>
+    </div>
+
+    <div class="specimens">
+      <div class="spec"><span class="tag">Specimen &mdash; verbatim from the export</span>Hillside skus</div>
+      <div class="spec"><span class="tag">Specimen &mdash; verbatim from the export</span>need sku peachy strawm and super ff</div>
+      <div class="spec"><span class="tag">Specimen &mdash; verbatim from the export</span>0 left in inv, was 10 prev 5/7/25 likely a mark inv issue. deactivating on 5/7/25</div>
+    </div>
+
+    <p class="body">The same pattern runs through the taxonomy. You use <strong>109 distinct category names</strong> and <strong>82 of them</strong> carry a shelf&#8209;location suffix &mdash; &ldquo;/ Front End&rdquo;, &ldquo;/ Back End&rdquo;. That is an excellent system for running a floor and an invisible one to a search engine, because nobody searches by which end of the shop a product sits in. Strip those out and <strong>27 real departments</strong> remain, covering <strong>1,599 SKUs</strong>. The other <strong>849 SKUs carry no category at all</strong>, including your single largest product line.</p>
+
+    <div class="chart">
+      <div class="chart-head"><span>Where the 3,498 SKUs sit today</span><span class="unit">SKUs</span></div>
+      <div class="bars">
+        <div class="bar hl"><div class="name">27 real departments</div><div class="track"><i style="width:45.71%"></i></div><div class="val">1,599</div></div>
+        <div class="bar"><div class="name">82 shelf&#8209;location labels</div><div class="track"><i style="width:30.02%"></i></div><div class="val">1,050</div></div>
+        <div class="bar"><div class="name">no category at all</div><div class="track"><i style="width:24.27%"></i></div><div class="val">849</div></div>
+      </div>
+      <div class="chart-foot">Drawn to scale against the full catalogue of 3,498 SKUs. Specimen category names, verbatim: &ldquo;Skunk Sidekick / Front End&rdquo;, &ldquo;Last Of Us / Back End&rdquo;.</div>
+    </div>
+
+    <div class="grid g4">
+      <div class="card"><div class="k">Shipping weight on file</div><div class="v danger">0</div><div class="s">Not one of the 3,498 SKUs carries a usable weight. Every shipping rule depends on it.</div></div>
+      <div class="card"><div class="k">SKUs with no brand</div><div class="v warn">361</div><div class="s">A brand tier is the cheapest depth on the board, and 361 SKUs cannot join it yet.</div></div>
+      <div class="card"><div class="k">SKUs with no supplier</div><div class="v warn">760</div><div class="s">Supplier is how restock and lead time get answered on a page.</div></div>
+      <div class="card"><div class="k">Real departments</div><div class="v accent">27</div><div class="s">E&#8209;Liquid 853 &middot; Papers/Cones/Wraps 253 &middot; Lighters &amp; Torches 193 lead them.</div></div>
+    </div>
+
+    <div class="datastrip">
+      <b>193</b> SKUs carry a description &rarr; <b>19</b> distinct strings across <b>19</b> lines &rarr; <b>0</b> of <b>568</b> lines with customer&#8209;facing copy &middot; <b>109</b> category names, <b>82</b> with a shelf suffix (<b>1,050</b> SKUs), <b>27</b> real departments (<b>1,599</b> SKUs), <b>849</b> uncategorised &middot; weight on file <b>0</b> of 3,498 &middot; no brand <b>361</b> &middot; no supplier <b>760</b>
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>Be straight about scope: the descriptions are the biggest block of work in the plan, 568 written from nothing. Do not quote it as 3,305 &mdash; that counts SKU rows, and every variant of a line shares one page and one description. The category finding is a compliment in disguise; it tells me the taxonomy was built by someone who works the floor. The weight finding is dull, cheap and blocks things people assume are already solved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 16 WHERE YOU RANK ========================== -->
+<section class="slide alt" id="s15">
+  <div class="wm" aria-hidden="true">15</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">15</span> &middot; The gap, measured</div>
+    <h2 class="headline">Google knows you <em>212 times over</em>. Each of those returns 1.01 visits.</h2>
+    <p class="body">Ten domains measured in a single request, so no site was measured more kindly than another. You rank for <strong>212 keywords</strong> and they return an estimated <strong>215 visits</strong> &mdash; <strong>1.01 each</strong>. Nothing of yours sits in the top three, and <strong>148 of the 212</strong> sit between positions 31 and 70, where almost nobody clicks. This is not obscurity. It is position, and position is a consequence of the three findings above it.</p>
+
+    <div class="chart">
+      <div class="chart-head"><span>Estimated visits per ranking keyword</span><span class="unit">visits &divide; keywords</span></div>
+      <div class="bars">
+        <div class="bar"><div class="name">vaperanger</div><div class="track"><i style="width:100%"></i></div><div class="val">5.70</div></div>
+        <div class="bar"><div class="name">mipodwholesale</div><div class="track"><i style="width:86.49%"></i></div><div class="val">4.93</div></div>
+        <div class="bar"><div class="name">phreshpicks &mdash; Albuquerque</div><div class="track"><i style="width:83.51%"></i></div><div class="val">4.76</div></div>
+        <div class="bar"><div class="name">median of the nine measured</div><div class="track"><i style="width:73.86%"></i></div><div class="val">4.21</div></div>
+        <div class="bar you"><div class="name">smokeshopgurus</div><div class="track"><i style="width:17.72%"></i></div><div class="val">1.01</div></div>
+        <div class="bar"><div class="name">tokershub</div><div class="track"><i style="width:15.26%"></i></div><div class="val">0.87</div></div>
+      </div>
+      <div class="chart-foot">Drawn to scale against vaperanger at 5.70. The median across all nine measured competitors is 4.21, and tokershub sits below you at 0.87 &mdash; so this is not a blanket claim that every competitor beats you. Visit figures are modelled on both sides of every comparison; the ranking between sites is the trustworthy part, not the absolute numbers.</div>
+    </div>
+
+    <div class="postiles">
+      <div class="ptile t"><div class="pk">Ranking keywords</div><div class="pv">212</div><div class="ps">The index is not the problem.</div></div>
+      <div class="ptile z"><div class="pk">In positions 1&#8209;3</div><div class="pv">0</div><div class="ps">Nothing of yours sits in the top three.</div></div>
+      <div class="ptile"><div class="pk">In positions 4&#8209;10</div><div class="pv">2</div><div class="ps">Two entries on the first page.</div></div>
+      <div class="ptile w"><div class="pk">In positions 11&#8209;30</div><div class="pv">35</div><div class="ps">Within reach. This is where a tag fix pays first.</div></div>
+    </div>
+
+    <div class="datastrip">
+      smokeshopgurus <b>212</b> kw / <b>215</b> est. visits = <b>1.01</b> each &middot; positions: <b>0</b> in 1&#8209;3, <b>2</b> in 4&#8209;10, <b>35</b> in 11&#8209;30, <b>148</b> in 31&#8209;70, <b>27</b> in 71&#8209;100 &middot; vaperanger <b>8,593</b>/<b>48,937</b> (<b>1,868</b> in top 20) &middot; mipodwholesale <b>8,303</b>/<b>40,934</b> (<b>4,083</b> in top 20) &middot; vapewholesaleusa <b>4,579</b>/<b>17,760</b> &middot; phreshpicks <b>281</b>/<b>1,338</b> &middot; tokershub <b>651</b>/<b>569</b> &middot; median ratio across nine <b>4.21</b>
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>I put the median and tokershub on this chart deliberately. Showing only the three best competitors would make it look like everyone converts at five. They do not &mdash; the median is 4.21 and one measured competitor converts worse than he does. Showing that is what makes the rest of the slide safe to believe. The 35 keywords at 11&#8209;30 are the honest upside and the reason the tag work goes first. Do not promise that they move &mdash; say precondition, not guarantee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ############################ ACT 5 OPENER ############################ -->
+<section class="actopen" id="act5">
+  <div class="wrap">
+    <div class="actno">Act five of five</div>
+    <h1 class="acth">The <em>plan</em>.</h1>
+    <p class="actsub">Three preconditions, then publish in one order. Everything here is sequenced so that each step makes the next one work &mdash; and the geography goes last, for a reason that is about measurement rather than about New Mexico.</p>
+    <div class="actrail">
+      <span>1 &middot; The market</span>
+      <span>2 &middot; The competition</span>
+      <span>3 &middot; What you own</span>
+      <span>4 &middot; The gap</span>
+      <span class="on">5 &middot; The plan</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 17 PLAN =============================== -->
+<section class="slide" id="s16">
+  <div class="wm" aria-hidden="true">16</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">16</span> &middot; The plan</div>
+    <h2 class="headline">Three preconditions. Then publish, in <em>one order</em>.</h2>
+    <p class="body">Nothing below the line is worth doing until the three above it are true, and the first work lands on the <strong>139 pages you already have</strong>.</p>
+
+    <div class="steps">
+      <div class="step gate">
+        <h3>Serve the tags from your own server.</h3>
+        <p>Titles, descriptions and product structured data get served in the HTML, without depending on a vendor script to execute.</p>
+        <div class="sm">Today, served HTML: title 0 &middot; meta description 0 &middot; structured data 0, every page type tested. Applies across the 139 existing URLs. The 35 keywords at positions 11&#8209;30 are where this pays first.</div>
+      </div>
+      <div class="step gate">
+        <h3>Connect the export to the storefront.</h3>
+        <p>Your point&#8209;of&#8209;sale export and your website become one system, with flavours and styles carried through as variant options. Until then, every product that goes live goes live by hand.</p>
+        <div class="sm">3,498 orderable SKUs under 568 handles on one side. 82 product pages on the other. Four in both.</div>
+      </div>
+      <div class="step gate">
+        <h3>Fill the fields the storefront has to read.</h3>
+        <p>Categories move from shelf locations to real departments; weights, brands and suppliers get filled in, because delivery rules and brand pages are built out of them.</p>
+        <div class="sm">109 category names, 82 with a shelf suffix, 849 SKUs uncategorised &middot; shipping weight on file: 0 of 3,498 &middot; no brand 361 &middot; no supplier 760.</div>
+      </div>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="order">
+      <div class="ord"><div class="oi">First</div><div class="ot"><b>The 19 phrases in Act 3.</b> Brand and flavour pages for the products you already stock against undefended phrases &mdash; Off Stamp 110 SKUs, Foger 157, Geek Bar 109, Lost Mary 276, KangVape 24, Olit 10. This is the shortest distance between the catalogue and measured demand.</div></div>
+      <div class="ord"><div class="oi">Then</div><div class="ot"><b>The rest of the brand tier.</b> Both leaders generate a brand tier from a field they already fill in &mdash; 656 and 140 pages. Of your 186 brands, <b>46 carry 20 or more SKUs</b> and are worth a page on day one; 142 are backed by a single product line and 15 are shelf or ops labels rather than brands, so the buildable tier is smaller than 186 and should be scoped from the top down.</div></div>
+      <div class="ord"><div class="oi">Then</div><div class="ot"><b>Product pages.</b> 568 pages carrying 3,498 SKUs, with flavour and style as options on the page &mdash; and 568 descriptions written from scratch. 300 of the 568 need a variant picker; 268 publish as simple pages.</div></div>
+      <div class="ord last"><div class="oi">Last</div><div class="ot"><b>Geography.</b> A state page plus one for each of New Mexico&rsquo;s 33 counties, over a catalogue that by then actually exists. Geography is last on two independent measurements: the geo phrases sit at the keyword reporting floor &mdash; 35 of 49 suggestions at exactly 10 a month &mdash; and every New Mexico phrase tested returned <b>0 AI search volume in all 12 months</b>. It is the one part that cannot be sized in advance, so it goes over a catalogue rather than instead of one.</div></div>
+    </div>
+
+    <div class="datastrip">
+      Preconditions: serve title + meta + structured data across <b>139</b> URLs &middot; connect <b>3,498</b> SKUs / <b>568</b> handles to the storefront &middot; fix <b>109</b> categories, <b>849</b> uncategorised SKUs, <b>0</b> weights &middot; Then publish: the <b>19</b> matched phrases &rarr; brand tier (<b>46</b> brands at 20+ SKUs, of <b>186</b>) &rarr; products (<b>568</b> pages, <b>568</b> descriptions) &rarr; geography (<b>33</b> counties)
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>The change from the last version is the ordering: the nineteen matched phrases go first, because they are the only part of the plan with measured demand attached to stock he already holds. On the brand tier, do not say &ldquo;186 brand pages&rdquo; as if all 186 are buildable &mdash; 142 have only one product line behind them and 15 are not brands at all. Forty&#8209;six at 20+ SKUs is the honest day&#8209;one number. And the honest limit stays: fixing tags is the precondition for those 212 keywords moving, not a guarantee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 18 THE THROUGH LINE ======================== -->
+<section class="closer" id="s17">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">17</span> &middot; The through line</div>
+    <h2 class="headline">The demand is real, the stock is real. <em>Only the pages are missing.</em></h2>
+
+    <p class="throughline">There are <b>82,420 searches a month</b> of wholesale intent in this category and two competitors take an estimated <b>25,233 visits</b> from it. Beyond the contested head, <b>37 phrases carrying 280,300 searches a month</b> sit at difficulty zero to ten, held loosely by sites that simply published a page. <b>Nineteen of those phrases name products you already stock</b> &mdash; 116,140 searches a month against 110 Off Stamp SKUs, 157 Foger, 109 Geek Bar, 276 Lost Mary. You have the catalogue, the doors and the machine layer. What you do not have is <em>a page for any of it</em>, and that is the entire work.</p>
+
+    <div class="grid g4">
+      <div class="card lead-card"><div class="k">Undefended demand</div><div class="v accent">280,300</div><div class="s">Searches a month across 37 phrases at difficulty 0 to 10.</div></div>
+      <div class="card"><div class="k">Of that, matched to your stock</div><div class="v">116,140</div><div class="s">Nineteen phrases naming brands and flavours in your export.</div></div>
+      <div class="card"><div class="k">What you sell</div><div class="v">3,498</div><div class="s">Orderable SKUs across 568 product lines and 186 brands.</div></div>
+      <div class="card"><div class="k">Pages published for any of it</div><div class="v danger">0</div><div class="s">82 product pages live, four of which match the export.</div></div>
+    </div>
+
+    <div class="order" style="margin-top:44px">
+      <div class="ord"><div class="oi">Step one</div><div class="ot"><b>Serve the tags, connect the systems, fill the fields.</b> The first work lands on the 139 pages that already exist.</div></div>
+      <div class="ord"><div class="oi">Step two</div><div class="ot"><b>Publish against measured demand first.</b> The 19 matched phrases, then the brand tier from the top down, then all 568 product pages.</div></div>
+      <div class="ord last"><div class="oi">Step three</div><div class="ot"><b>Then geography.</b> A state page and 33 county pages, over a catalogue that by then actually exists.</div></div>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <h3 style="font-family:var(--sg-mono);font-size:var(--sg-fs-micro);letter-spacing:.2em;text-transform:uppercase;color:var(--sg-ink-faint);font-weight:500;">Where every number in this deck came from</h3>
+    <div class="sources">
+      <div class="src"><b>01</b><span>Live ranked&#8209;keyword exports for vaperanger.com (top 40) and mipodwholesale.com (top 60) &mdash; every phrase, volume, difficulty score, position and estimated&#8209;visit figure in Acts 1 and 2.</span></div>
+      <div class="src"><b>02</b><span>Your own point&#8209;of&#8209;sale product export &mdash; 3,498 SKUs, 568 handles, 186 brands, and every brand and flavour match in Act 3, checked row by row.</span></div>
+      <div class="src"><b>03</b><span>The earlier keyword&#8209;overview and long&#8209;tail pulls &mdash; the null&#8209;volume rows corrected in Act 1, and the 35&#8209;of&#8209;49 reporting&#8209;floor figure.</span></div>
+      <div class="src"><b>04</b><span>Each site&rsquo;s own sitemap, expanded and counted the same day &mdash; your 139 URLs and every competitor page and brand&#8209;page count.</span></div>
+      <div class="src"><b>05</b><span>Your served HTML, fetched without JavaScript, then rendered with it &mdash; the title, meta and structured&#8209;data findings.</span></div>
+      <div class="src"><b>06</b><span>DataForSEO Labs, one request covering all ten domains &mdash; total ranking keywords, estimated visits and position distribution; plus a top&#8209;20 filtered ranked&#8209;keyword call for the 1,868 and 4,083 figures.</span></div>
+      <div class="src"><b>07</b><span>DataForSEO AI Optimization &mdash; AI search volume by phrase and its 12&#8209;month series, and the 391 cited domains with the 25 most&#8209;cited retrieved.</span></div>
+      <div class="src"><b>08</b><span>US Census, County Business Patterns 2023 &mdash; the ~1,003 doors across 33 counties.</span></div>
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>If he remembers one thing it should be this: 280,300 undefended, 116,140 of it matched to stock he already holds, and zero pages. That is the whole argument in three numbers, and it puts the market before the diagnosis the way he asked. The catalogue framing &mdash; 3,498 SKUs, 568 pages, 82 live, 4 matched &mdash; still does the structural work, it just no longer opens the deck.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 19 Q&A ================================ -->
+<section class="slide alt" id="s18">
+  <div class="wm" aria-hidden="true">18</div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">18</span> &middot; The questions to expect</div>
+    <h2 class="headline">Prepared answers, <em>with the receipts</em>.</h2>
+    <p class="body">Each answer below is built only from numbers that appear elsewhere in this deck. If a question comes up that is not here, the honest answer is that it was not measured.</p>
+
+    <div class="qa">
+
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">How big is this market, honestly?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">On wholesale intent alone, <b>17 distinct phrases carrying 82,420 searches a month</b>, which two competitors convert into an estimated <b>25,233 visits</b>. Widen it to every phrase either of them ranks for at difficulty 10 or under and 2,000+ volume and it is <b>37 phrases, 280,300 searches a month</b>. Those are reported volumes from live competitor ranking data, deduplicated so the same phrase is never counted twice.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">If those phrases are so easy, why has nobody taken them?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Somebody has taken them, badly. MiPod sits at positions <b>5 to 11</b> on most of them and still gets <b>341,620</b> searches a month in front of it while converting less traffic than VapeRanger does from <b>203,400</b>. Difficulty scores of <b>0</b> mean no established competitor is defending the phrase. Most wholesalers publish a catalogue dump, not a page written about a flavour &mdash; which is exactly the page you are in a position to write.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">Can we beat VapeRanger on &ldquo;vape wholesalers&rdquo;?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Not first, and not cheaply. It holds <b>#1</b> there at difficulty <b>58</b>, and <b>#1</b> on two more head terms at <b>62</b> and <b>53</b>. Nothing in the plan depends on taking those. The plan targets the <b>37 phrases at difficulty 0 to 10</b>, because that is where the same market is reachable and where your stock is the deciding factor rather than your link profile.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">You are saying I can rank for &ldquo;off stamp vapes&rdquo; because I stock it?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">I am saying you can <b>compete</b> for it, which you cannot do today because you have no page. The phrase is <b>40,500</b> searches a month at difficulty <b>1</b>, MiPod holds it at <b>#11</b>, and your export carries <b>110 Off Stamp SKUs</b> across three product lines. Stocking it means the page would be truthful, complete and deeper than a competitor who carries four flavours. It does not by itself produce a ranking, and I am not putting a position or a date on a slide.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">Are those flavour matches real, or did you match on brand and call it close enough?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Matched on both, and I kept the thin ones thin. Where a phrase names a flavour I matched the flavour value in the variant field as well as the brand &mdash; <b>watermelon ice geek bar</b> is <b>8 SKUs</b> that are Geek Bar <em>and</em> Watermelon Ice, not 109 Geek Bar SKUs. Where the match is a single row I said so: <b>tigers blood lost mary</b> is <b>1 SKU</b>, <b>meta moon geek bar</b> is <b>1 SKU</b>. The brand&#8209;level rows are the deep ones &mdash; Off Stamp <b>110</b>, Foger <b>157</b>, Geek Bar <b>109</b>, Lost Mary <b>276</b>.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">So how many products do I actually have &mdash; 3,498 or 568?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Both, in different units, and only one of them is your catalogue size. You sell <b>3,498 orderable SKUs</b> &mdash; every row in your export has its own SKU code, its own stock count and its own cost, and a shop orders a flavour and a style. Those SKUs group under <b>568 handles</b>, which is how many <b>pages</b> it takes to publish them with flavours and styles as options. <b>3,498</b> is how big your catalogue is. <b>568</b> is how much building it takes.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">Four products? That has to be a measurement error.</div></div>
+        <div class="a"><div class="am">A</div><div class="at">It was matched slug for slug against your own handles, run several different ways, and it held every way. <b>568 handles</b> in the export, <b>82 product pages</b> in the live sitemap, <b>four</b> present in both. Separately, <b>359</b> SKUs are flagged active_online, they group under <b>49</b> handles, and <b>none</b> of the 49 is in the sitemap either.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">My SEO vendor already handles the tags. Isn&rsquo;t this covered?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">The tags exist &mdash; after JavaScript runs. Fetched without JavaScript, every page type tested returns <b>no title, no meta description and no structured data</b>. Rendered in a browser, a title, a description and <b>five</b> blocks of structured data appear, written by <b>app.greendispensarymarketing.com</b>. <b>3 of 4</b> measured competitors serve all three in the raw HTML. The dependency is the point: your tag layer works only for as long as someone else&rsquo;s script loads.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">568 descriptions is an enormous amount of writing. Can we shortcut it?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Not honestly &mdash; but it is 568, not 3,305, because variants of a line share one page and one description. <b>193</b> SKUs carry a description, resolving to <b>19</b> distinct strings, all internal shorthand &mdash; &ldquo;Hillside skus&rdquo;, &ldquo;need sku peachy strawm and super ff&rdquo;. <b>549</b> lines start from a blank field and the other <b>19</b> start from text that has to be deleted first. The <b>19 matched phrases</b> in Act 3 are where the first descriptions should go, because those are the ones with measured demand behind them.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">Competitors publish thousands of pages. Do I just need more pages?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">No, and the clearest proof is in the data. The <b>largest</b> publisher in this set is vapewholesaleusa at <b>7,552</b> URLs &mdash; more than either site that holds the head &mdash; and it holds <b>none</b> of the head terms. At the other end, vapeshopwholesale publishes <b>104</b> URLs and upends <b>61</b>. Page count is the entry ticket, not the prize. Your <b>212</b> keywords return <b>1.01</b> visits each against a median of <b>4.21</b> across the nine measured competitors, with <b>0</b> in positions 1&#8209;3. What makes the first pages worth building is not how many there are &mdash; it is that we know which phrases are undefended and which of them you stock.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">You said 186 brands. Is that 186 brand pages?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">No, and I would rather correct that now than have you find it later. <b>186</b> distinct brand names is confirmed, but <b>142</b> of them are backed by a single product line, <b>48</b> by a single SKU, and at least <b>15</b> are shelf or ops labels rather than brands &mdash; &ldquo;Multi&#8209;Branded&rdquo;, &ldquo;Price Check&rdquo;, &ldquo;Generic&rdquo;. A further <b>361</b> SKUs carry no brand at all. The honest day&#8209;one tier is the <b>46 brands carrying 20 or more SKUs</b>, built from the top down.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">If we fix the tags, do the rankings move?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Fixing the tags is the <b>precondition</b> for those <b>212</b> keywords moving, not a guarantee that they move. What I can state is the current position: <b>0</b> in positions 1&#8209;3, <b>2</b> in 4&#8209;10, and <b>35</b> sitting at <b>11&#8209;30</b> &mdash; that last group is close enough that a served title and description is the thing standing between them and page one. I am not going to put a ranking promise or a date on a slide.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">There is no search volume for New Mexico phrases. Why build geo pages at all?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">That is exactly why geography goes <b>last</b>, not first &mdash; and it is a point about geography, not about this category. Keyword tools have a hard reporting floor of <b>10</b> a month: of <b>49</b> long&#8209;tail suggestions, <b>35</b> sit at exactly 10, and a phrase searched nine times is indistinguishable from one searched never. &ldquo;No reported volume&rdquo; means below the floor, not zero. A second, independent measurement says the same thing &mdash; every New Mexico phrase tested returned <b>0 AI search volume in all 12 months</b>, against <b>283</b> for &ldquo;vape wholesale&rdquo;. Against roughly <b>1,003</b> doors statewide the pages are still worth building &mdash; after the catalogue exists and after the 37 phrases that <em>are</em> measurable have been taken.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">Everyone is talking about AI search. Am I behind on it?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">On the plumbing you are ahead &mdash; you already serve <b>/llms.txt</b>, <b>/agents.md</b> and a live UCP endpoint, which most wholesalers in this category have not touched. On the surface itself, keep it in proportion: measured AI search for &ldquo;vape wholesale&rdquo; is <b>283 a month</b>, up from <b>105</b> a year earlier but down from a <b>443</b> peak in March. What makes it worth the plumbing is <em>who gets cited</em>: of <b>391</b> domains, the most&#8209;cited are <b>Reddit (15)</b>, the <b>FDA (10)</b> and <b>state tax authorities (9)</b> &mdash; and <b>neither vaperanger nor mipodwholesale appears among the 25 most&#8209;cited sources</b>, while vapeshopwholesale does with <b>48 product pages</b>. This surface rewards being a structured, quotable source on shipping rules and state licensing, not publishing the most pages.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">You quoted two different keyword counts for MiPod. Which is it?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Both, and they measure different things. <b>8,303</b> is every keyword MiPod ranks for anywhere in the top hundred. <b>4,083</b> is how many of those sit in the <b>top 20</b> &mdash; page one or two, the only part that earns clicks. VapeRanger is <b>8,593</b> total and <b>1,868</b> in the top 20. The pairing is the useful number: MiPod converts a much larger share of its rankings into visible positions, and it did that by publishing a catalogue as pages.</div></div>
+      </div>
+
+      <div class="qitem">
+        <div class="q"><div class="qm">Q</div><div class="qt">Are the visit numbers real, or a tool&rsquo;s guess?</div></div>
+        <div class="a"><div class="am">A</div><div class="at">Estimated visits are <b>modelled</b> &mdash; reported search volume multiplied by a click&#8209;through model for the position held &mdash; and they are estimates on both sides of every comparison, so the ranking between sites is the trustworthy part rather than the absolute figures. The <b>volumes</b>, the <b>difficulty scores</b> and the <b>positions</b> are reported values, not models. The counted numbers are elsewhere: page counts from each site&rsquo;s own sitemap, the catalogue numbers and every SKU match from your own export, the door counts from the <b>US Census, County Business Patterns 2023</b>.</div></div>
+      </div>
+
+    </div>
+
+    <div class="note">
+      <div class="note-label">Presenter note &mdash; not on the slide</div>
+      <p>If a question lands outside this deck, say it was not measured. One answer here &mdash; the 186&#8209;brands one &mdash; gives back a number in his favour before he can test it. Volunteering that is what makes the rest worth believing.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="fm">
+      <b>The Market You Already Stock</b> &mdash; Smoke Shop Gurus.<br>
+      Competitor phrases, volumes, difficulty scores and positions from live ranked&#8209;keyword exports for vaperanger.com and mipodwholesale.com. Catalogue figures and every brand and flavour match counted from your own point&#8209;of&#8209;sale export. Page counts from each site&rsquo;s own sitemap; domain traffic from one DataForSEO Labs request across ten domains; AI search volume and citation data from the DataForSEO AI Optimization endpoints; door counts from the US Census County Business Patterns 2023. Measured <b>2026&#8209;09&#8209;20</b>.<br>
+      Estimated visits are modelled on both sides of every comparison. Search volumes, difficulty scores and positions are reported values. Catalogue size is stated in orderable SKUs; page counts are stated in pages.
+    </div>
+    <div class="fm" style="text-align:right;flex:none;">
+      <b>280,300</b> undefended<br><b>116,140</b> matched to stock<br><b>3,498</b> SKUs<br><b>0</b> pages
+    </div>
+  </div>
+  <div class="ft-watermark" aria-hidden="true">280,300 / 116,140 / 0</div>
+</footer>
+<button id="presenterToggle" type="button" aria-pressed="false">Presenter notes</button>
+<script>(function(){var b=document.getElementById("presenterToggle");if(!b)return;b.addEventListener("click",function(){var on=document.body.classList.toggle("presenter");b.setAttribute("aria-pressed",on?"true":"false");b.textContent=on?"Hide notes":"Presenter notes";});})();</script>
+
+<a id="xlink" href="../" style="position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:99;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.06);color:rgba(255,255,255,.46);border:1px solid rgba(255,255,255,.10);border-radius:9999px;padding:8px 14px;backdrop-filter:blur(8px);text-decoration:none">&larr; Homepage concept</a>
+</body>
+</html>

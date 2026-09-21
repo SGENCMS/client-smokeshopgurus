@@ -1,12 +1,21 @@
-# Smoke Shop Gurus — homepage mockup
+# Smoke Shop Gurus — client preview
 
-A design mockup of a re-skinned wholesale homepage for smokeshopgurus.com.
-Nav, homepage and footer only. Not a live store, not connected to any catalogue or checkout.
+Two pages, both private previews. Not a live store.
 
-- Dark trade-counter design system, green accent
-- Wholesale-gated: no prices shown, "log in for pricing" throughout
-- All product imagery is generated for the mockup, not client photography
-- `noindex,nofollow` — this is a private preview, not a public site
+| Page | What it is |
+|---|---|
+| [`/`](./) | Homepage design concept — nav, homepage and footer re-skinned as a wholesale trade counter |
+| [`/research/`](./research/) | Market and competitive research — the measured case behind the concept |
 
-Figures shown (3,498 SKUs, 568 lines, 186 brands, 27 departments) are read from
-the client's own point-of-sale export.
+**Homepage concept.** Dark trade-counter design system. Wholesale-gated: no prices shown,
+"log in for pricing" throughout, licensed-retailers-only language. All product imagery is
+generated for the mockup and is not client photography. Nothing is connected to a catalogue,
+an account system or a checkout.
+
+**Research.** Market sizing, competitor keyphrase positions and traffic estimates, catalogue
+analysis and the publishing gap. Figures come from the client's own point-of-sale export
+(3,498 orderable SKUs across 568 product lines, 186 brands, 27 departments), live keyword and
+SERP data, and US Census County Business Patterns. Traffic figures are modelled estimates,
+labelled as such on the page.
+
+Both pages ship `noindex,nofollow`.
